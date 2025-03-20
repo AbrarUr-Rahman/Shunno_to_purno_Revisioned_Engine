@@ -1,0 +1,191 @@
+[gd_scene load_steps=17 format=3 uid="uid://dq7m4bsq7jo4i"]
+
+[ext_resource type="Script" path="res://scripts/female_level_6.gd" id="1_5kxmq"]
+[ext_resource type="FontFile" uid="uid://ba6t0et4hwg55" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="1_bcpvn"]
+[ext_resource type="Texture2D" uid="uid://bgg0wn5vlotm8" path="res://assets/webp/cityarrive-female@2x-remove.png" id="1_i2sfg"]
+[ext_resource type="PackedScene" uid="uid://ceuo000ep8fek" path="res://scenes/porer_dhap.tscn" id="3_fec3k"]
+[ext_resource type="PackedScene" uid="uid://gbqsaclwerml" path="res://scenes/female_player.tscn" id="4_pqxtm"]
+[ext_resource type="PackedScene" uid="uid://cb5grourguv1e" path="res://scenes/bus.tscn" id="6_noaet"]
+[ext_resource type="PackedScene" uid="uid://bmyy4wsdx3rfm" path="res://flipped_bus.tscn" id="7_dlpxc"]
+
+[sub_resource type="Animation" id="Animation_uf4x6"]
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-219, 353)]
+}
+
+[sub_resource type="Animation" id="Animation_kyn78"]
+resource_name = "move_bus"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-219, 353), Vector2(353, 353)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_70f58"]
+_data = {
+"RESET": SubResource("Animation_uf4x6"),
+"move_bus": SubResource("Animation_kyn78")
+}
+
+[sub_resource type="Animation" id="Animation_oiepx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(573, 401)]
+}
+
+[sub_resource type="Animation" id="Animation_5c43i"]
+resource_name = "move_human"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(573, 401), Vector2(805, 401)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_64it3"]
+_data = {
+"RESET": SubResource("Animation_oiepx"),
+"move_human": SubResource("Animation_5c43i")
+}
+
+[sub_resource type="Animation" id="Animation_hlhgl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(352, 353)]
+}
+
+[sub_resource type="Animation" id="Animation_mncly"]
+resource_name = "bus_move_reverse"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(352, 353), Vector2(-190, 353)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pf086"]
+_data = {
+"RESET": SubResource("Animation_hlhgl"),
+"bus_move_reverse": SubResource("Animation_mncly")
+}
+
+[node name="female_level_6" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5kxmq")
+
+[node name="Backround" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = -3.0
+offset_right = 1151.0
+offset_bottom = 647.0
+texture = ExtResource("1_i2sfg")
+expand_mode = 1
+
+[node name="text" type="Label" parent="."]
+texture_filter = 2
+layout_mode = 0
+offset_left = 37.0
+offset_top = 507.0
+offset_right = 694.0
+offset_bottom = 615.0
+theme_override_fonts/font = ExtResource("1_bcpvn")
+theme_override_font_sizes/font_size = 15
+text = "ধরে নিন, আপনি শহরে বাস করেন। আপনার আয় স্বল্প। প্রতি মাসে আপনার নিয়মিত আয় ১২ পয়েন্ট – যা
+ এখন আপনার কাছে আছে। পয়েন্ট ব্যয় করে একটি মাসের সবচেয়ে প্রয়োজনীয় চাহিদা ও সেবাগুলো (যেমন:
+ বাড়িভাড়া, খাবার, পড়ালেখা, ইত্যাদি ) উপভোগ করুন।"
+
+[node name="Button" parent="." instance=ExtResource("3_fec3k")]
+layout_mode = 0
+offset_left = 835.0
+offset_top = 510.0
+offset_right = 1084.0
+offset_bottom = 584.0
+theme_override_font_sizes/font_size = 41
+
+[node name="Bus" parent="." instance=ExtResource("6_noaet")]
+position = Vector2(-219, 353)
+scale = Vector2(1.5, 1.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bus"]
+libraries = {
+"": SubResource("AnimationLibrary_70f58")
+}
+speed_scale = 0.5
+
+[node name="Female" parent="." instance=ExtResource("4_pqxtm")]
+position = Vector2(573, 401)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Female"]
+libraries = {
+"": SubResource("AnimationLibrary_64it3")
+}
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Flipped_Bus" parent="." instance=ExtResource("7_dlpxc")]
+position = Vector2(352, 353)
+scale = Vector2(1.5, 1.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Flipped_Bus"]
+libraries = {
+"": SubResource("AnimationLibrary_pf086")
+}
+speed_scale = 0.5
+
+[node name="Timer2" type="Timer" parent="."]
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

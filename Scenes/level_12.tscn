@@ -1,0 +1,263 @@
+[gd_scene load_steps=12 format=3 uid="uid://bftpicgmr8x8w"]
+
+[ext_resource type="Script" path="res://Scripts/level_12.gd" id="1_iky15"]
+[ext_resource type="Texture2D" uid="uid://dl1aig0b5wewj" path="res://assets/images/backgroundImage.webp" id="1_l7ayl"]
+[ext_resource type="FontFile" uid="uid://hl5jas8diunp" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="3_oai23"]
+[ext_resource type="Texture2D" uid="uid://wt0cun8hl0m6" path="res://assets/webp/coin-6.png" id="4_gj2gy"]
+[ext_resource type="Texture2D" uid="uid://dqusp3hfjhfvg" path="res://assets/webp/screen-4-border.svg" id="5_j7vyw"]
+[ext_resource type="Texture2D" uid="uid://boc806djyt546" path="res://assets/webp/Group_3_house@2x.webp" id="6_4oq13"]
+[ext_resource type="Texture2D" uid="uid://c8j2p3tt3g3tv" path="res://assets/webp/Group_3_food@2x.webp" id="7_4li0d"]
+[ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="8_3r5oo"]
+[ext_resource type="Texture2D" uid="uid://b2h6ljcwnrjdm" path="res://assets/webp/Group_3_doc@2x.webp" id="8_bq6uv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jsvc"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yuvth"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(1, 1, 1, 1)
+
+[node name="level_12" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iky15")
+
+[node name="Backround" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = -3.0
+offset_right = 1151.0
+offset_bottom = 647.0
+texture = ExtResource("1_l7ayl")
+expand_mode = 1
+
+[node name="text" type="Label" parent="Backround"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 50.0
+offset_top = 500.0
+offset_right = 707.0
+offset_bottom = 608.0
+theme_override_fonts/font = ExtResource("3_oai23")
+theme_override_font_sizes/font_size = 18
+text = "প্রত্যাশিত জীবনের পথে এগিয়ে যেতে হলে আপনাকে অবশ্যই ৩টি চাহিদা বা সেবা উপভোগ করতে হবে।"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Backround"]
+layout_mode = 0
+offset_left = 805.0
+offset_top = 142.0
+offset_right = 1165.0
+offset_bottom = 427.0
+scale = Vector2(0.8, 0.8)
+size_flags_horizontal = 8
+texture = ExtResource("4_gj2gy")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="points" type="Label" parent="Backround/TextureRect"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 185.25
+offset_top = 62.5
+offset_right = 322.25
+offset_bottom = 159.5
+theme_override_fonts/font = ExtResource("3_oai23")
+theme_override_font_sizes/font_size = 52
+text = "১৯"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="Backround/TextureRect"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 212.5
+offset_top = 111.25
+offset_right = 299.5
+offset_bottom = 204.25
+theme_override_fonts/font = ExtResource("3_oai23")
+theme_override_font_sizes/font_size = 32
+text = " পয়েন্ট "
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="Backround/TextureRect"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 130.0
+offset_top = 200.0
+offset_right = 369.0
+offset_bottom = 312.0
+theme_override_fonts/font = ExtResource("3_oai23")
+theme_override_font_sizes/font_size = 32
+text = " বাকি"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 54.0
+offset_right = 681.0
+offset_bottom = 527.0
+scale = Vector2(1.22, 0.8)
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 25
+columns = 2
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_j7vyw")
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/TextureButton"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 271.0
+offset_bottom = 200.0
+texture = ExtResource("6_4oq13")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="GridContainer/TextureButton/TextureRect"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 0.737703
+offset_top = -1.25
+offset_right = 27.7377
+offset_bottom = 135.75
+theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
+theme_override_fonts/font = ExtResource("3_oai23")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_8jsvc")
+text = "৭
+প
+য়ে
+ন্ট"
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="GridContainer/TextureButton"]
+z_index = 5
+texture_filter = 2
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 0
+offset_left = 6.0
+offset_top = 146.0
+offset_right = 275.0
+offset_bottom = 203.0
+theme_override_colors/font_color = Color(0.541176, 0.0745098, 0.352941, 1)
+theme_override_fonts/font = ExtResource("3_oai23")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_yuvth")
+text = "ভালো বাড়ি"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_j7vyw")
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/TextureButton2"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 271.0
+offset_bottom = 200.0
+texture = ExtResource("7_4li0d")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="GridContainer/TextureButton2"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 7.0
+offset_top = 146.25
+offset_right = 274.0
+offset_bottom = 203.25
+theme_override_colors/font_color = Color(0.541176, 0.0745098, 0.352941, 1)
+theme_override_fonts/font = ExtResource("3_oai23")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_yuvth")
+text = "পুষ্টিকর খাবার"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="GridContainer/TextureButton2"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 7.0
+offset_top = 9.0
+offset_right = 34.0
+offset_bottom = 146.0
+theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
+theme_override_fonts/font = ExtResource("3_oai23")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_8jsvc")
+text = "৫
+প
+য়ে
+ন্ট"
+autowrap_mode = 2
+
+[node name="TextureButton3" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_j7vyw")
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/TextureButton3"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 271.0
+offset_bottom = 200.0
+texture = ExtResource("8_bq6uv")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="GridContainer/TextureButton3/TextureRect"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 1.55738
+offset_top = -1.25002
+offset_right = 28.5574
+offset_bottom = 135.75
+theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
+theme_override_fonts/font = ExtResource("3_oai23")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_8jsvc")
+text = "৩
+প
+য়ে
+ন্ট"
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="GridContainer/TextureButton3"]
+z_index = 5
+texture_filter = 2
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 146.0
+offset_right = 274.0
+offset_bottom = 201.0
+theme_override_colors/font_color = Color(0.541176, 0.0745098, 0.352941, 1)
+theme_override_fonts/font = ExtResource("3_oai23")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_yuvth")
+text = "নিয়মিত চিকিৎসা          "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" parent="." instance=ExtResource("8_3r5oo")]
+layout_mode = 0
+offset_left = 866.0
+offset_top = 501.0
+offset_right = 1099.0
+offset_bottom = 571.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

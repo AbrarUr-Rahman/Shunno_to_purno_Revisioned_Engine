@@ -1,0 +1,90 @@
+[gd_scene load_steps=9 format=3 uid="uid://d3j6xo0yg8t2b"]
+
+[ext_resource type="Script" path="res://Scenes/male_level_5.gd" id="1_aqa36"]
+[ext_resource type="PackedScene" uid="uid://nvu1bsas5jye" path="res://Scenes/male_player.tscn" id="2_4lp0h"]
+[ext_resource type="Texture2D" uid="uid://b32qvtaowwjxg" path="res://assets/images/city_arrive_bg_removed.png" id="2_d7xkd"]
+[ext_resource type="FontFile" uid="uid://hl5jas8diunp" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="2_kfwn8"]
+[ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="4_87nsy"]
+
+[sub_resource type="Animation" id="Animation_tlsi8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-170, 43)]
+}
+
+[sub_resource type="Animation" id="Animation_jk8fe"]
+resource_name = "walk"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-170, 43), Vector2(557, 43)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gs0n5"]
+_data = {
+"RESET": SubResource("Animation_tlsi8"),
+"walk": SubResource("Animation_jk8fe")
+}
+
+[node name="male_level_5" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aqa36")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 658.0
+texture = ExtResource("2_d7xkd")
+expand_mode = 1
+
+[node name="text" type="Label" parent="Background"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 38.0
+offset_top = 507.0
+offset_right = 824.0
+offset_bottom = 615.0
+theme_override_fonts/font = ExtResource("2_kfwn8")
+theme_override_font_sizes/font_size = 22
+text = "ধরে নিন, আপনি শহরে বাস করেন। আপনার আয় স্বল্প। প্রতি মাসে আপনার নিয়মিত আয় ১২ পয়েন্ট – যা এখন আপনার কাছে আছে। পয়েন্ট ব্যয় করে একটি মাসের সবচেয়ে প্রয়োজনীয় চাহিদা ও সেবাগুলো (যেমন: বাড়িভাড়া, খাবার, পড়ালেখা, ইত্যাদি ) উপভোগ করুন।"
+autowrap_mode = 2
+
+[node name="MalePlayer" parent="." instance=ExtResource("2_4lp0h")]
+position = Vector2(-170, 43)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MalePlayer"]
+libraries = {
+"": SubResource("AnimationLibrary_gs0n5")
+}
+autoplay = "walk"
+speed_scale = 0.2
+
+[node name="Button" parent="." instance=ExtResource("4_87nsy")]
+layout_mode = 0
+offset_left = 879.0
+offset_top = 525.0
+offset_right = 1091.0
+offset_bottom = 605.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,77 @@
+[gd_scene load_steps=8 format=3 uid="uid://basd81qjt2n4e"]
+
+[ext_resource type="Script" path="res://Scripts/male_level_6.gd" id="1_monc4"]
+[ext_resource type="Texture2D" uid="uid://wi72bdbba13k" path="res://assets/webp/roadmap1-male@2x.webp" id="2_rf4bf"]
+[ext_resource type="PackedScene" uid="uid://nvu1bsas5jye" path="res://Scenes/male_player.tscn" id="3_6cp0f"]
+[ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="4_hwq30"]
+
+[sub_resource type="Animation" id="Animation_e0c51"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-206, 337)]
+}
+
+[sub_resource type="Animation" id="Animation_k83i0"]
+resource_name = "walk"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-206, 337), Vector2(32, 337)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_71p1h"]
+_data = {
+"RESET": SubResource("Animation_e0c51"),
+"walk": SubResource("Animation_k83i0")
+}
+
+[node name="male_level_6" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_monc4")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 658.0
+texture = ExtResource("2_rf4bf")
+expand_mode = 1
+
+[node name="MalePlayer" parent="." instance=ExtResource("3_6cp0f")]
+position = Vector2(-206, 337)
+scale = Vector2(0.56, 0.56)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MalePlayer"]
+libraries = {
+"": SubResource("AnimationLibrary_71p1h")
+}
+autoplay = "walk"
+
+[node name="Button" parent="." instance=ExtResource("4_hwq30")]
+layout_mode = 0
+offset_left = 926.0
+offset_top = 556.0
+offset_right = 1121.0
+offset_bottom = 626.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

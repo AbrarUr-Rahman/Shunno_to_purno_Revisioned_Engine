@@ -1,0 +1,333 @@
+[gd_scene load_steps=13 format=3 uid="uid://cphpcxed30e3r"]
+
+[ext_resource type="Texture2D" uid="uid://dl1aig0b5wewj" path="res://assets/images/backgroundImage.webp" id="1_fkpyf"]
+[ext_resource type="FontFile" uid="uid://dflfvvlubatt6" path="res://assets/fonts/LiAlinurKurigramUnicode.woff" id="3_jhk3s"]
+[ext_resource type="Texture2D" uid="uid://dmkxrmkm8daes" path="res://assets/webp/image1.webp" id="5_y2nsd"]
+[ext_resource type="FontFile" uid="uid://hl5jas8diunp" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="6_uy3h8"]
+[ext_resource type="Texture2D" uid="uid://or7jyldso5v7" path="res://assets/webp/image2.webp" id="7_jcfuc"]
+[ext_resource type="Texture2D" uid="uid://cvv7aogrtbf" path="res://assets/webp/image3.webp" id="8_0osow"]
+[ext_resource type="Texture2D" uid="uid://dqusp3hfjhfvg" path="res://assets/webp/screen-4-border.svg" id="8_rcf0x"]
+[ext_resource type="Texture2D" uid="uid://d1u73l6wbb6n2" path="res://assets/webp/image4.webp" id="9_lkkiw"]
+[ext_resource type="Texture2D" uid="uid://dn3pgq0bi06uj" path="res://assets/webp/image5.webp" id="10_pedni"]
+[ext_resource type="Texture2D" uid="uid://cn1qalwsimhng" path="res://assets/webp/image6.webp" id="11_7m0dl"]
+[ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="11_jaius"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxtj6"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_color = Color(1, 1, 1, 1)
+
+[node name="level_9" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backround" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = -3.0
+offset_right = 1151.0
+offset_bottom = 647.0
+texture = ExtResource("1_fkpyf")
+expand_mode = 1
+
+[node name="text" type="Label" parent="Backround"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 500.0
+offset_right = 707.0
+offset_bottom = 608.0
+theme_override_fonts/font = ExtResource("3_jhk3s")
+theme_override_font_sizes/font_size = 15
+text = "একটা স্বচ্ছল এবং সুন্দর জীবনের পথে এগিয়ে যেতে এই খেলা ১২টি সুযোগ এনে দিচ্ছে। এর মধ্য থেকে আপনার ইচ্ছে মতো যেকোন ৫টি সেরা অপশন নির্বাচন করে পয়েন্ট সংগ্রহ করুন। --অপশনগুলো পেতে ক্লিক করুন--"
+autowrap_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="Backround"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 66.0
+offset_right = 1816.0
+offset_bottom = 533.0
+scale = Vector2(0.82, 0.82)
+theme_override_constants/h_separation = 180
+theme_override_constants/v_separation = 15
+columns = 3
+
+[node name="TextureButton" type="TextureButton" parent="Backround/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_rcf0x")
+
+[node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 271.0
+offset_bottom = 200.0
+texture = ExtResource("5_y2nsd")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Backround/GridContainer/TextureButton"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 9.0
+offset_top = 146.0
+offset_right = 273.0
+offset_bottom = 202.0
+theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
+theme_override_fonts/font = ExtResource("6_uy3h8")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_hxtj6")
+text = "যাতায়াত"
+
+[node name="Label2" type="Label" parent="Backround/GridContainer/TextureButton"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 36.0
+offset_bottom = 146.0
+theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
+theme_override_fonts/font = ExtResource("6_uy3h8")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_hxtj6")
+text = "২
+প
+য়ে
+ন্ট"
+autowrap_mode = 2
+
+[node name="TextureButton2" type="TextureButton" parent="Backround/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_rcf0x")
+
+[node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton2"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 271.0
+offset_bottom = 200.0
+texture = ExtResource("7_jcfuc")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Backround/GridContainer/TextureButton2"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 9.0
+offset_top = 146.0
+offset_right = 273.0
+offset_bottom = 202.0
+theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
+theme_override_fonts/font = ExtResource("6_uy3h8")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_hxtj6")
+text = "যাতায়াত"
+
+[node name="Label2" type="Label" parent="Backround/GridContainer/TextureButton2"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 36.0
+offset_bottom = 146.0
+theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
+theme_override_fonts/font = ExtResource("6_uy3h8")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_hxtj6")
+text = "২
+প
+য়ে
+ন্ট"
+autowrap_mode = 2
+
+[node name="TextureButton3" type="TextureButton" parent="Backround/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_rcf0x")
+
+[node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton3"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 271.0
+offset_bottom = 200.0
+texture = ExtResource("8_0osow")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Backround/GridContainer/TextureButton3"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 9.0
+offset_top = 146.0
+offset_right = 273.0
+offset_bottom = 202.0
+theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
+theme_override_fonts/font = ExtResource("6_uy3h8")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_hxtj6")
+text = "যাতায়াত"
+
+[node name="Label2" type="Label" parent="Backround/GridContainer/TextureButton3"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 36.0
+offset_bottom = 146.0
+theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
+theme_override_fonts/font = ExtResource("6_uy3h8")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_hxtj6")
+text = "২
+প
+য়ে
+ন্ট"
+autowrap_mode = 2
+
+[node name="TextureButton4" type="TextureButton" parent="Backround/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_rcf0x")
+
+[node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton4"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 271.0
+offset_bottom = 200.0
+texture = ExtResource("9_lkkiw")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Backround/GridContainer/TextureButton4"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 9.0
+offset_top = 146.0
+offset_right = 273.0
+offset_bottom = 202.0
+theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
+theme_override_fonts/font = ExtResource("6_uy3h8")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_hxtj6")
+text = "যাতায়াত"
+
+[node name="Label2" type="Label" parent="Backround/GridContainer/TextureButton4"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 36.0
+offset_bottom = 146.0
+theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
+theme_override_fonts/font = ExtResource("6_uy3h8")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_hxtj6")
+text = "২
+প
+য়ে
+ন্ট"
+autowrap_mode = 2
+
+[node name="TextureButton5" type="TextureButton" parent="Backround/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_rcf0x")
+
+[node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton5"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 271.0
+offset_bottom = 200.0
+texture = ExtResource("10_pedni")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Backround/GridContainer/TextureButton5"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 9.0
+offset_top = 146.0
+offset_right = 273.0
+offset_bottom = 202.0
+theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
+theme_override_fonts/font = ExtResource("6_uy3h8")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_hxtj6")
+text = "যাতায়াত"
+
+[node name="Label2" type="Label" parent="Backround/GridContainer/TextureButton5"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 36.0
+offset_bottom = 146.0
+theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
+theme_override_fonts/font = ExtResource("6_uy3h8")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_hxtj6")
+text = "২
+প
+য়ে
+ন্ট"
+autowrap_mode = 2
+
+[node name="TextureButton6" type="TextureButton" parent="Backround/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_rcf0x")
+
+[node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton6"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 271.0
+offset_bottom = 200.0
+texture = ExtResource("11_7m0dl")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Backround/GridContainer/TextureButton6"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 9.0
+offset_top = 146.0
+offset_right = 273.0
+offset_bottom = 202.0
+theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
+theme_override_fonts/font = ExtResource("6_uy3h8")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_hxtj6")
+text = "যাতায়াত"
+
+[node name="Label2" type="Label" parent="Backround/GridContainer/TextureButton6"]
+z_index = 5
+texture_filter = 2
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 36.0
+offset_bottom = 146.0
+theme_override_colors/font_color = Color(0.539443, 0.0725496, 0.351377, 1)
+theme_override_fonts/font = ExtResource("6_uy3h8")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_hxtj6")
+text = "২
+প
+য়ে
+ন্ট"
+autowrap_mode = 2
+
+[node name="Button" parent="." instance=ExtResource("11_jaius")]
+layout_mode = 0
+offset_left = 876.0
+offset_top = 496.0
+offset_right = 1085.0
+offset_bottom = 568.0

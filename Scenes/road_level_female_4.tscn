@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://4w4to707u882"]
+
+[ext_resource type="Texture2D" uid="uid://b14d5f4myibel" path="res://assets/webp/roadmap1-female@2x.webp" id="1_1gusq"]
+[ext_resource type="Script" path="res://Scripts/road_level_female_4.gd" id="1_d067m"]
+[ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="2_hpjx1"]
+[ext_resource type="PackedScene" uid="uid://gbqsaclwerml" path="res://Scenes/backup/female_player.tscn" id="3_kudpf"]
+
+[sub_resource type="Animation" id="Animation_0bt65"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1059, 185)]
+}
+
+[sub_resource type="Animation" id="Animation_h8a3u"]
+resource_name = "move_female"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1059, 185), Vector2(592, 185)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rp7a5"]
+_data = {
+"RESET": SubResource("Animation_0bt65"),
+"move_female": SubResource("Animation_h8a3u")
+}
+
+[node name="Road_level_female_4" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 660.0
+script = ExtResource("1_d067m")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 658.0
+texture = ExtResource("1_1gusq")
+expand_mode = 1
+
+[node name="Button" parent="Background" instance=ExtResource("2_hpjx1")]
+layout_mode = 0
+offset_left = 853.0
+offset_top = 557.0
+offset_right = 1102.0
+offset_bottom = 627.0
+theme_override_font_sizes/font_size = 36
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_kudpf")]
+position = Vector2(1059, 185)
+scale = Vector2(-0.5, 0.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
+libraries = {
+"": SubResource("AnimationLibrary_rp7a5")
+}
+autoplay = "move_female"
+speed_scale = 0.5
+
+[connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]

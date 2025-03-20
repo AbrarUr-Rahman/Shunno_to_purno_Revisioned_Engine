@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1tuomnceud8f"]
+
+[ext_resource type="Texture2D" uid="uid://8sv5tpr1hhys" path="res://assets/Sprites/woman.png" id="1_1p1k8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_473us"]
+atlas = ExtResource("1_1p1k8")
+region = Rect2(0, 0, 63, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gew7"]
+atlas = ExtResource("1_1p1k8")
+region = Rect2(126, 0, 63, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10yxu"]
+atlas = ExtResource("1_1p1k8")
+region = Rect2(445, 0, 89, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0b1h"]
+atlas = ExtResource("1_1p1k8")
+region = Rect2(532, 0, 76, 204)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4kyd2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_473us")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gew7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10yxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0b1h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgyn8"]
+size = Vector2(121, 248.5)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(337, 233)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_4kyd2")
+autoplay = "default"
+frame = 2
+frame_progress = 0.707088
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(343.5, 245.25)
+shape = SubResource("RectangleShape2D_vgyn8")

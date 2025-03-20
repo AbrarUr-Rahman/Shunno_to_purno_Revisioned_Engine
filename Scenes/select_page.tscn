@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=3 uid="uid://cf5754ta8jxgc"]
+
+[ext_resource type="Script" path="res://Scripts/select_page.gd" id="1_0o01g"]
+[ext_resource type="Texture2D" uid="uid://co7ejogaho4g7" path="res://assets/images/backgroundImage.png" id="1_q6r4l"]
+[ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="4_vmoh7"]
+[ext_resource type="Texture2D" uid="uid://cl8f25a8ax7xl" path="res://assets/webp/purush-img@2x.webp" id="5_l1jw2"]
+[ext_resource type="FontFile" uid="uid://xf3iklv5806" path="res://assets/fonts/LiAlinurKurigramUnicode.woff2" id="5_opxb7"]
+[ext_resource type="FontFile" uid="uid://hl5jas8diunp" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="6_77j71"]
+[ext_resource type="Texture2D" uid="uid://bwl4sbbk3iyvw" path="res://assets/webp/nari-img@2x.webp" id="6_si3us"]
+
+[node name="Select Page" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0o01g")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 647.0
+texture = ExtResource("1_q6r4l")
+expand_mode = 1
+
+[node name="Cards" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 107.0
+offset_right = 1713.0
+offset_bottom = 767.0
+scale = Vector2(0.4, 0.4)
+theme_override_constants/h_separation = 105
+columns = 2
+
+[node name="MaleButton" type="TextureButton" parent="Cards"]
+layout_mode = 2
+texture_normal = ExtResource("5_l1jw2")
+
+[node name="FemaleButton" type="TextureButton" parent="Cards"]
+layout_mode = 2
+texture_normal = ExtResource("6_si3us")
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="BannerText" type="Label" parent="Labels"]
+texture_filter = 2
+offset_left = 40.0
+offset_top = 542.0
+offset_right = 331.0
+offset_bottom = 584.0
+theme_override_fonts/font = ExtResource("5_opxb7")
+theme_override_font_sizes/font_size = 22
+text = "যেকোনো একটি নির্বাচন করুন।"
+
+[node name="Nari" type="Label" parent="Labels"]
+texture_filter = 2
+offset_left = 707.0
+offset_top = 370.0
+offset_right = 763.0
+offset_bottom = 422.0
+theme_override_fonts/font = ExtResource("6_77j71")
+theme_override_font_sizes/font_size = 37
+text = "নারী"
+
+[node name="Purush" type="Label" parent="Labels"]
+texture_filter = 2
+offset_left = 349.0
+offset_top = 371.0
+offset_right = 430.0
+offset_bottom = 423.0
+theme_override_fonts/font = ExtResource("6_77j71")
+theme_override_font_sizes/font_size = 37
+text = "পুরুষ"
+
+[node name="Button" parent="." instance=ExtResource("4_vmoh7")]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 537.0
+offset_right = 1093.0
+offset_bottom = 605.0
+
+[connection signal="pressed" from="Cards/FemaleButton" to="." method="_on_femaile_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

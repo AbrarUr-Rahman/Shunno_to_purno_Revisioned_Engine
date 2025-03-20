@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=3 uid="uid://7mbnyen54gnq"]
+
+[ext_resource type="Texture2D" uid="uid://wi72bdbba13k" path="res://assets/webp/roadmap1-male@2x.webp" id="1_3w13k"]
+[ext_resource type="Script" path="res://Scripts/road_level_7.gd" id="1_gggkl"]
+[ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="2_gk4l6"]
+[ext_resource type="PackedScene" uid="uid://nvu1bsas5jye" path="res://Scenes/male_player.tscn" id="3_ibosg"]
+
+[sub_resource type="Animation" id="Animation_jkek1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(50, 304)]
+}
+
+[sub_resource type="Animation" id="Animation_gn53j"]
+resource_name = "move_male"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(50, 304), Vector2(390, 304)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jmsgb"]
+_data = {
+"RESET": SubResource("Animation_jkek1"),
+"move_male": SubResource("Animation_gn53j")
+}
+
+[node name="Road_level_7" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_gggkl")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 658.0
+texture = ExtResource("1_3w13k")
+expand_mode = 1
+
+[node name="Button" parent="Background" instance=ExtResource("2_gk4l6")]
+layout_mode = 0
+offset_left = 831.0
+offset_top = 529.0
+offset_right = 1080.0
+offset_bottom = 599.0
+theme_override_font_sizes/font_size = 36
+
+[node name="MalePlayer" parent="." instance=ExtResource("3_ibosg")]
+position = Vector2(50, 304)
+scale = Vector2(0.7, 0.7)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MalePlayer"]
+libraries = {
+"": SubResource("AnimationLibrary_jmsgb")
+}
+autoplay = "move_male"
+
+[connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]

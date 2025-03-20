@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://djqlq82vvfwke"]
+
+[ext_resource type="Script" path="res://Scenes/male_level_4.gd" id="1_r8sik"]
+[ext_resource type="Texture2D" uid="uid://cecq06xecrnta" path="res://assets/webp/cityarrive-male@2x.webp" id="2_ww7b4"]
+[ext_resource type="FontFile" uid="uid://hl5jas8diunp" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="3_y5bhh"]
+[ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="4_7emxb"]
+
+[node name="male-level-4" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r8sik")
+
+[node name="Backround" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 647.0
+pivot_offset = Vector2(471, 591)
+texture = ExtResource("2_ww7b4")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 2
+layout_mode = 0
+offset_left = 38.0
+offset_top = 507.0
+offset_right = 695.0
+offset_bottom = 615.0
+theme_override_fonts/font = ExtResource("3_y5bhh")
+theme_override_font_sizes/font_size = 15
+text = "ধরে নিন, আপনি শহরে বাস করেন। আপনার আয় স্বল্প। প্রতি মাসে আপনার নিয়মিত আয় ১২ পয়েন্ট – যা
+ এখন আপনার কাছে আছে। পয়েন্ট ব্যয় করে একটি মাসের সবচেয়ে প্রয়োজনীয় চাহিদা ও সেবাগুলো (যেমন:
+ বাড়িভাড়া, খাবার, পড়ালেখা, ইত্যাদি ) উপভোগ করুন।"
+
+[node name="Button" parent="." instance=ExtResource("4_7emxb")]
+layout_mode = 0
+offset_left = 864.0
+offset_top = 512.0
+offset_right = 1106.0
+offset_bottom = 595.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

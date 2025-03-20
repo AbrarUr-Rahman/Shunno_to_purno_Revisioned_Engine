@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://dstdor3r2urjf"]
+
+[ext_resource type="Script" path="res://Scripts/accident_2_cyclone.gd" id="1_uh6ui"]
+[ext_resource type="Texture2D" uid="uid://kij6bs1sy28p" path="res://assets/webp/accident-2.webp" id="2_hjq6m"]
+[ext_resource type="FontFile" uid="uid://hl5jas8diunp" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="3_odrfu"]
+[ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="4_sdiva"]
+
+[node name="Accident-2_Cyclone" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uh6ui")
+
+[node name="Backround" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_hjq6m")
+expand_mode = 1
+
+[node name="text" type="Label" parent="Backround"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 38.0
+offset_top = 507.0
+offset_right = 852.0
+offset_bottom = 615.0
+theme_override_fonts/font = ExtResource("3_odrfu")
+theme_override_font_sizes/font_size = 15
+text = "ঘূণির্ঝড়ে আপনি ক্ষতিগ্রস্ত হয়েছেন, ২ পয়েন্ট ব্যয় করুন।"
+autowrap_mode = 2
+
+[node name="Button" parent="." instance=ExtResource("4_sdiva")]
+layout_mode = 0
+offset_left = 864.0
+offset_top = 512.0
+offset_right = 1106.0
+offset_bottom = 595.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

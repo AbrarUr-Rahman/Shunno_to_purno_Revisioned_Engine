@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwa0qg25uee5"]
+
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_pnkpj"]
+[ext_resource type="Texture2D" uid="uid://cb6e3ytoi4jse" path="res://assets/images/home-screen-bg@2x.png" id="2_4txsb"]
+[ext_resource type="FontFile" uid="uid://dflfvvlubatt6" path="res://assets/fonts/LiAlinurKurigramUnicode.woff" id="2_jhuvo"]
+[ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="3_iy6g8"]
+
+[node name="Start page" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 10.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pnkpj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -3.0
+offset_right = 1149.0
+offset_bottom = 643.0
+texture = ExtResource("2_4txsb")
+expand_mode = 1
+
+[node name="Button" parent="." instance=ExtResource("3_iy6g8")]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 500.0
+offset_right = 687.0
+offset_bottom = 568.0
+theme_override_fonts/font = ExtResource("2_jhuvo")
+theme_override_font_sizes/font_size = 30
+text = "শুরু করুন"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

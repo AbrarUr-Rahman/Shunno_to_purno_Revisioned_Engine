@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://g74nwhc3va1v"]
+
+[ext_resource type="Texture2D" uid="uid://d03vdpu2i4o2b" path="res://assets/textures/btn.png" id="1_s4vlh"]
+[ext_resource type="FontFile" uid="uid://hl5jas8diunp" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="1_v5art"]
+
+[sub_resource type="Theme" id="Theme_e4l0l"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ambf"]
+texture = ExtResource("1_s4vlh")
+
+[node name="Button" type="Button"]
+texture_filter = 2
+offset_left = 122.0
+offset_right = 518.0
+offset_bottom = 158.0
+theme = SubResource("Theme_e4l0l")
+theme_override_colors/font_color = Color(0.619608, 0.0156863, 0.447059, 1)
+theme_override_fonts/font = ExtResource("1_v5art")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_0ambf")
+text = "পরের ধাপ "

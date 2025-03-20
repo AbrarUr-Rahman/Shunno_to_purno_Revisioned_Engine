@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://dv6wom85jsk0c"]
+
+[ext_resource type="Texture2D" uid="uid://wi72bdbba13k" path="res://assets/webp/roadmap1-male@2x.webp" id="2_0s1qq"]
+[ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="4_rwre0"]
+[ext_resource type="PackedScene" uid="uid://gbqsaclwerml" path="res://Scenes/backup/female_player.tscn" id="5_fq38f"]
+
+[sub_resource type="Animation" id="Animation_nq6c6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(37, 477)]
+}
+
+[sub_resource type="Animation" id="Animation_ub8dv"]
+resource_name = "walking"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(37, 477), Vector2(158, 477)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cfxtp"]
+_data = {
+"RESET": SubResource("Animation_nq6c6"),
+"walking": SubResource("Animation_ub8dv")
+}
+
+[node name="Female_level_5" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backround" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = -3.0
+offset_right = 1151.0
+offset_bottom = 647.0
+texture = ExtResource("2_0s1qq")
+expand_mode = 1
+
+[node name="Button2" parent="." instance=ExtResource("4_rwre0")]
+layout_mode = 0
+offset_left = 856.0
+offset_top = 504.0
+offset_right = 1105.0
+offset_bottom = 590.0
+theme_override_font_sizes/font_size = 38
+
+[node name="female player" parent="." instance=ExtResource("5_fq38f")]
+position = Vector2(37, 477)
+scale = Vector2(0.9, 0.9)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="female player"]
+libraries = {
+"": SubResource("AnimationLibrary_cfxtp")
+}
+autoplay = "walking"
+speed_scale = 0.5

@@ -1,0 +1,192 @@
+[gd_scene load_steps=17 format=3 uid="uid://b6r61x3cuf2ay"]
+
+[ext_resource type="Script" path="res://scripts/male_level_5.gd" id="1_2g0ri"]
+[ext_resource type="Texture2D" uid="uid://bgg0wn5vlotm8" path="res://assets/webp/cityarrive-female@2x-remove.png" id="1_6yefc"]
+[ext_resource type="FontFile" uid="uid://ba6t0et4hwg55" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="2_kfwn8"]
+[ext_resource type="PackedScene" uid="uid://cb5grourguv1e" path="res://scenes/bus.tscn" id="4_1sci2"]
+[ext_resource type="PackedScene" uid="uid://ceuo000ep8fek" path="res://scenes/porer_dhap.tscn" id="4_87nsy"]
+[ext_resource type="PackedScene" uid="uid://c7v3samoj0onu" path="res://scenes/male_player.tscn" id="5_tw1pi"]
+[ext_resource type="PackedScene" uid="uid://bmyy4wsdx3rfm" path="res://flipped_bus.tscn" id="6_2r7y4"]
+
+[sub_resource type="Animation" id="Animation_pgr4s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-225, 324)]
+}
+
+[sub_resource type="Animation" id="Animation_mrhmd"]
+resource_name = "move_bus"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-225, 324), Vector2(413, 324)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wmg3r"]
+_data = {
+"RESET": SubResource("Animation_pgr4s"),
+"move_bus": SubResource("Animation_mrhmd")
+}
+
+[sub_resource type="Animation" id="Animation_6n0vt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(380, 323)]
+}
+
+[sub_resource type="Animation" id="Animation_loc3a"]
+resource_name = "move_flipped"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(380, 323), Vector2(-331, 323)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pngrc"]
+_data = {
+"RESET": SubResource("Animation_6n0vt"),
+"move_flipped": SubResource("Animation_loc3a")
+}
+
+[sub_resource type="Animation" id="Animation_u0n2g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(406, 253)]
+}
+
+[sub_resource type="Animation" id="Animation_7xaj3"]
+resource_name = "move_male_human"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(406, 253), Vector2(716, 253)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fo54n"]
+_data = {
+"RESET": SubResource("Animation_u0n2g"),
+"move_male_human": SubResource("Animation_7xaj3")
+}
+
+[node name="male_level_5" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2g0ri")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 658.0
+texture = ExtResource("1_6yefc")
+expand_mode = 1
+
+[node name="text" type="Label" parent="Background"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 38.0
+offset_top = 507.0
+offset_right = 824.0
+offset_bottom = 615.0
+theme_override_fonts/font = ExtResource("2_kfwn8")
+theme_override_font_sizes/font_size = 22
+text = "ধরে নিন, আপনি শহরে বাস করেন। আপনার আয় স্বল্প। প্রতি মাসে আপনার নিয়মিত আয় ১২ পয়েন্ট – যা এখন আপনার কাছে আছে। পয়েন্ট ব্যয় করে একটি মাসের সবচেয়ে প্রয়োজনীয় চাহিদা ও সেবাগুলো (যেমন: বাড়িভাড়া, খাবার, পড়ালেখা, ইত্যাদি ) উপভোগ করুন।"
+autowrap_mode = 2
+
+[node name="Button" parent="Background" instance=ExtResource("4_87nsy")]
+layout_mode = 0
+offset_left = 879.0
+offset_top = 525.0
+offset_right = 1128.0
+offset_bottom = 605.0
+
+[node name="Bus" parent="." instance=ExtResource("4_1sci2")]
+texture_filter = 1
+position = Vector2(-225, 324)
+scale = Vector2(2, 2)
+floor_max_angle = 1.05941
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bus"]
+libraries = {
+"": SubResource("AnimationLibrary_wmg3r")
+}
+speed_scale = 0.5
+
+[node name="Flipped_Bus" parent="." instance=ExtResource("6_2r7y4")]
+position = Vector2(380, 323)
+scale = Vector2(2, 2)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Flipped_Bus"]
+libraries = {
+"": SubResource("AnimationLibrary_pngrc")
+}
+speed_scale = 0.5
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="male" parent="." instance=ExtResource("5_tw1pi")]
+position = Vector2(406, 253)
+scale = Vector2(0.6, 0.6)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="male"]
+libraries = {
+"": SubResource("AnimationLibrary_fo54n")
+}
+speed_scale = 0.5
+
+[node name="Timer2" type="Timer" parent="."]
+
+[connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlqjqb3vx6xgw"]
+
+[ext_resource type="Script" path="res://Scripts/man_purno.gd" id="1_6b1fg"]
+[ext_resource type="Texture2D" uid="uid://srlf0mqy32sb" path="res://assets/webp/win-male.webp" id="1_xgbsr"]
+
+[node name="Man_purno" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6b1fg")
+
+[node name="Backround" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_xgbsr")
+expand_mode = 1

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://u8w8ax0f5gbb"]
+
+[ext_resource type="Texture2D" uid="uid://dva2584l5wkug" path="res://assets/webp/purno-fail-female@2x.webp" id="1_06rfj"]
+[ext_resource type="Script" path="res://Scenes/woman_fail.gd" id="1_c5oja"]
+
+[node name="woman_fail" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c5oja")
+
+[node name="Backround" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_06rfj")
+expand_mode = 1

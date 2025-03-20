@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6bc5apgfypgw"]
+
+[ext_resource type="Script" path="res://Scripts/level_3.gd" id="1_lbxgp"]
+[ext_resource type="Texture2D" uid="uid://fa6x7n20wugm" path="res://assets/webp/welcome.webp" id="2_xeuje"]
+[ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="3_6yers"]
+
+[node name="level-3" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -730.0
+offset_bottom = -387.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lbxgp")
+metadata/_edit_lock_ = true
+
+[node name="Backround" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 647.0
+texture = ExtResource("2_xeuje")
+expand_mode = 1
+
+[node name="text" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="text"]
+offset_left = 52.0
+offset_top = 486.0
+offset_right = 317.0
+offset_bottom = 531.0
+theme_override_font_sizes/font_size = 32
+text = "খেলা! খেলা! খেলা!"
+
+[node name="Label2" type="Label" parent="text"]
+offset_left = 47.0
+offset_top = 505.0
+offset_right = 585.0
+offset_bottom = 596.0
+theme_override_font_sizes/font_size = 14
+text = "
+”শূন্য থেকে পূর্ণ”-তে আপনাকে স্বাগতম। একজন মানুষের শূন্য থেকে পরিপূর্ন হওয়ার পথচলার অভিজ্ঞতা নিতে খেলায় অংশ
+ নিন। আপনার জন্য শুভ কামনা।"
+autowrap_mode = 2
+
+[node name="Button" parent="." instance=ExtResource("3_6yers")]
+layout_mode = 0
+offset_left = 868.0
+offset_top = 494.0
+offset_right = 1080.0
+offset_bottom = 574.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Godot Game</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+
+        #canvas {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script src="index.js"></script>
+    <script>
+        (function () {
+            const canvas = document.getElementById("canvas");
+
+            /**
+             * Resize canvas to fill the screen
+             */
+            function resizeCanvas() {
+                const windowWidth = window.innerWidth;
+                const windowHeight = window.innerHeight;
+
+                if (windowWidth < windowHeight) {
+                    // Portrait mode: Reload to force landscape
+                    alert("Please rotate your device to landscape mode.");
+                    location.reload();
+                }
+
+                canvas.style.width = `${windowWidth}px`;
+                canvas.style.height = `${windowHeight}px`;
+                canvas.width = windowWidth;
+                canvas.height = windowHeight;
+            }
+
+            /**
+             * Initialize Godot Engine
+             */
+            function initializeGame() {
+                const GODOT_CONFIG = {
+                    "args": [],
+                    "canvasResizePolicy": 2,
+                    "executable": "index",
+                    "fileSizes": {
+                        "index.pck": 21756160,
+                        "index.wasm": 35376909
+                    },
+                    "focusCanvas": true,
+                };
+
+                const engine = new Engine(GODOT_CONFIG);
+
+                engine.startGame({
+                    onProgress: (current, total) => {
+                        console.log(`Loading progress: ${current} / ${total}`);
+                    }
+                }).then(() => {
+                    console.log("Game started successfully.");
+                }).catch((error) => {
+                    console.error("Failed to start the Godot game:", error);
+                });
+            }
+
+            // Resize the canvas and initialize the game
+            resizeCanvas();
+            window.addEventListener("resize", resizeCanvas);
+            window.addEventListener("load", initializeGame);
+        })();
+    </script>
+</body>
+</html>
+
