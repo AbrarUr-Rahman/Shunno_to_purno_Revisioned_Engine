@@ -3,18 +3,23 @@ extends Control
 # Track the selected cards
 var selected_cards = [false, false, false, false, false, false]  # One for each card
 var selected_count = 0  # Keep track of how many cards are selected
+var max_cards = 3  # Maximum number of cards that can be selected
 
 # This function is called when a card is clicked
 func _on_card_clicked(card_index: int) -> void:
 	var card = $GridContainer.get_child(card_index)  # Get the clicked card
+	
 	if selected_cards[card_index]:  # Deselecting the card
 		selected_cards[card_index] = false
 		selected_count -= 1
 		card.modulate = Color(1, 1, 1, 1)  # Reset appearance
 	else:  # Selecting the card
-		selected_cards[card_index] = true
-		selected_count += 1
-		card.modulate = Color(0.5, 0.5, 0.5)  # Highlight the card visually
+		if selected_count < max_cards:  # Only allow selecting if less than 3 cards are selected
+			selected_cards[card_index] = true
+			selected_count += 1
+			card.modulate = Color(0.5, 0.5, 0.5)  # Highlight the card visually
+		else:
+			print("Cannot select more than 3 cards!")  # Prevent further selections if 3 cards are selected
 
 	print("Selected count:", selected_count)
 
@@ -24,7 +29,7 @@ func _on_card_clicked(card_index: int) -> void:
 # Update the "Next Page" button state
 func update_next_page_button_state():
 	var next_page_button = $Button  # Adjust this path if necessary
-	next_page_button.disabled = selected_count != 3  # Enable only if exactly 3 cards are selected
+	next_page_button.disabled = selected_count != max_cards  # Enable only if exactly 3 cards are selected
 
 # Handle the next page button click
 func _on_next_page_button_pressed():

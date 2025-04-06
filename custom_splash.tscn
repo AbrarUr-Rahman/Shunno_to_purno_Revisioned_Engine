@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxmnvkvedryy8"]
+
+[ext_resource type="Texture2D" uid="uid://bogjmjvlk4wyt" path="res://assets/logo/brac-logo.png" id="1_2l7uq"]
+[ext_resource type="Script" path="res://custom_splash.gd" id="1_3vkuo"]
+
+[sub_resource type="Theme" id="Theme_i54a5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfj1f"]
+bg_color = Color(0.962897, 0.279658, 0.735231, 1)
+
+[node name="Custom_splash" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -730.0
+offset_bottom = -387.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_i54a5")
+script = ExtResource("1_3vkuo")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 652.0
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+texture_filter = 2
+texture_repeat = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.5
+offset_top = -232.0
+offset_right = 283.5
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2l7uq")
+expand_mode = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 42.0
+offset_top = 214.0
+offset_right = 84.0
+offset_bottom = 897.0
+grow_horizontal = 2
+grow_vertical = 0
+rotation = -1.5706
+theme_override_styles/background = SubResource("StyleBoxFlat_hfj1f")
+show_percentage = false
+indeterminate = true
+editor_preview_indeterminate = false
