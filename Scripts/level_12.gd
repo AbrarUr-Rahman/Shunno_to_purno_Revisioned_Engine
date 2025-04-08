@@ -1,7 +1,7 @@
 extends Control
 
 # Points required for each card
-var card_costs = [7, 5, 4]  # Example costs for the cards
+var card_costs = [7, 5, 3]  # Example costs for the cards
 
 # Track whether each card is selected
 var selected_cards = [false, false, false]  # Matches the number of cards
@@ -75,7 +75,7 @@ func _on_next_page_pressed() -> void:
 			total_points_spent += card_costs[index]
 
 		# Check if there are enough points BEFORE deducting
-		if GameState.total_points - total_points_spent < 0:
+		if GameState.total_points  <= 0:
 			print("Not enough points to proceed! Redirecting to fail screen.")
 			if GameState.selected_gender == "male":
 				get_tree().change_scene_to_file("res://Scenes/man_fail.tscn")  # Male fail screen path
