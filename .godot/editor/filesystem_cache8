@@ -1,6 +1,6 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1744090645
-custom_splash.gd::GDScript::-1::1742711387::0::1::::<>Control<>::
+::res://::1744181259
+custom_splash.gd::GDScript::-1::1744178641::0::1::::<>Control<>::
 custom_splash.tscn::PackedScene::8799205368241573801::1742713014::0::1::::<><>::uid://bogjmjvlk4wyt::::res://assets/logo/brac-logo.png<>res://custom_splash.gd
 export_presets.cfg::TextFile::-1::1742714476::0::1::::<><>::
 icon.svg::CompressedTexture2D::1346022410235432215::1742459626::1742459782::1::::<><>::
@@ -10,7 +10,7 @@ LiAlinurKurigramUnicode.woff::FontFile::7533256632093226817::1742459626::1742459
 LiAlinurKurigramUnicode.woff2::FontFile::47834711700460437::1742459626::1742459782::1::::<><>::
 LiSirajeeSanjarUnicode.woff::FontFile::515867671999217705::1742459626::1742459782::1::::<><>::
 LiSirajeeSanjarUnicode.woff2::FontFile::1892823588627988207::1742459626::1742459782::1::::<><>::
-::res://assets/images/::1742459788
+::res://assets/images/::1744190637
 backgroundImage.png::CompressedTexture2D::5821804951170445120::1742459626::1742459787::1::::<><>::
 backgroundImage.webp::CompressedTexture2D::7985027792901059573::1742459626::1742459787::1::::<><>::
 city_arrive_bg_removed.png::CompressedTexture2D::4408456477083911944::1742459626::1742459788::1::::<><>::
@@ -20,6 +20,173 @@ loading-screen.png::CompressedTexture2D::4820219624053321385::1742459626::174245
 nari-img@2x.png::CompressedTexture2D::4101442453633865562::1742459626::1742459784::1::::<><>::
 purush-img@2x.png::CompressedTexture2D::4113810801948940812::1742459626::1742459784::1::::<><>::
 screen-4-border.svg::CompressedTexture2D::2570614181595034739::1742459626::1742459784::1::::<><>::
+::res://assets/images/accident_page-a/::1744190117
+bg.png::CompressedTexture2D::301891989317855284::1739177244::1744190789::1::::<><>::
+bg.webp::CompressedTexture2D::4815032871906949816::1744184346::1744190789::1::::<><>::
+ref.png::CompressedTexture2D::3521251100334580762::1739177225::1744190784::1::::<><>::
+ref.webp::CompressedTexture2D::5941940393490737266::1744184368::1744190784::1::::<><>::
+::res://assets/images/accident_page-b/::1744190117
+bg.png::CompressedTexture2D::5588008944408252592::1740647578::1744190793::1::::<><>::
+bg.webp::CompressedTexture2D::4410860916078327755::1744184584::1744190793::1::::<><>::
+ref.png::CompressedTexture2D::8183080695887553920::1740657770::1744190793::1::::<><>::
+ref.webp::CompressedTexture2D::2270382436580506819::1744184598::1744190793::1::::<><>::
+::res://assets/images/dice_massage/::1744190118
+bg (1).webp::CompressedTexture2D::1515738885993284608::1744184655::1744190790::1::::<><>::
+bg.png::CompressedTexture2D::1318300049666946576::1739176635::1744190790::1::::<><>::
+ref (1).webp::CompressedTexture2D::2778016056913493682::1744184665::1744190790::1::::<><>::
+ref.png::CompressedTexture2D::8774410307144472641::1739176618::1744190790::1::::<><>::
+::res://assets/images/gender_select/::1744190118
+bg.png::CompressedTexture2D::4098008210935908056::1737357995::1744190789::1::::<><>::
+bg.webp::CompressedTexture2D::7110691147647951286::1744184789::1744190789::1::::<><>::
+female.png::CompressedTexture2D::5062967782288445739::1739093781::1744190789::1::::<><>::
+female.webp::CompressedTexture2D::516570462946398954::1744184798::1744190789::1::::<><>::
+male.png::CompressedTexture2D::4969669599352918856::1742717248::1744190789::1::::<><>::
+male.webp::CompressedTexture2D::4903128985948675292::1744184805::1744190789::1::::<><>::
+ref-1.png::CompressedTexture2D::6103405952888229121::1742717508::1744190790::1::::<><>::
+ref-1.webp::CompressedTexture2D::6504631635820594041::1744184814::1744190790::1::::<><>::
+::res://assets/images/intro_page/::1744190118
+1920x918.webp::CompressedTexture2D::1906876049568067951::1744184911::1744190788::1::::<><>::
+female.png::CompressedTexture2D::603050662503188310::1740653741::1744190788::1::::<><>::
+female.webp::CompressedTexture2D::6071451813190149605::1744184917::1744190787::1::::<><>::
+male.png::CompressedTexture2D::2163368168922502052::1740653723::1744190787::1::::<><>::
+male.webp::CompressedTexture2D::5305527921512631763::1744184923::1744190788::1::::<><>::
+ref-1.png::CompressedTexture2D::3830112835088353212::1739103968::1744190788::1::::<><>::
+ref-1.webp::CompressedTexture2D::1006062116994974024::1744184928::1744190788::1::::<><>::
+::res://assets/images/map/::1744190118
+female-1.png::CompressedTexture2D::970792571589727491::1740650361::1744190786::1::::<><>::
+female-1.webp::CompressedTexture2D::5675489381420479023::1744185206::1744190786::1::::<><>::
+female-2.png::CompressedTexture2D::3478832127087392420::1740650348::1744190786::1::::<><>::
+female-2.webp::CompressedTexture2D::512399418029032650::1744185213::1744190786::1::::<><>::
+female-3.png::CompressedTexture2D::4089063293753971250::1740650332::1744190787::1::::<><>::
+female-3.webp::CompressedTexture2D::4616452064294326953::1744185221::1744190787::1::::<><>::
+female-4.png::CompressedTexture2D::2459780137107016517::1740650318::1744190787::1::::<><>::
+female-4.webp::CompressedTexture2D::7641268797548009214::1744185226::1744190787::1::::<><>::
+female-5.png::CompressedTexture2D::7147776671432673273::1740650294::1744190787::1::::<><>::
+female-5.webp::CompressedTexture2D::5834709843135174521::1744185231::1744190791::1::::<><>::
+male-1.png::CompressedTexture2D::1270200824544711147::1740650198::1744190791::1::::<><>::
+male-1.webp::CompressedTexture2D::8315839094150070985::1744185236::1744190791::1::::<><>::
+male-2.png::CompressedTexture2D::1352492078031659825::1740650216::1744190791::1::::<><>::
+male-2.webp::CompressedTexture2D::9018359803729788249::1744185242::1744190791::1::::<><>::
+male-3.png::CompressedTexture2D::5954762814749287454::1740650234::1744190791::1::::<><>::
+male-3.webp::CompressedTexture2D::449488730676670608::1744185247::1744190792::1::::<><>::
+male-4.png::CompressedTexture2D::8615996400568130337::1740650250::1744190791::1::::<><>::
+male-4.webp::CompressedTexture2D::5745878434007803723::1744185252::1744190792::1::::<><>::
+male-5.png::CompressedTexture2D::1051200585393337987::1740650270::1744190792::1::::<><>::
+male-5.webp::CompressedTexture2D::5459768704981425960::1744185257::1744190792::1::::<><>::
+ref-female.png::CompressedTexture2D::2956199774380867185::1739188167::1744190792::1::::<><>::
+ref-female.webp::CompressedTexture2D::8575839564195770124::1744185263::1744190792::1::::<><>::
+ref-male.png::CompressedTexture2D::6678811913242588818::1739188138::1744190793::1::::<><>::
+ref-male.webp::CompressedTexture2D::7540947508916407251::1744185269::1744190793::1::::<><>::
+::res://assets/images/proverty_day_message/::1744190117
+ref.png::CompressedTexture2D::1741642937376053057::1739359574::1744190789::1::::<><>::
+ref.webp::CompressedTexture2D::152322313004402675::1744185310::1744190789::1::::<><>::
+::res://assets/images/selection-page-5/::1744190118
+card 1.png::CompressedTexture2D::3185495812036323809::1739120869::1744190781::1::::<><>::
+card 1.webp::CompressedTexture2D::8927237338309029571::1744185639::1744190781::1::::<><>::
+card 2.png::CompressedTexture2D::3185695217873714991::1739120869::1744190781::1::::<><>::
+card 2.webp::CompressedTexture2D::675386729883564505::1744185649::1744190781::1::::<><>::
+card 3.png::CompressedTexture2D::7175329839554584458::1739120869::1744190781::1::::<><>::
+card 3.webp::CompressedTexture2D::3449173169752114201::1744185655::1744190781::1::::<><>::
+coin 1.png::CompressedTexture2D::6226526740915505411::1737357973::1744190781::1::::<><>::
+coin 1.webp::CompressedTexture2D::3281288341139828601::1744185662::1744190781::1::::<><>::
+coin 2.png::CompressedTexture2D::4108298921863895845::1737357973::1744190781::1::::<><>::
+coin 2.webp::CompressedTexture2D::8171718224424368273::1744185666::1744190781::1::::<><>::
+ref-1.png::CompressedTexture2D::68062841966286242::1739121006::1744190783::1::::<><>::
+ref-1.webp::CompressedTexture2D::5717340352587492228::1744185672::1744190783::1::::<><>::
+::res://assets/images/selection_page-1/::1744190118
+bg.png::CompressedTexture2D::5309373548541643323::1737357995::1744190783::1::::<><>::
+bg.webp::CompressedTexture2D::8707288273966764736::1744185722::1744190783::1::::<><>::
+card 1.png::CompressedTexture2D::1030639782307320309::1737357479::1744190782::1::::<><>::
+card 1.webp::CompressedTexture2D::5673350596123977061::1744185727::1744190781::1::::<><>::
+card 2.png::CompressedTexture2D::6606863354354391422::1737357478::1744190781::1::::<><>::
+card 2.webp::CompressedTexture2D::587113646675123886::1744185733::1744190781::1::::<><>::
+card 3.png::CompressedTexture2D::8159322371974884525::1737357478::1744190781::1::::<><>::
+card 3.webp::CompressedTexture2D::2574796137834568697::1744185738::1744190781::1::::<><>::
+card 4.png::CompressedTexture2D::2511046092630659585::1737357478::1744190781::1::::<><>::
+card 4.webp::CompressedTexture2D::583739533074045693::1744185743::1744190781::1::::<><>::
+card 5.png::CompressedTexture2D::7900101758933245581::1737357478::1744190781::1::::<><>::
+card 5.webp::CompressedTexture2D::5372948015283659208::1744185747::1744190781::1::::<><>::
+card 6.png::CompressedTexture2D::4189112786993879779::1737357478::1744190781::1::::<><>::
+card 6.webp::CompressedTexture2D::1764121344081095824::1744185754::1744190781::1::::<><>::
+card 7.png::CompressedTexture2D::1350526735327793606::1737357478::1744190781::1::::<><>::
+card 7.webp::CompressedTexture2D::297935415249119541::1744185758::1744190781::1::::<><>::
+coin 1.png::CompressedTexture2D::6564330950952762624::1737357973::1744190781::1::::<><>::
+coin 1.webp::CompressedTexture2D::350187165774546858::1744185764::1744190781::1::::<><>::
+coin 2.png::CompressedTexture2D::7728432644919733187::1737357973::1744190781::1::::<><>::
+coin 2.webp::CompressedTexture2D::5882564723355385218::1744185768::1744190781::1::::<><>::
+ref-1.png::CompressedTexture2D::3246369625621428804::1739087822::1744190783::1::::<><>::
+ref-1.webp::CompressedTexture2D::2527016454421174773::1744185773::1744190783::1::::<><>::
+::res://assets/images/selection_page-2/::1744190117
+card 1.png::CompressedTexture2D::5532471301769186823::1739082566::1744190782::1::::<><>::
+card 1.webp::CompressedTexture2D::8910448552361854337::1744185833::1744190782::1::::<><>::
+card 2.png::CompressedTexture2D::6982408338160811888::1739082566::1744190782::1::::<><>::
+card 2.webp::CompressedTexture2D::5132748942508025652::1744185838::1744190782::1::::<><>::
+card 3.png::CompressedTexture2D::7543038746362040808::1739082566::1744190782::1::::<><>::
+card 3.webp::CompressedTexture2D::8805679227001124041::1744185922::1744190782::1::::<><>::
+card 4.png::CompressedTexture2D::3622948305382219604::1739082566::1744190782::1::::<><>::
+card 4.webp::CompressedTexture2D::654830398236931915::1744185855::1744190782::1::::<><>::
+card 5.png::CompressedTexture2D::8941447444407722038::1739084344::1744190782::1::::<><>::
+card 5.webp::CompressedTexture2D::8324407672937206183::1744185860::1744190782::1::::<><>::
+card 6.png::CompressedTexture2D::7047441888357243272::1739082566::1744190782::1::::<><>::
+card 6.webp::CompressedTexture2D::4426172243094562716::1744185865::1744190782::1::::<><>::
+ref-1.png::CompressedTexture2D::3897399984577409043::1739083119::1744190784::1::::<><>::
+ref-1.webp::CompressedTexture2D::4351403601472333122::1744185870::1744190784::1::::<><>::
+::res://assets/images/selection_page-3/::1744190118
+card 1 point.png::CompressedTexture2D::252623521474568949::1742814837::1744190781::1::::<><>::
+card 1 point.webp::CompressedTexture2D::5405469752864840225::1744185347::1744190781::1::::<><>::
+card 2 point.png::CompressedTexture2D::3000460575888373944::1742814837::1744190781::1::::<><>::
+card 2 point.webp::CompressedTexture2D::439308939284228066::1744185354::1744190781::1::::<><>::
+card 3 point.png::CompressedTexture2D::3187211589775313756::1742814837::1744190781::1::::<><>::
+card 3 point.webp::CompressedTexture2D::1538577193012485102::1744185360::1744190781::1::::<><>::
+card 4 point.png::CompressedTexture2D::7547152267145303058::1742814836::1744190781::1::::<><>::
+card 4 point.webp::CompressedTexture2D::1385852573576162034::1744185365::1744190781::1::::<><>::
+card 5 point.png::CompressedTexture2D::4080273335917232238::1742814836::1744190781::1::::<><>::
+card 5 point.webp::CompressedTexture2D::7138379830381082689::1744185370::1744190781::1::::<><>::
+card 6 point.png::CompressedTexture2D::5689244725731402802::1742814836::1744190781::1::::<><>::
+card 6 point.webp::CompressedTexture2D::4231365286803244486::1744185375::1744190781::1::::<><>::
+card 7 point.png::CompressedTexture2D::8248635384986956291::1742814836::1744190781::1::::<><>::
+card 7 point.webp::CompressedTexture2D::6738804993228954820::1744185380::1744190781::1::::<><>::
+card 8 point.png::CompressedTexture2D::351397184775366411::1742814835::1744190781::1::::<><>::
+card 8 point.webp::CompressedTexture2D::7585266828141447663::1744185384::1744190781::1::::<><>::
+card 9 point.png::CompressedTexture2D::1596926560990625446::1742814835::1744190781::1::::<><>::
+card 9 point.webp::CompressedTexture2D::3144741873769887693::1744185389::1744190781::1::::<><>::
+card 10 point.png::CompressedTexture2D::6966990393866775757::1742814835::1744190781::1::::<><>::
+card 10 point.webp::CompressedTexture2D::4144106313215615544::1744185395::1744190781::1::::<><>::
+card 11 point.png::CompressedTexture2D::2294620770518493622::1742814835::1744190781::1::::<><>::
+card 11 point.webp::CompressedTexture2D::1592933815730401014::1744185400::1744190781::1::::<><>::
+card 12 point.png::CompressedTexture2D::3933079285244960707::1742814834::1744190781::1::::<><>::
+card 12 point.webp::CompressedTexture2D::5031319293030053714::1744185405::1744190781::1::::<><>::
+ref (1).webp::CompressedTexture2D::3508926988842398956::1744185411::1744190783::1::::<><>::
+ref.png::CompressedTexture2D::4602281217790518785::1742814461::1744190783::1::::<><>::
+text ovinondon.png::CompressedTexture2D::7396455054945183508::1739107509::1744190781::1::::<><>::
+text ovinondon.webp::CompressedTexture2D::1484699977904580192::1744185416::1744190781::1::::<><>::
+::res://assets/images/selection_page-4/::1744190117
+card 1.png::CompressedTexture2D::4397547928760504482::1742889004::1744190785::1::::<><>::
+card 1.webp::CompressedTexture2D::2280511977728411938::1744185986::1744190785::1::::<><>::
+card 2.png::CompressedTexture2D::8737478667604623221::1742889004::1744190785::1::::<><>::
+card 2.webp::CompressedTexture2D::45506240689828524::1744185993::1744190786::1::::<><>::
+card 3.png::CompressedTexture2D::8934177412839886528::1742889004::1744190786::1::::<><>::
+card 3.webp::CompressedTexture2D::4489500968756698731::1744185999::1744190786::1::::<><>::
+card 4.png::CompressedTexture2D::6527162385067411364::1742889004::1744190786::1::::<><>::
+card 4.webp::CompressedTexture2D::3390469690686444270::1744186003::1744190786::1::::<><>::
+ref.png::CompressedTexture2D::9013312627019985646::1742888957::1744190787::1::::<><>::
+ref.webp::CompressedTexture2D::6716914626054698372::1744186009::1744190788::1::::<><>::
+::res://assets/images/welcome_page/::1744190117
+button tap.png::CompressedTexture2D::7152215329848197987::1739005062::1744190792::1::::<><>::
+button tap.webp::CompressedTexture2D::5117483758755456010::1744186056::1744190787::1::::<><>::
+button.png::CompressedTexture2D::7762730335016982162::1739005099::1744190787::1::::<><>::
+button.webp::CompressedTexture2D::8993442094006625545::1744186051::1744190787::1::::<><>::
+title.png::CompressedTexture2D::1383600026152728220::1739260104::1744190787::1::::<><>::
+title.webp::CompressedTexture2D::4293804206658389119::1744186064::1744190787::1::::<><>::
+::res://assets/images/win_page/::1744190117
+female-loss.png::CompressedTexture2D::3456969377987208739::1739267775::1744190785::1::::<><>::
+female-loss.webp::CompressedTexture2D::2517639207138774617::1744186098::1744190785::1::::<><>::
+female-win.png::CompressedTexture2D::8320275579072985817::1740656863::1744190785::1::::<><>::
+female-win.webp::CompressedTexture2D::4907343003614993484::1744186103::1744190785::1::::<><>::
+male-loss.png::CompressedTexture2D::8573531611615062850::1739267792::1744190785::1::::<><>::
+male-loss.webp::CompressedTexture2D::592928324471685728::1744186108::1744190785::1::::<><>::
+male-win.png::CompressedTexture2D::967482718295813748::1740656849::1744190785::1::::<><>::
+male-win.webp::CompressedTexture2D::2229985341369835361::1744186115::1744190785::1::::<><>::
 ::res://assets/logo/::1742470303
 brac-logo.png::CompressedTexture2D::3382019149277033155::1742470280::1742470303::1::::<><>::
 ::res://assets/Sprites/::1742459785
@@ -93,7 +260,7 @@ Group_634@2x.webp::CompressedTexture2D::4228117129414038032::1742459626::1742459
 Group_635@2x.webp::CompressedTexture2D::2876487527334279510::1742459626::1742459786::1::::<><>::
 Group_636@2x.webp::CompressedTexture2D::3839781987412757960::1742459626::1742459786::1::::<><>::
 Group_773@2x.webp::CompressedTexture2D::3289505385269329735::1742459626::1742459786::1::::<><>::
-::res://Scenes/::1744001488
+::res://Scenes/::1744189573
 accident_1_car_crash.tscn::PackedScene::3237556667229936807::1742459625::0::1::::<><>::res://Scripts/accident_1_car_crash.gd<>uid://buesyygt3pq3o::::res://assets/webp/accident-1.webp<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn
 accident_2_cyclone.tscn::PackedScene::8462092502944755179::1742459625::0::1::::<><>::res://Scripts/accident_2_cyclone.gd<>uid://kij6bs1sy28p::::res://assets/webp/accident-2.webp<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn
 coin_toss.tscn::PackedScene::5264740960519355958::1742459625::0::1::::<><>::uid://bua1s38ran27k::::res://assets/webp/coin-toss-bg@2x.webp<>res://Scripts/coin_toss.gd<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff
@@ -108,22 +275,22 @@ game.tscn::PackedScene::8217059471919549589::1742464922::0::1::::<><>::uid://nvu
 game_over.tscn::PackedScene::3534955838797450555::1742464922::0::1::::<><>::res://Scripts/game_over.gd<>uid://bfuoi4lyn1hip::::res://assets/webp/thank-you.webp<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn<>uid://dflfvvlubatt6::::res://assets/fonts/LiAlinurKurigramUnicode.woff
 level_3.tscn::PackedScene::6950934929174266926::1742713013::0::1::::<><>::res://Scripts/level_3.gd<>uid://fa6x7n20wugm::::res://assets/webp/welcome.webp<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn
 level_7.tscn::PackedScene::3491564195450098523::1743946379::0::1::::<><>::res://Scripts/level_7.gd<>uid://dl1aig0b5wewj::::res://assets/images/backgroundImage.webp<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn<>uid://dflfvvlubatt6::::res://assets/fonts/LiAlinurKurigramUnicode.woff<>uid://dqusp3hfjhfvg::::res://assets/webp/screen-4-border.svg<>uid://dmkxrmkm8daes::::res://assets/webp/image1.webp<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://or7jyldso5v7::::res://assets/webp/image2.webp<>uid://cvv7aogrtbf::::res://assets/webp/image3.webp<>uid://d1u73l6wbb6n2::::res://assets/webp/image4.webp<>uid://dn3pgq0bi06uj::::res://assets/webp/image5.webp<>uid://cn1qalwsimhng::::res://assets/webp/image6.webp<>uid://bob1b5rmgmoit::::res://assets/webp/image7.webp<>uid://rpqtlpa6re1e::::res://assets/webp/coin-12.webp
-level_8.tscn::PackedScene::8151965589288173391::1743946379::0::1::::<><>::uid://dl1aig0b5wewj::::res://assets/images/backgroundImage.webp<>res://Scripts/level_8.gd<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://vjyywg23p2vj::::res://assets/webp/faded_hopes/screen-6-border.svg<>uid://cngg1fcggakdu::::res://assets/webp/faded_hopes/Group_614@2x.webp<>uid://d3khftayfo7f5::::res://assets/webp/faded_hopes/Group_615@2x.webp<>uid://bb6ih7yo47lk6::::res://assets/webp/faded_hopes/Group_616@2x.webp<>uid://dfsgkcssfwbpl::::res://assets/webp/faded_hopes/Group_617@2x.webp<>uid://bbysrv1mf7lcf::::res://assets/webp/faded_hopes/Group_618@2x.webp<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn<>uid://dtmoavcrro8by::::res://assets/webp/faded_hopes/Group_619@2x.webp
-level_9.tscn::PackedScene::5841040207105395905::1743946379::0::1::::<><>::res://Scripts/level_9.gd<>uid://dl1aig0b5wewj::::res://assets/images/backgroundImage.webp<>uid://dflfvvlubatt6::::res://assets/fonts/LiAlinurKurigramUnicode.woff<>uid://c8l7ykm5ow6lo::::res://assets/webp/life-path-option/Group 625@2x.png<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://buyawbqdok761::::res://assets/webp/life-path-option/Group_636@2x.webp<>uid://de14fjotnl2f3::::res://assets/webp/life-path-option/Group 626@2x.png<>uid://dqusp3hfjhfvg::::res://assets/webp/screen-4-border.svg<>uid://bdxbludngtcm0::::res://assets/webp/life-path-option/Group 627@2x.png<>uid://bw688j2v1oldp::::res://assets/webp/life-path-option/Group 628@2x.png<>uid://bs3p5fx4kmhwr::::res://assets/webp/life-path-option/Group 629@2x.png<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn<>uid://c3ombd5lvntmt::::res://assets/webp/life-path-option/Group 630@2x.png<>uid://ejkg6ev8mcn2::::res://assets/webp/life-path-option/Group 631@2x.png<>uid://bm4pw5dh6h5d8::::res://assets/webp/life-path-option/Group_773@2x.webp<>uid://dimjaxxnlybcy::::res://assets/webp/life-path-option/Group 633@2x.png<>uid://b48e5xyriuee0::::res://assets/webp/life-path-option/Group 635@2x.png<>uid://cnhgdvtgv4xg3::::res://assets/webp/life-path-option/Group 634@2x.png
-level_10.tscn::PackedScene::2168889936480384017::1743946379::0::1::::<><>::res://Scripts/level_10.gd<>uid://dl1aig0b5wewj::::res://assets/images/backgroundImage.webp<>uid://dflfvvlubatt6::::res://assets/fonts/LiAlinurKurigramUnicode.woff<>uid://dqusp3hfjhfvg::::res://assets/webp/screen-4-border.svg<>uid://dmkxrmkm8daes::::res://assets/webp/image1.webp<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://or7jyldso5v7::::res://assets/webp/image2.webp<>uid://cvv7aogrtbf::::res://assets/webp/image3.webp<>uid://d1u73l6wbb6n2::::res://assets/webp/image4.webp<>uid://dn3pgq0bi06uj::::res://assets/webp/image5.webp<>uid://rpqtlpa6re1e::::res://assets/webp/coin-12.webp<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn
-level_11.tscn::PackedScene::2147441937141133844::1743946379::0::1::::<><>::res://Scripts/level_11.gd<>uid://dl1aig0b5wewj::::res://assets/images/backgroundImage.webp<>uid://dflfvvlubatt6::::res://assets/fonts/LiAlinurKurigramUnicode.woff<>uid://dqusp3hfjhfvg::::res://assets/webp/screen-4-border.svg<>uid://c8l7ykm5ow6lo::::res://assets/webp/life-path-option/Group 625@2x.png<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://buyawbqdok761::::res://assets/webp/life-path-option/Group_636@2x.webp<>uid://de14fjotnl2f3::::res://assets/webp/life-path-option/Group 626@2x.png<>uid://bdxbludngtcm0::::res://assets/webp/life-path-option/Group 627@2x.png<>uid://bw688j2v1oldp::::res://assets/webp/life-path-option/Group 628@2x.png<>uid://rpqtlpa6re1e::::res://assets/webp/coin-12.webp<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn
-level_12.tscn::PackedScene::2777513235337929196::1743946378::0::1::::<><>::res://Scripts/level_12.gd<>uid://dl1aig0b5wewj::::res://assets/images/backgroundImage.webp<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://wt0cun8hl0m6::::res://assets/webp/coin-6.png<>uid://dqusp3hfjhfvg::::res://assets/webp/screen-4-border.svg<>uid://boc806djyt546::::res://assets/webp/Group_3_house@2x.webp<>uid://c8j2p3tt3g3tv::::res://assets/webp/Group_3_food@2x.webp<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn<>uid://b2h6ljcwnrjdm::::res://assets/webp/Group_3_doc@2x.webp
-level_13.tscn::PackedScene::6368885262279135182::1742466973::0::1::::<><>::res://Scripts/level_13.gd<>uid://dl1aig0b5wewj::::res://assets/images/backgroundImage.webp<>uid://dflfvvlubatt6::::res://assets/fonts/LiAlinurKurigramUnicode.woff<>uid://wt0cun8hl0m6::::res://assets/webp/coin-6.png<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://dqusp3hfjhfvg::::res://assets/webp/screen-4-border.svg<>uid://obexxrptqr6w::::res://assets/webp/Group_3_man@2x.webp<>uid://bhyl8o26gf31y::::res://assets/webp/Group_3_uni@2x.webp<>uid://b3rydrr2i2brq::::res://assets/webp/Group_3_land@2x.webp<>uid://dhs1yveibgcgr::::res://assets/webp/Group_3_paper@2x.webp<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn
-male_level_4.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
+level_8.tscn::PackedScene::8151965589288173391::1744189573::0::1::::<><>::uid://dl1aig0b5wewj::::res://assets/images/backgroundImage.webp<>res://Scripts/level_8.gd<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://vjyywg23p2vj::::res://assets/webp/faded_hopes/screen-6-border.svg<>uid://cngg1fcggakdu::::res://assets/webp/faded_hopes/Group_614@2x.webp<>uid://d3khftayfo7f5::::res://assets/webp/faded_hopes/Group_615@2x.webp<>uid://bb6ih7yo47lk6::::res://assets/webp/faded_hopes/Group_616@2x.webp<>uid://dfsgkcssfwbpl::::res://assets/webp/faded_hopes/Group_617@2x.webp<>uid://bbysrv1mf7lcf::::res://assets/webp/faded_hopes/Group_618@2x.webp<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn<>uid://dtmoavcrro8by::::res://assets/webp/faded_hopes/Group_619@2x.webp
+level_9.tscn::PackedScene::5841040207105395905::1744189573::0::1::::<><>::res://Scripts/level_9.gd<>uid://dl1aig0b5wewj::::res://assets/images/backgroundImage.webp<>uid://dflfvvlubatt6::::res://assets/fonts/LiAlinurKurigramUnicode.woff<>uid://c8l7ykm5ow6lo::::res://assets/webp/life-path-option/Group 625@2x.png<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://buyawbqdok761::::res://assets/webp/life-path-option/Group_636@2x.webp<>uid://de14fjotnl2f3::::res://assets/webp/life-path-option/Group 626@2x.png<>uid://dqusp3hfjhfvg::::res://assets/webp/screen-4-border.svg<>uid://bdxbludngtcm0::::res://assets/webp/life-path-option/Group 627@2x.png<>uid://bw688j2v1oldp::::res://assets/webp/life-path-option/Group 628@2x.png<>uid://bs3p5fx4kmhwr::::res://assets/webp/life-path-option/Group 629@2x.png<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn<>uid://c3ombd5lvntmt::::res://assets/webp/life-path-option/Group 630@2x.png<>uid://ejkg6ev8mcn2::::res://assets/webp/life-path-option/Group 631@2x.png<>uid://bm4pw5dh6h5d8::::res://assets/webp/life-path-option/Group_773@2x.webp<>uid://dimjaxxnlybcy::::res://assets/webp/life-path-option/Group 633@2x.png<>uid://b48e5xyriuee0::::res://assets/webp/life-path-option/Group 635@2x.png<>uid://cnhgdvtgv4xg3::::res://assets/webp/life-path-option/Group 634@2x.png
+level_10.tscn::PackedScene::2168889936480384017::1744189573::0::1::::<><>::res://Scripts/level_10.gd<>uid://dl1aig0b5wewj::::res://assets/images/backgroundImage.webp<>uid://dflfvvlubatt6::::res://assets/fonts/LiAlinurKurigramUnicode.woff<>uid://dqusp3hfjhfvg::::res://assets/webp/screen-4-border.svg<>uid://dmkxrmkm8daes::::res://assets/webp/image1.webp<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://or7jyldso5v7::::res://assets/webp/image2.webp<>uid://cvv7aogrtbf::::res://assets/webp/image3.webp<>uid://d1u73l6wbb6n2::::res://assets/webp/image4.webp<>uid://dn3pgq0bi06uj::::res://assets/webp/image5.webp<>uid://rpqtlpa6re1e::::res://assets/webp/coin-12.webp<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn
+level_11.tscn::PackedScene::2147441937141133844::1744189573::0::1::::<><>::res://Scripts/level_11.gd<>uid://dl1aig0b5wewj::::res://assets/images/backgroundImage.webp<>uid://dflfvvlubatt6::::res://assets/fonts/LiAlinurKurigramUnicode.woff<>uid://dqusp3hfjhfvg::::res://assets/webp/screen-4-border.svg<>uid://c8l7ykm5ow6lo::::res://assets/webp/life-path-option/Group 625@2x.png<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://buyawbqdok761::::res://assets/webp/life-path-option/Group_636@2x.webp<>uid://de14fjotnl2f3::::res://assets/webp/life-path-option/Group 626@2x.png<>uid://bdxbludngtcm0::::res://assets/webp/life-path-option/Group 627@2x.png<>uid://bw688j2v1oldp::::res://assets/webp/life-path-option/Group 628@2x.png<>uid://rpqtlpa6re1e::::res://assets/webp/coin-12.webp<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn
+level_12.tscn::PackedScene::2777513235337929196::1744189573::0::1::::<><>::res://Scripts/level_12.gd<>uid://dl1aig0b5wewj::::res://assets/images/backgroundImage.webp<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://wt0cun8hl0m6::::res://assets/webp/coin-6.png<>uid://dqusp3hfjhfvg::::res://assets/webp/screen-4-border.svg<>uid://boc806djyt546::::res://assets/webp/Group_3_house@2x.webp<>uid://c8j2p3tt3g3tv::::res://assets/webp/Group_3_food@2x.webp<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn<>uid://b2h6ljcwnrjdm::::res://assets/webp/Group_3_doc@2x.webp
+level_13.tscn::PackedScene::6368885262279135182::1744189573::0::1::::<><>::res://Scripts/level_13.gd<>uid://dl1aig0b5wewj::::res://assets/images/backgroundImage.webp<>uid://dflfvvlubatt6::::res://assets/fonts/LiAlinurKurigramUnicode.woff<>uid://wt0cun8hl0m6::::res://assets/webp/coin-6.png<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://dqusp3hfjhfvg::::res://assets/webp/screen-4-border.svg<>uid://obexxrptqr6w::::res://assets/webp/Group_3_man@2x.webp<>uid://bhyl8o26gf31y::::res://assets/webp/Group_3_uni@2x.webp<>uid://b3rydrr2i2brq::::res://assets/webp/Group_3_land@2x.webp<>uid://dhs1yveibgcgr::::res://assets/webp/Group_3_paper@2x.webp<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn
+male_level_4.gd::GDScript::-1::1744178641::0::1::::<>Control<>::
 male_level_4.tscn::PackedScene::7824689923472163720::1742459626::0::1::::<><>::res://Scenes/male_level_4.gd<>uid://cecq06xecrnta::::res://assets/webp/cityarrive-male@2x.webp<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn
 male_level_5.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
 male_level_5.tscn::PackedScene::9145053147813121419::1742459626::0::1::::<><>::res://Scenes/male_level_5.gd<>uid://nvu1bsas5jye::::res://Scenes/male_player.tscn<>uid://b32qvtaowwjxg::::res://assets/images/city_arrive_bg_removed.png<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn
 male_level_6.tscn::PackedScene::2423821956202698810::1742459626::0::1::::<><>::res://Scripts/male_level_6.gd<>uid://wi72bdbba13k::::res://assets/webp/roadmap1-male@2x.webp<>uid://nvu1bsas5jye::::res://Scenes/male_player.tscn<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn
 male_player.tscn::PackedScene::957067750981606888::1742459626::0::1::::<><>::uid://ni5xnfkeak24::::res://assets/Sprites/man.png
-man_fail.gd::GDScript::-1::1742462721::0::1::::<>Control<>::
+man_fail.gd::GDScript::-1::1744178641::0::1::::<>Control<>::
 man_fail.tscn::PackedScene::2343219676940454628::1742464921::0::1::::<><>::res://Scenes/man_fail.gd<>uid://c2r0ygh2pjfjh::::res://assets/webp/purno-fail-male@2x.webp
 man_purno.tscn::PackedScene::7964944497563990982::1742459626::0::1::::<><>::res://Scripts/man_purno.gd<>uid://srlf0mqy32sb::::res://assets/webp/win-male.webp
-menu.tscn::PackedScene::256028337261100822::1744001488::0::1::::<><>::res://Scripts/menu.gd<>uid://cb6e3ytoi4jse::::res://assets/images/home-screen-bg@2x.png<>uid://dflfvvlubatt6::::res://assets/fonts/LiAlinurKurigramUnicode.woff<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn
+menu.tscn::PackedScene::256028337261100822::1744189573::0::1::::<><>::res://Scripts/menu.gd<>uid://cb6e3ytoi4jse::::res://assets/images/home-screen-bg@2x.png<>uid://dflfvvlubatt6::::res://assets/fonts/LiAlinurKurigramUnicode.woff<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn
 porer_dhap.tscn::PackedScene::488978324525546865::1742459626::0::1::::<><>::uid://d03vdpu2i4o2b::::res://assets/textures/btn.png<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff
 road_level_7.tscn::PackedScene::2270900729150802634::1742459626::0::1::::<><>::uid://wi72bdbba13k::::res://assets/webp/roadmap1-male@2x.webp<>res://Scripts/road_level_7.gd<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn<>uid://nvu1bsas5jye::::res://Scenes/male_player.tscn
 road_level_female_1.tscn::PackedScene::4155680533898866591::1742464921::0::1::::<><>::uid://b14d5f4myibel::::res://assets/webp/roadmap1-female@2x.webp<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn<>uid://c1tuomnceud8f::::res://Scenes/female_player.tscn
@@ -139,7 +306,7 @@ road_level_male_10.tscn::PackedScene::3557780848758723726::1742459626::0::1::::<
 road_level_male_11.tscn::PackedScene::7141846939447861317::1742466973::0::1::::<><>::uid://wi72bdbba13k::::res://assets/webp/roadmap1-male@2x.webp<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn<>uid://nvu1bsas5jye::::res://Scenes/male_player.tscn
 select_page.tscn::PackedScene::5187714988356748738::1742464921::0::1::::<><>::res://Scripts/select_page.gd<>uid://co7ejogaho4g7::::res://assets/images/backgroundImage.png<>uid://g74nwhc3va1v::::res://Scenes/porer_dhap.tscn<>uid://cl8f25a8ax7xl::::res://assets/webp/purush-img@2x.webp<>uid://xf3iklv5806::::res://assets/fonts/LiAlinurKurigramUnicode.woff2<>uid://hl5jas8diunp::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://bwl4sbbk3iyvw::::res://assets/webp/nari-img@2x.webp
 thank_you.tscn::PackedScene::3972616204662392055::1742464921::0::1::::<><>::uid://buesyygt3pq3o::::res://assets/webp/accident-1.webp
-woman_fail.gd::GDScript::-1::1742462762::0::1::::<>Control<>::
+woman_fail.gd::GDScript::-1::1744178641::0::1::::<>Control<>::
 woman_fail.tscn::PackedScene::1473296080358599003::1742464921::0::1::::<><>::uid://dva2584l5wkug::::res://assets/webp/purno-fail-female@2x.webp<>res://Scenes/woman_fail.gd
 woman_purno.tscn::PackedScene::9047427239443787012::1742459626::0::1::::<><>::res://Scripts/woman_purno.gd<>uid://bi2cye10lcqfe::::res://assets/webp/win-female.webp
 ::res://Scenes/backup/::1742459625
@@ -153,34 +320,34 @@ male_level_6.tscn::PackedScene::2423821956202698810::1742459625::0::1::::<><>::r
 ::res://Scenes/temp/::1742459626
 female_level_5.tscn::PackedScene::8698584935443924124::1742459626::0::1::::<><>::uid://dw33b0yruaaq2::::res://assets/webp/roadmap1-male@2x.webp<>uid://ceuo000ep8fek::::res://scenes/porer_dhap.tscn<>uid://mofjvwu1ig5g::::res://scenes/female_player.tscn
 male_level_5.tscn::PackedScene::4599299167117811116::1742459626::0::1::::<><>::res://scripts/male_level_5.gd<>uid://bgg0wn5vlotm8::::res://assets/webp/cityarrive-female@2x-remove.png<>uid://ba6t0et4hwg55::::res://assets/fonts/LiSirajeeSanjarUnicode.woff<>uid://cb5grourguv1e::::res://scenes/bus.tscn<>uid://ceuo000ep8fek::::res://scenes/porer_dhap.tscn<>uid://c7v3samoj0onu::::res://scenes/male_player.tscn<>uid://bmyy4wsdx3rfm::::res://flipped_bus.tscn
-::res://Scripts/::1743945294
+::res://Scripts/::1744189018
 accident_1_car_crash.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
 accident_2_cyclone.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
 coin_toss.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
 female_level_4.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
-GameState.gd::GDScript::-1::1742465053::0::1::::<>Node<>::
-game_over.gd::GDScript::-1::1742464809::0::1::::<>Control<>::
-level_3.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
-level_7.gd::GDScript::-1::1742460578::0::1::::<>Control<>::
-level_8.gd::GDScript::-1::1742715602::0::1::::<>Control<>::
-level_9.gd::GDScript::-1::1742793253::0::1::::<>Control<>::
-level_10.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
-level_11.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
-level_12.gd::GDScript::-1::1743945294::0::1::::<>Control<>::
-level_13.gd::GDScript::-1::1742459953::0::1::::<>Control<>::
+GameState.gd::GDScript::-1::1744178641::0::1::::<>Node<>::
+game_over.gd::GDScript::-1::1744180690::0::1::::<>Control<>::
+level_3.gd::GDScript::-1::1744178641::0::1::::<>Control<>::
+level_7.gd::GDScript::-1::1744178641::0::1::::<>Control<>::
+level_8.gd::GDScript::-1::1744179005::0::1::::<>Control<>::
+level_9.gd::GDScript::-1::1744184460::0::1::::<>Control<>::
+level_10.gd::GDScript::-1::1744178641::0::1::::<>Control<>::
+level_11.gd::GDScript::-1::1744178641::0::1::::<>Control<>::
+level_12.gd::GDScript::-1::1744189018::0::1::::<>Control<>::
+level_13.gd::GDScript::-1::1744178930::0::1::::<>Control<>::
 male_level_6.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
 man_purno.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
-menu.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
+menu.gd::GDScript::-1::1744178641::0::1::::<>Control<>::
 road_level_7.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
 road_level_female_2.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
 road_level_female_3.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
 road_level_female_4.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
-road_level_female_5.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
+road_level_female_5.gd::GDScript::-1::1744178641::0::1::::<>Control<>::
 road_level_male_7.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
 road_level_male_8.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
 road_level_male_9.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
 road_level_male_10.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
-select_page.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
+select_page.gd::GDScript::-1::1744178641::0::1::::<>Control<>::
 unknwon.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
 woman_purno.gd::GDScript::-1::1742459626::0::1::::<>Control<>::
 ::res://Scripts/backup/::1742459626

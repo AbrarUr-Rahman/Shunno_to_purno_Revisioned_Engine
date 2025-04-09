@@ -4,9 +4,9 @@ func _on_button_pressed() -> void:
 	# Reset GameState variables
 	GameState.from_level_13 = false
 	GameState.total_points = 0
-	GameState.selected_cards.clear()
-	GameState.selected_card_indices.clear()
-	GameState.selected_card_points.clear()
+	GameState.selected_cards=[]
+	GameState.selected_card_indices=[]
+	GameState.selected_card_points=[]
 	GameState.selected_gender = ""
 	GameState.visited_level_9 = false  # Reset Level 9 visit flag
 

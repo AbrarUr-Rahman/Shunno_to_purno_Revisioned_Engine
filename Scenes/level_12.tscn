@@ -101,10 +101,10 @@ autowrap_mode = 2
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 0
-offset_left = 50.0
-offset_top = 54.0
-offset_right = 681.0
-offset_bottom = 527.0
+offset_left = 48.0
+offset_top = 56.0
+offset_right = 679.0
+offset_bottom = 529.0
 scale = Vector2(1.22, 0.8)
 theme_override_constants/h_separation = 10
 theme_override_constants/v_separation = 25

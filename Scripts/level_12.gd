@@ -13,6 +13,8 @@ var selected_card_indices = []  # List of selected card indices
 @onready var next_page_button = $Button
 
 func _ready():
+	GameState.selected_card_indices.clear()
+	GameState.selected_card_points.clear()
 	next_page_button.connect("pressed", Callable(self, "_on_next_page_pressed"))
 
 	# Retrieve total points from GameState
@@ -24,11 +26,7 @@ func _ready():
 	# Connect the pressed signals for each card
 	for i in range(card_costs.size()):
 		var card = grid_container.get_child(i)  # Get existing card
-		# Connect the card's "pressed" signal
 		card.connect("pressed", Callable(self, "_on_card_clicked").bind(i))
-
-	# Connect the next page button's signal (Fix for the missing signal connection)
-	next_page_button.connect("pressed", Callable(self, "_on_next_page_pressed"))
 
 # Handle card clicks
 func _on_card_clicked(index: int) -> void:
@@ -37,7 +35,7 @@ func _on_card_clicked(index: int) -> void:
 	if selected_cards[index]:  # Prevent unselecting cards
 		print("Card", index, "is already selected.")
 		return
-	else:  # Select the card
+	else:
 		if GameState.total_points >= card_costs[index]:
 			selected_cards[index] = true
 			selected_card_indices.append(index)
@@ -51,8 +49,24 @@ func _on_card_clicked(index: int) -> void:
 	points_label.text = str(GameState.total_points)
 	update_next_page_button_state()
 
+	# Auto-fail check: if the player can no longer afford remaining unselected cards
+	var remaining_cost = 0
+	for i in range(card_costs.size()):
+		if not selected_cards[i]:
+			remaining_cost += card_costs[i]
+
+	if GameState.total_points < remaining_cost:
+		print("Not enough points left to select the remaining cards. Redirecting to fail screen.")
+		if GameState.selected_gender == "male":
+			get_tree().change_scene_to_file("res://Scenes/man_fail.tscn")
+		elif GameState.selected_gender == "female":
+			get_tree().change_scene_to_file("res://Scenes/woman_fail.tscn")
+		else:
+			print("No gender selected!")
+		return
+
 # Check if all cards are selected
-func all_cards_selected() -> bool:
+func all_cards_selected() -> bool:	
 	for selected in selected_cards:
 		if not selected:
 			return false
@@ -63,33 +77,14 @@ func update_next_page_button_state():
 	# Enable the button only if all cards are selected
 	next_page_button.disabled = not all_cards_selected()
 
+# Handle Next Page press
 func _on_next_page_pressed() -> void:
 	if all_cards_selected():
 		print("All cards selected!")
-		print("Points remaining before spending:", GameState.total_points)
 		print("Selected card indices:", selected_card_indices)
 
-		# Calculate total points needed
-		var total_points_spent = 0
-		for index in selected_card_indices:
-			total_points_spent += card_costs[index]
-
-		# Check if there are enough points BEFORE deducting
-		if GameState.total_points  <= 0:
-			print("Not enough points to proceed! Redirecting to fail screen.")
-			if GameState.selected_gender == "male":
-				get_tree().change_scene_to_file("res://Scenes/man_fail.tscn")  # Male fail screen path
-			elif GameState.selected_gender == "female":
-				get_tree().change_scene_to_file("res://Scenes/woman_fail.tscn")  # Female fail screen path
-			else:
-				print("No gender selected!")
-			return  # Stop further execution
-
-		# Deduct points if the player has enough
-		GameState.total_points -= total_points_spent
+		# Store selected card indices and points
 		GameState.selected_card_indices += selected_card_indices
-
-		# Store selected card costs
 		for index in selected_card_indices:
 			GameState.selected_card_points.append(card_costs[index])
 
@@ -98,5 +93,4 @@ func _on_next_page_pressed() -> void:
 		get_tree().change_scene_to_file("res://Scenes/coin_toss.tscn")
 	else:
 		print("You must select all cards to proceed!")
-		# You could optionally show a warning to the player here, for example, highlighting unselected cards
 		next_page_button.disabled = false
