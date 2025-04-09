@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://cw0euy5fr317w"]
 
 [ext_resource type="Script" path="res://Scripts/level_13.gd" id="1_ek7cb"]
-[ext_resource type="Texture2D" uid="uid://dl1aig0b5wewj" path="res://assets/images/backgroundImage.webp" id="2_71hoy"]
+[ext_resource type="Texture2D" path="res://assets/images/backgroundImage.webp" id="2_71hoy"]
 [ext_resource type="FontFile" uid="uid://dflfvvlubatt6" path="res://assets/fonts/LiAlinurKurigramUnicode.woff" id="3_dl6a8"]
 [ext_resource type="Texture2D" uid="uid://wt0cun8hl0m6" path="res://assets/webp/coin-6.png" id="4_82luy"]
 [ext_resource type="FontFile" uid="uid://hl5jas8diunp" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="5_f2mno"]
