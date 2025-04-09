@@ -11,8 +11,8 @@ texture = ExtResource("1_s4vlh")
 [node name="Button" type="Button"]
 texture_filter = 2
 offset_left = 122.0
-offset_right = 518.0
-offset_bottom = 158.0
+offset_right = 504.0
+offset_bottom = 164.0
 theme = SubResource("Theme_e4l0l")
 theme_override_colors/font_color = Color(0.619608, 0.0156863, 0.447059, 1)
 theme_override_fonts/font = ExtResource("1_v5art")
