@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/female_level_6.gd" id="1_2xojc"]
 [ext_resource type="FontFile" uid="uid://hl5jas8diunp" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="1_bcpvn"]
-[ext_resource type="Texture2D" uid="uid://b32qvtaowwjxg" path="res://assets/images/city_arrive_bg_removed.png" id="2_2vj7c"]
+[ext_resource type="Texture2D" uid="uid://c6smo4f3q4des" path="res://assets/images/intro_page/female.webp" id="2_nglea"]
 [ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="3_fec3k"]
 [ext_resource type="PackedScene" uid="uid://c1tuomnceud8f" path="res://Scenes/female_player.tscn" id="4_pqxtm"]
 
@@ -57,28 +57,28 @@ layout_mode = 0
 offset_top = -3.0
 offset_right = 1151.0
 offset_bottom = 647.0
-texture = ExtResource("2_2vj7c")
+texture = ExtResource("2_nglea")
 expand_mode = 1
 
 [node name="text" type="Label" parent="."]
-texture_filter = 2
+texture_filter = 6
 layout_mode = 0
-offset_left = 37.0
-offset_top = 507.0
-offset_right = 694.0
-offset_bottom = 615.0
+offset_left = 82.0
+offset_top = 492.0
+offset_right = 739.0
+offset_bottom = 600.0
 theme_override_fonts/font = ExtResource("1_bcpvn")
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 20
 text = "ধরে নিন, আপনি শহরে বাস করেন। আপনার আয় স্বল্প। প্রতি মাসে আপনার নিয়মিত আয় ১২ পয়েন্ট – যা
  এখন আপনার কাছে আছে। পয়েন্ট ব্যয় করে একটি মাসের সবচেয়ে প্রয়োজনীয় চাহিদা ও সেবাগুলো (যেমন:
  বাড়িভাড়া, খাবার, পড়ালেখা, ইত্যাদি ) উপভোগ করুন।"
 
 [node name="Button" parent="." instance=ExtResource("3_fec3k")]
 layout_mode = 0
-offset_left = 892.0
-offset_top = 510.0
-offset_right = 1094.0
-offset_bottom = 584.0
+offset_left = 869.0
+offset_top = 501.0
+offset_right = 1071.0
+offset_bottom = 575.0
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_pqxtm")]
 position = Vector2(-206, 153)

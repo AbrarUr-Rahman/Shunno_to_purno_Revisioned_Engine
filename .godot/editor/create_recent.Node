@@ -1,5 +1,6 @@
+ColorRect
+Node2D
 Button
 TextureRect
-ColorRect
 ProgressBar
 Control
