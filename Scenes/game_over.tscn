@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bqmmhamsp1vkt"]
 
 [ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_hujhs"]
-[ext_resource type="Texture2D" uid="uid://bfuoi4lyn1hip" path="res://assets/webp/thank-you.webp" id="2_r2en4"]
+[ext_resource type="Texture2D" uid="uid://dwku5fkwkx56p" path="res://assets/images/proverty_day_message/ref.webp" id="2_fidkd"]
 [ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="3_v2lpe"]
 [ext_resource type="FontFile" uid="uid://dflfvvlubatt6" path="res://assets/fonts/LiAlinurKurigramUnicode.woff" id="4_w0xym"]
 
@@ -20,15 +20,15 @@ offset_left = 1.0
 offset_top = -3.0
 offset_right = 1149.0
 offset_bottom = 643.0
-texture = ExtResource("2_r2en4")
+texture = ExtResource("2_fidkd")
 expand_mode = 1
 
 [node name="Button" parent="." instance=ExtResource("3_v2lpe")]
 layout_mode = 0
-offset_left = 514.0
-offset_top = 500.0
-offset_right = 687.0
-offset_bottom = 568.0
+offset_left = 844.0
+offset_top = 506.0
+offset_right = 1017.0
+offset_bottom = 574.0
 theme_override_fonts/font = ExtResource("4_w0xym")
 theme_override_font_sizes/font_size = 30
 text = "আবার খেলুন"

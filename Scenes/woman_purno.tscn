@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d15v2mlne7f3y"]
 
 [ext_resource type="Script" path="res://Scripts/woman_purno.gd" id="1_38b3p"]
-[ext_resource type="Texture2D" uid="uid://bi2cye10lcqfe" path="res://assets/webp/win-female.webp" id="1_207el"]
+[ext_resource type="Texture2D" uid="uid://h6nwl4vs6kdj" path="res://assets/images/win_page/female-win.webp" id="2_33rbi"]
 
 [node name="woman_purno" type="Control"]
 layout_mode = 3
@@ -17,5 +17,5 @@ layout_mode = 0
 offset_left = -1.0
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("1_207el")
+texture = ExtResource("2_33rbi")
 expand_mode = 1

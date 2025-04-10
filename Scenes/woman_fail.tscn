@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://u8w8ax0f5gbb"]
 
-[ext_resource type="Texture2D" uid="uid://dva2584l5wkug" path="res://assets/webp/purno-fail-female@2x.webp" id="1_06rfj"]
 [ext_resource type="Script" path="res://Scenes/woman_fail.gd" id="1_c5oja"]
+[ext_resource type="Texture2D" uid="uid://djsf85cgkmhst" path="res://assets/images/win_page/female-loss.webp" id="2_xll0g"]
 
 [node name="woman_fail" type="Control"]
 layout_mode = 3
@@ -17,5 +17,5 @@ layout_mode = 0
 offset_left = -1.0
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("1_06rfj")
+texture = ExtResource("2_xll0g")
 expand_mode = 1

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dlqjqb3vx6xgw"]
 
 [ext_resource type="Script" path="res://Scripts/man_purno.gd" id="1_6b1fg"]
-[ext_resource type="Texture2D" uid="uid://srlf0mqy32sb" path="res://assets/webp/win-male.webp" id="1_xgbsr"]
+[ext_resource type="Texture2D" uid="uid://c51pkj5woe33a" path="res://assets/images/win_page/male-win.webp" id="2_vgyi8"]
 
 [node name="Man_purno" type="Control"]
 layout_mode = 3
@@ -17,5 +17,5 @@ layout_mode = 0
 offset_left = -1.0
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("1_xgbsr")
+texture = ExtResource("2_vgyi8")
 expand_mode = 1

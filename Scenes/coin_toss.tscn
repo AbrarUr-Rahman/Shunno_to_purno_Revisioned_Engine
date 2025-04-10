@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://chajrqxhkdk6y"]
 
-[ext_resource type="Texture2D" uid="uid://bua1s38ran27k" path="res://assets/webp/coin-toss-bg@2x.webp" id="1_5ltew"]
 [ext_resource type="Script" path="res://Scripts/coin_toss.gd" id="1_aabmx"]
 [ext_resource type="FontFile" uid="uid://hl5jas8diunp" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="2_5dh36"]
+[ext_resource type="Texture2D" uid="uid://xwjvd12rx368" path="res://assets/images/dice_massage/ref (1).webp" id="2_16q42"]
 
 [node name="Coin_toss" type="Control"]
 layout_mode = 3
@@ -18,10 +18,11 @@ layout_mode = 0
 offset_left = -1.0
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("1_5ltew")
+texture = ExtResource("2_16q42")
 expand_mode = 1
 
 [node name="text" type="Label" parent="Backround"]
+visible = false
 texture_filter = 1
 layout_mode = 0
 offset_left = 38.0

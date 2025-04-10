@@ -1,8 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6bc5apgfypgw"]
+[gd_scene load_steps=6 format=3 uid="uid://c6bc5apgfypgw"]
 
 [ext_resource type="Script" path="res://Scripts/level_3.gd" id="1_lbxgp"]
-[ext_resource type="Texture2D" uid="uid://fa6x7n20wugm" path="res://assets/webp/welcome.webp" id="2_xeuje"]
+[ext_resource type="Texture2D" uid="uid://c4pwukwwoo3uk" path="res://assets/images/welcome_page/welcome.webp" id="2_b4hlm"]
 [ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="3_6yers"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nn3cf"]
+content_margin_top = 2.0
+bg_color = Color(0.92549, 0, 0.54902, 0.8)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qq11x"]
+bg_color = Color(0.92549, 0, 0.54902, 0.8)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+corner_detail = 15
 
 [node name="level-3" type="Control"]
 layout_mode = 3
@@ -20,12 +36,13 @@ metadata/_edit_lock_ = true
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 647.0
-texture = ExtResource("2_xeuje")
+texture = ExtResource("2_b4hlm")
 expand_mode = 1
 
 [node name="text" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="text"]
+visible = false
 offset_left = 52.0
 offset_top = 486.0
 offset_right = 317.0
@@ -34,6 +51,7 @@ theme_override_font_sizes/font_size = 32
 text = "খেলা! খেলা! খেলা!"
 
 [node name="Label2" type="Label" parent="text"]
+visible = false
 offset_left = 47.0
 offset_top = 505.0
 offset_right = 585.0
@@ -46,9 +64,14 @@ autowrap_mode = 2
 
 [node name="Button" parent="." instance=ExtResource("3_6yers")]
 layout_mode = 0
-offset_left = 868.0
-offset_top = 494.0
-offset_right = 1080.0
-offset_bottom = 574.0
+offset_left = 895.0
+offset_top = 504.0
+offset_right = 1035.0
+offset_bottom = 584.0
+scale = Vector2(1.11062, 0.888632)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nn3cf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qq11x")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

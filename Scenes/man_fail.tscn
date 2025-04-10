@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://8ncqrrfgtymu"]
 
 [ext_resource type="Script" path="res://Scenes/man_fail.gd" id="1_7bdyr"]
-[ext_resource type="Texture2D" uid="uid://c2r0ygh2pjfjh" path="res://assets/webp/purno-fail-male@2x.webp" id="1_fx3tc"]
+[ext_resource type="Texture2D" uid="uid://cx46s6j7wd58h" path="res://assets/images/win_page/male-loss.webp" id="2_2bwdv"]
 
 [node name="man_fail" type="Control"]
 layout_mode = 3
@@ -17,5 +17,5 @@ layout_mode = 0
 offset_left = -1.0
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("1_fx3tc")
+texture = ExtResource("2_2bwdv")
 expand_mode = 1
