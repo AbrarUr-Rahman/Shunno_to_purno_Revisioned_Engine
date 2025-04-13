@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwa0qg25uee5"]
+[gd_scene load_steps=4 format=3 uid="uid://dwa0qg25uee5"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_pnkpj"]
-[ext_resource type="Texture2D" path="res://assets/images/home-screen-bg@2x.png" id="2_4txsb"]
 [ext_resource type="FontFile" uid="uid://dflfvvlubatt6" path="res://assets/fonts/LiAlinurKurigramUnicode.woff" id="2_jhuvo"]
 [ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="3_iy6g8"]
 
@@ -22,7 +21,6 @@ offset_left = 1.0
 offset_top = -3.0
 offset_right = 1157.0
 offset_bottom = 648.0
-texture = ExtResource("2_4txsb")
 expand_mode = 1
 
 [node name="Button" parent="." instance=ExtResource("3_iy6g8")]

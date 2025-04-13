@@ -21,14 +21,14 @@ offset_top = -3.0
 offset_right = 1149.0
 offset_bottom = 643.0
 texture = ExtResource("2_fidkd")
-expand_mode = 1
+stretch_mode = 2
 
 [node name="Button" parent="." instance=ExtResource("3_v2lpe")]
 layout_mode = 0
-offset_left = 844.0
-offset_top = 506.0
-offset_right = 1017.0
-offset_bottom = 574.0
+offset_left = 1426.0
+offset_top = 700.0
+offset_right = 1706.0
+offset_bottom = 830.0
 theme_override_fonts/font = ExtResource("4_w0xym")
 theme_override_font_sizes/font_size = 30
 text = "আবার খেলুন"

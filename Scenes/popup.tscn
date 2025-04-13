@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://daantbtj6ur4m"]
+
+[ext_resource type="Script" path="res://Scripts/popup.gd" id="1_t4mae"]
+[ext_resource type="Texture2D" uid="uid://du8g0xqx83qud" path="res://assets/images/popup/pop up panel.png" id="2_shmu8"]
+[ext_resource type="FontFile" uid="uid://xf3iklv5806" path="res://assets/fonts/LiAlinurKurigramUnicode.woff2" id="3_rs2nc"]
+[ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="3_s1xfj"]
+
+[node name="Popup" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_t4mae")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -3119.0
+offset_top = -1538.0
+offset_right = -2014.0
+offset_bottom = -538.0
+scale = Vector2(49.2471, 4.21905)
+color = Color(0, 0, 0, 0.501961)
+
+[node name="Modal" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -9.0
+offset_right = 971.0
+offset_bottom = 339.0
+scale = Vector2(1.56164, 1.98975)
+texture = ExtResource("2_shmu8")
+
+[node name="Label" type="Label" parent="Modal"]
+texture_filter = 6
+layout_mode = 0
+offset_left = 195.561
+offset_top = 89.0
+offset_right = 737.561
+offset_bottom = 159.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_rs2nc")
+theme_override_font_sizes/font_size = 50
+text = "নির্বাচন করে এগিয়ে যান। "
+
+[node name="Button" parent="Modal" instance=ExtResource("3_s1xfj")]
+layout_mode = 0
+offset_left = 331.0
+offset_top = 181.0
+offset_right = 581.0
+offset_bottom = 281.0
+text = "ঠিক আছে"
+
+[connection signal="confirmed" from="." to="." method="_on_confirmed"]
