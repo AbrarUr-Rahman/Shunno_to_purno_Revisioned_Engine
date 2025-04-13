@@ -58,29 +58,30 @@ offset_top = -3.0
 offset_right = 1151.0
 offset_bottom = 647.0
 texture = ExtResource("2_nglea")
-expand_mode = 1
+stretch_mode = 2
 
 [node name="text" type="Label" parent="."]
 texture_filter = 6
 layout_mode = 0
-offset_left = 82.0
-offset_top = 492.0
-offset_right = 739.0
-offset_bottom = 600.0
+offset_left = 138.0
+offset_top = 690.0
+offset_right = 1432.0
+offset_bottom = 843.0
 theme_override_fonts/font = ExtResource("1_bcpvn")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 35
 text = "ধরে নিন, আপনি শহরে বাস করেন। আপনার আয় স্বল্প। প্রতি মাসে আপনার নিয়মিত আয় ১২ পয়েন্ট – যা
  এখন আপনার কাছে আছে। পয়েন্ট ব্যয় করে একটি মাসের সবচেয়ে প্রয়োজনীয় চাহিদা ও সেবাগুলো (যেমন:
  বাড়িভাড়া, খাবার, পড়ালেখা, ইত্যাদি ) উপভোগ করুন।"
 
 [node name="Button" parent="." instance=ExtResource("3_fec3k")]
 layout_mode = 0
-offset_left = 869.0
-offset_top = 501.0
-offset_right = 1071.0
-offset_bottom = 575.0
+offset_left = 1525.0
+offset_top = 713.0
+offset_right = 1775.0
+offset_bottom = 813.0
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_pqxtm")]
+visible = false
 position = Vector2(-206, 153)
 scale = Vector2(0.85, 0.85)
 

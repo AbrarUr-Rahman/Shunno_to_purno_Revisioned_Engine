@@ -1,6 +1,7 @@
-ColorRect
-Node2D
-Button
 TextureRect
-ProgressBar
 Control
+Button
+Label
+Node2D
+ColorRect
+ProgressBar

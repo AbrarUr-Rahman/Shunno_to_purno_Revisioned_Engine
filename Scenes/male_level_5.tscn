@@ -56,21 +56,23 @@ layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 658.0
 texture = ExtResource("2_d6ty2")
-expand_mode = 1
+stretch_mode = 2
 
 [node name="text" type="Label" parent="Background"]
 texture_filter = 6
 layout_mode = 0
-offset_left = 82.0
-offset_top = 507.0
-offset_right = 868.0
-offset_bottom = 615.0
+offset_left = 142.0
+offset_top = 685.0
+offset_right = 1436.0
+offset_bottom = 838.0
+scale = Vector2(0.994, 1)
 theme_override_fonts/font = ExtResource("2_kfwn8")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 35
 text = "ধরে নিন, আপনি শহরে বাস করেন। আপনার আয় স্বল্প। প্রতি মাসে আপনার নিয়মিত আয় ১২ পয়েন্ট – যা এখন আপনার কাছে আছে। পয়েন্ট ব্যয় করে একটি মাসের সবচেয়ে প্রয়োজনীয় চাহিদা ও সেবাগুলো (যেমন: বাড়িভাড়া, খাবার, পড়ালেখা, ইত্যাদি ) উপভোগ করুন।"
 autowrap_mode = 2
 
 [node name="MalePlayer" parent="." instance=ExtResource("2_4lp0h")]
+visible = false
 position = Vector2(-170, 43)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MalePlayer"]
@@ -82,9 +84,10 @@ speed_scale = 0.2
 
 [node name="Button" parent="." instance=ExtResource("4_87nsy")]
 layout_mode = 0
-offset_left = 865.0
-offset_top = 514.0
-offset_right = 1077.0
-offset_bottom = 594.0
+offset_left = 1516.0
+offset_top = 712.0
+offset_right = 1766.0
+offset_bottom = 812.0
+scale = Vector2(1.009, 1)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

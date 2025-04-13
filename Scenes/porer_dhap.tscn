@@ -1,21 +1,41 @@
-[gd_scene load_steps=5 format=3 uid="uid://g74nwhc3va1v"]
+[gd_scene load_steps=11 format=3 uid="uid://g74nwhc3va1v"]
 
-[ext_resource type="Texture2D" uid="uid://d03vdpu2i4o2b" path="res://assets/textures/btn.png" id="1_s4vlh"]
 [ext_resource type="FontFile" uid="uid://hl5jas8diunp" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="1_v5art"]
+[ext_resource type="Texture2D" uid="uid://bld52dg40ulas" path="res://assets/images/button/button tap.png" id="2_ykabv"]
+[ext_resource type="Texture2D" uid="uid://db73gka02mky5" path="res://assets/images/button/button.png" id="3_uo3th"]
+[ext_resource type="Script" path="res://Scripts/button.gd" id="4_432sg"]
 
 [sub_resource type="Theme" id="Theme_e4l0l"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_00bii"]
+texture = ExtResource("2_ykabv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jy6p1"]
+texture = ExtResource("3_uo3th")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ywirr"]
+texture = ExtResource("3_uo3th")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uwanb"]
+texture = ExtResource("2_ykabv")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ambf"]
-texture = ExtResource("1_s4vlh")
+texture = ExtResource("3_uo3th")
 
 [node name="Button" type="Button"]
 texture_filter = 2
 offset_left = 122.0
-offset_right = 504.0
-offset_bottom = 164.0
+offset_right = 372.0
+offset_bottom = 100.0
+focus_mode = 0
 theme = SubResource("Theme_e4l0l")
-theme_override_colors/font_color = Color(0.619608, 0.0156863, 0.447059, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_v5art")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxTexture_00bii")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_jy6p1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ywirr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uwanb")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0ambf")
 text = "পরের ধাপ "
+script = ExtResource("4_432sg")
