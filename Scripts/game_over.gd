@@ -9,6 +9,6 @@ func _on_button_pressed() -> void:
 	GameState.selected_card_points=[]
 	GameState.selected_gender = ""
 	GameState.visited_level_9 = false  # Reset Level 9 visit flag
-
+	GameState.has_tried_purno=false
 	# Change to menu scene
 	get_tree().change_scene_to_file("res://Scenes/menu.tscn")

@@ -17,7 +17,6 @@ var selected_count = 0
 @onready var next_button = $Button
 
 func _ready():
-
 	# Initialize selection and connect signals
 	for i in range(card_points.size()):
 		selected_cards.append(false)
@@ -30,6 +29,7 @@ func _ready():
 		card.connect("pressed", Callable(self, "_on_card_clicked").bind(i))
 
 	# Restore previous selections
+	selected_card_indices.clear()
 	for i in GameState.selected_card_indices:
 		selected_cards[i] = true
 		selected_card_indices.append(i)
@@ -37,10 +37,16 @@ func _ready():
 		grid_container.get_child(i).modulate = Color(0.5, 0.5, 0.5)
 
 	update_next_page_button_state()
-	next_button.connect("pressed", Callable(self, "_on_next_page_pressed"))
+
+	if not next_button.is_connected("pressed", Callable(self, "_on_next_page_pressed")):
+		next_button.connect("pressed", Callable(self, "_on_next_page_pressed"))
 
 func _on_card_clicked(card_index: int) -> void:
 	var card = grid_container.get_child(card_index)
+
+	var max_limit = INITIAL_SELECTION_LIMIT
+	if GameState.has_tried_purno:
+		max_limit += 1  # Allow one more card after returning from Level 12
 
 	if selected_cards[card_index]:
 		selected_cards[card_index] = false
@@ -50,7 +56,6 @@ func _on_card_clicked(card_index: int) -> void:
 		GameState.total_points -= card_points[card_index]
 		print("Removed points for the card:", card_points[card_index])
 	else:
-		var max_limit = MAX_SELECTION if GameState.has_tried_purno else INITIAL_SELECTION_LIMIT
 		if selected_count < max_limit:
 			selected_cards[card_index] = true
 			selected_count += 1
@@ -67,11 +72,15 @@ func _on_card_clicked(card_index: int) -> void:
 	update_next_page_button_state()
 
 func update_next_page_button_state():
-	var required_count = MAX_SELECTION if GameState.has_tried_purno else INITIAL_SELECTION_LIMIT
+	var required_count = INITIAL_SELECTION_LIMIT
+	if GameState.has_tried_purno:
+		required_count += 1
 	next_button.disabled = selected_count != required_count
 
 func _on_next_page_pressed() -> void:
-	var required_count = MAX_SELECTION if GameState.has_tried_purno else INITIAL_SELECTION_LIMIT
+	var required_count = INITIAL_SELECTION_LIMIT
+	if GameState.has_tried_purno:
+		required_count += 1
 
 	if selected_count == required_count:
 		GameState.selected_card_indices = selected_card_indices.duplicate()
@@ -97,6 +106,10 @@ func _on_return_to_level_9():
 		GameState.has_tried_purno = false
 		print("Returning to Level 9. You can now select 1 more card.")
 
+	# Reset local state from GameState
+	selected_card_indices = GameState.selected_card_indices.duplicate()
+	selected_count = selected_card_indices.size()
+
 	for i in range(card_points.size()):	
 		var card = grid_container.get_child(i)
 
@@ -104,10 +117,13 @@ func _on_return_to_level_9():
 			card.disconnect("pressed", Callable(self, "_on_card_clicked"))
 		card.connect("pressed", Callable(self, "_on_card_clicked").bind(i))
 
-		if selected_cards[i]:
+		if i in selected_card_indices:
+			selected_cards[i] = true
 			card.modulate = Color(0.5, 0.5, 0.5)
 		else:
+			selected_cards[i] = false
 			card.modulate = Color(1, 1, 1, 1)
 
-	selected_count = GameState.selected_card_indices.size()
 	update_next_page_button_state()
+	print("Previously selected:", selected_card_indices)
+	print("You may now select one more card.")

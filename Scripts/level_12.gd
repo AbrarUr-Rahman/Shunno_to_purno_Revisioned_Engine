@@ -28,7 +28,6 @@ func _ready():
 		card.connect("pressed", Callable(self, "_on_card_clicked").bind(i))
 	print("Level 12 Ready! Total points:", GameState.total_points)
 
-	next_page_button.connect("pressed", Callable(self, "_on_next_page_pressed"))
 
 	# Retrieve total points from GameState
 	points_label.text = str(GameState.total_points)
@@ -36,10 +35,6 @@ func _ready():
 	# Disable the next page button initially
 	next_page_button.disabled = true
 
-	for i in range(card_costs.size()):
-		var card = grid_container.get_child(i)
-		print("Connecting card", i)
-		card.connect("pressed", Callable(self, "_on_card_clicked").bind(i))
 # Handle card clicks
 func _on_card_clicked(index: int) -> void:
 	

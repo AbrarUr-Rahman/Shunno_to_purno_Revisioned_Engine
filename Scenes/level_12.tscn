@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bftpicgmr8x8w"]
+[gd_scene load_steps=11 format=3 uid="uid://bftpicgmr8x8w"]
 
 [ext_resource type="Script" path="res://Scripts/level_12.gd" id="1_iky15"]
-[ext_resource type="Texture2D" path="res://assets/images/backgroundImage.webp" id="1_l7ayl"]
 [ext_resource type="FontFile" uid="uid://hl5jas8diunp" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="3_oai23"]
 [ext_resource type="Texture2D" uid="uid://wt0cun8hl0m6" path="res://assets/webp/coin-6.png" id="4_gj2gy"]
 [ext_resource type="Texture2D" uid="uid://dqusp3hfjhfvg" path="res://assets/webp/screen-4-border.svg" id="5_j7vyw"]
@@ -33,7 +32,6 @@ layout_mode = 0
 offset_top = -3.0
 offset_right = 1151.0
 offset_bottom = 647.0
-texture = ExtResource("1_l7ayl")
 expand_mode = 1
 
 [node name="text" type="Label" parent="Backround"]
