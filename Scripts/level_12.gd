@@ -5,16 +5,15 @@ var card_costs = [7, 5, 3]  # Example costs for the cards
 
 # Track whether each card is selected
 var selected_cards = [false, false, false]  # Matches the number of cards
-var selected_card_indices = []  # List of selected card indices
-
+#var selected_card_indices = []  # List of selected card indices
+var selected_card_indices_level12 : Array = []
 # Reference to the grid container, points label, and next page button
 @onready var grid_container = $GridContainer
 @onready var points_label = $Backround/TextureRect/points
 @onready var next_page_button = $Button
 
 func _ready():
-	GameState.selected_card_indices.clear()
-	GameState.selected_card_points.clear()
+
 	next_page_button.connect("pressed", Callable(self, "_on_next_page_pressed"))
 
 	# Retrieve total points from GameState
@@ -27,18 +26,34 @@ func _ready():
 	for i in range(card_costs.size()):
 		var card = grid_container.get_child(i)  # Get existing card
 		card.connect("pressed", Callable(self, "_on_card_clicked").bind(i))
+	print("Level 12 Ready! Total points:", GameState.total_points)
 
+	next_page_button.connect("pressed", Callable(self, "_on_next_page_pressed"))
+
+	# Retrieve total points from GameState
+	points_label.text = str(GameState.total_points)
+
+	# Disable the next page button initially
+	next_page_button.disabled = true
+
+	for i in range(card_costs.size()):
+		var card = grid_container.get_child(i)
+		print("Connecting card", i)
+		card.connect("pressed", Callable(self, "_on_card_clicked").bind(i))
 # Handle card clicks
 func _on_card_clicked(index: int) -> void:
+	
+
+	print("CARD CLICKED PROGRAMMATICALLY? Index:", index)
 	var card = grid_container.get_child(index)  # Get the clicked card
 
 	if selected_cards[index]:  # Prevent unselecting cards
-		print("Card", index, "is already selected.")
-		return
+			print("Card", index, "is already selected.")
+			return
 	else:
 		if GameState.total_points >= card_costs[index]:
 			selected_cards[index] = true
-			selected_card_indices.append(index)
+			selected_card_indices_level12.append(index)
 			GameState.total_points -= card_costs[index]  # Deduct points
 			card.modulate = Color(0.5, 0.5, 0.5)  # Highlight the card visually
 			print("Selected card", index, ". Points spent:", card_costs[index])
@@ -81,11 +96,11 @@ func update_next_page_button_state():
 func _on_next_page_pressed() -> void:
 	if all_cards_selected():
 		print("All cards selected!")
-		print("Selected card indices:", selected_card_indices)
+		print("Selected card indices:", selected_card_indices_level12)
 
 		# Store selected card indices and points
-		GameState.selected_card_indices += selected_card_indices
-		for index in selected_card_indices:
+		GameState.selected_card_indices_level12 += selected_card_indices_level12
+		for index in selected_card_indices_level12:
 			GameState.selected_card_points.append(card_costs[index])
 
 		print("Points remaining after spending:", GameState.total_points)

@@ -17,9 +17,6 @@ var selected_count = 0
 @onready var next_button = $Button
 
 func _ready():
-	selected_cards.clear()
-	selected_card_indices.clear()
-	selected_count = 0
 
 	# Initialize selection and connect signals
 	for i in range(card_points.size()):
