@@ -1,9 +1,5 @@
 res://Scenes/female_level_4.tscn
 res://Scenes/female_level_5.tscn
 res://Scenes/level_13.tscn
-res://Scripts/level_12.gd
-res://Scripts/GameState.gd
 res://Scenes/level_12.tscn
 res://Scenes/game_over.tscn
-res://Scripts/game_over.gd
-res://Scripts/level_9.gd

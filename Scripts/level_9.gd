@@ -1,23 +1,23 @@
 extends Control
 
-# Hidden point values for each card
 var card_points = [5, 3, 0, 4, 5, 3, 2, 0, 5, 2, 1, 5]
 
-# Tracks whether each card is selected
 var selected_cards = []
-var selected_card_indices = []  # Indices of selected cards
+var selected_card_indices = []
+var locked_indices = []  # New: cards that cannot be deselected
 
-# Number of cards that need to be selected
 const INITIAL_SELECTION_LIMIT = 5
 const MAX_SELECTION = 6
 var selected_count = 0
 
-# Reference nodes
 @onready var grid_container = $GridContainer
 @onready var next_button = $Button
 
 func _ready():
-	# Initialize selection and connect signals
+	selected_cards.clear()
+	selected_card_indices.clear()
+	locked_indices.clear()
+
 	for i in range(card_points.size()):
 		selected_cards.append(false)
 		var card = grid_container.get_child(i)
@@ -29,12 +29,15 @@ func _ready():
 		card.connect("pressed", Callable(self, "_on_card_clicked").bind(i))
 
 	# Restore previous selections
-	selected_card_indices.clear()
 	for i in GameState.selected_card_indices:
 		selected_cards[i] = true
 		selected_card_indices.append(i)
 		selected_count += 1
 		grid_container.get_child(i).modulate = Color(0.5, 0.5, 0.5)
+
+		# Lock if returning from Level 12
+		if GameState.has_tried_purno:
+			locked_indices.append(i)
 
 	update_next_page_button_state()
 
@@ -42,11 +45,14 @@ func _ready():
 		next_button.connect("pressed", Callable(self, "_on_next_page_pressed"))
 
 func _on_card_clicked(card_index: int) -> void:
-	var card = grid_container.get_child(card_index)
+	if card_index in locked_indices:
+		print("This card is locked and cannot be deselected.")
+		return
 
+	var card = grid_container.get_child(card_index)
 	var max_limit = INITIAL_SELECTION_LIMIT
 	if GameState.has_tried_purno:
-		max_limit += 1  # Allow one more card after returning from Level 12
+		max_limit += 1
 
 	if selected_cards[card_index]:
 		selected_cards[card_index] = false
@@ -106,11 +112,11 @@ func _on_return_to_level_9():
 		GameState.has_tried_purno = false
 		print("Returning to Level 9. You can now select 1 more card.")
 
-	# Reset local state from GameState
 	selected_card_indices = GameState.selected_card_indices.duplicate()
 	selected_count = selected_card_indices.size()
+	locked_indices = selected_card_indices.duplicate()  # Lock them!
 
-	for i in range(card_points.size()):	
+	for i in range(card_points.size()):
 		var card = grid_container.get_child(i)
 
 		if card.is_connected("pressed", Callable(self, "_on_card_clicked")):
@@ -125,5 +131,5 @@ func _on_return_to_level_9():
 			card.modulate = Color(1, 1, 1, 1)
 
 	update_next_page_button_state()
-	print("Previously selected:", selected_card_indices)
+	print("Previously selected (locked):", locked_indices)
 	print("You may now select one more card.")
