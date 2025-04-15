@@ -71,8 +71,7 @@ texture_normal = ExtResource("4_weit4")
 [node name="BorderGlow" type="Button" parent="Cards/FemaleButton"]
 z_index = -1
 layout_mode = 0
-offset_left = 3.69324
-offset_right = 818.693
+offset_right = 815.0
 offset_bottom = 587.0
 theme_override_styles/hover = SubResource("StyleBoxFlat_q583h")
 theme_override_styles/normal = SubResource("StyleBoxFlat_6ccjt")
@@ -119,6 +118,7 @@ offset_right = 1709.0
 offset_bottom = 784.0
 
 [node name="Popup" parent="." instance=ExtResource("8_7ky2c")]
+visible = false
 z_index = 2
 offset_left = 422.0
 offset_top = 152.0
