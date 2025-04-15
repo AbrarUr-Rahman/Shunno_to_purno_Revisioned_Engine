@@ -1,7 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://5uib4senev3y"]
+[gd_scene load_steps=13 format=3 uid="uid://5uib4senev3y"]
 
 [ext_resource type="Script" path="res://Scripts/level_11.gd" id="1_a34js"]
-[ext_resource type="Texture2D" path="res://assets/images/backgroundImage.webp" id="1_lnyfq"]
 [ext_resource type="FontFile" uid="uid://dflfvvlubatt6" path="res://assets/fonts/LiAlinurKurigramUnicode.woff" id="3_8wpll"]
 [ext_resource type="Texture2D" uid="uid://dqusp3hfjhfvg" path="res://assets/webp/screen-4-border.svg" id="4_fywms"]
 [ext_resource type="Texture2D" uid="uid://c8l7ykm5ow6lo" path="res://assets/webp/life-path-option/Group 625@2x.png" id="5_bq7cu"]
@@ -31,7 +30,6 @@ layout_mode = 0
 offset_top = -3.0
 offset_right = 1151.0
 offset_bottom = 647.0
-texture = ExtResource("1_lnyfq")
 expand_mode = 1
 
 [node name="text2" type="Label" parent="Backround"]

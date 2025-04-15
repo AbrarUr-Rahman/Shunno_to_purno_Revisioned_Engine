@@ -85,6 +85,10 @@ func update_next_page_button_state():
 
 func _on_next_page_pressed() -> void:
 	var required_count = INITIAL_SELECTION_LIMIT
+	GameState.card_textures = []
+	for index in selected_card_indices:
+		var card_node = grid_container.get_child(index)
+		GameState.card_textures.append(card_node.texture_normal) 
 	if GameState.has_tried_purno:
 		required_count += 1
 

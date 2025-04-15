@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://d3j6xo0yg8t2b"]
+[gd_scene load_steps=8 format=3 uid="uid://d3j6xo0yg8t2b"]
 
 [ext_resource type="Script" path="res://Scenes/male_level_5.gd" id="1_aqa36"]
 [ext_resource type="PackedScene" uid="uid://nvu1bsas5jye" path="res://Scenes/male_player.tscn" id="2_4lp0h"]
-[ext_resource type="Texture2D" uid="uid://b32qvtaowwjxg" path="res://assets/images/city_arrive_bg_removed.png" id="2_d7xkd"]
 [ext_resource type="FontFile" uid="uid://hl5jas8diunp" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="2_kfwn8"]
 [ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="4_87nsy"]
 
@@ -55,7 +54,6 @@ script = ExtResource("1_aqa36")
 layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 658.0
-texture = ExtResource("2_d7xkd")
 expand_mode = 1
 
 [node name="text" type="Label" parent="Background"]

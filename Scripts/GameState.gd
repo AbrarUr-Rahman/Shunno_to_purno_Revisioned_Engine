@@ -9,3 +9,4 @@ var selected_card_indices_level12 : Array = []
 var has_tried_purno = false
 var visited_level_9: bool = false
 var selected_gender : String = ""
+var card_textures = [] 

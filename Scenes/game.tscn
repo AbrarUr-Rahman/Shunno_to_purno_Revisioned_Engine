@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://c1tuomnceud8f" path="res://Scenes/female_player.tscn" id="2_4xvvl"]
 
 [node name="Game" type="Node2D"]
+position = Vector2(3, 0)
+scale = Vector2(1.06595, 0.831182)
 
 [node name="MalePlayer" parent="." instance=ExtResource("1_tec6q")]
 position = Vector2(118, 74)
