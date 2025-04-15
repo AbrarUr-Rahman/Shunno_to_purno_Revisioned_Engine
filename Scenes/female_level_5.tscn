@@ -51,9 +51,10 @@ grow_vertical = 2
 
 [node name="Backround" type="TextureRect" parent="."]
 layout_mode = 0
-offset_top = -3.0
-offset_right = 1151.0
-offset_bottom = 647.0
+offset_left = -5.0
+offset_top = 5.0
+offset_right = 1146.0
+offset_bottom = 655.0
 texture = ExtResource("2_0s1qq")
 expand_mode = 1
 

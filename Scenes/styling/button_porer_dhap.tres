@@ -1,0 +1,7 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://v7tj22nooiw5"]
+
+[ext_resource type="Texture2D" uid="uid://cc6u2lf4lqoy5" path="res://assets/images/welcome_page/button.webp" id="1_qwqop"]
+
+[resource]
+texture = ExtResource("1_qwqop")
+texture_margin_top = 15.0

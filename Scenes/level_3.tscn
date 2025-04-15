@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/level_3.gd" id="1_lbxgp"]
 [ext_resource type="Texture2D" uid="uid://fa6x7n20wugm" path="res://assets/webp/welcome.webp" id="2_xeuje"]
-[ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="3_6yers"]
+[ext_resource type="PackedScene" uid="uid://bbda3sv7pryt0" path="res://Scenes/porer_dhap.tscn" id="3_6yers"]
 
 [node name="level-3" type="Control"]
 layout_mode = 3
@@ -18,8 +18,10 @@ metadata/_edit_lock_ = true
 
 [node name="Backround" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 647.0
+offset_left = 2.0
+offset_top = -5.0
+offset_right = 1154.0
+offset_bottom = 642.0
 texture = ExtResource("2_xeuje")
 expand_mode = 1
 

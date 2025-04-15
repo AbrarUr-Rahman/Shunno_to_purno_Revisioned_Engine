@@ -1,21 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://dlqjqb3vx6xgw"]
+[gd_scene load_steps=6 format=3 uid="uid://dlqjqb3vx6xgw"]
 
-[ext_resource type="Script" path="res://Scripts/man_purno.gd" id="1_6b1fg"]
-[ext_resource type="Texture2D" uid="uid://srlf0mqy32sb" path="res://assets/webp/win-male.webp" id="1_xgbsr"]
+[ext_resource type="StyleBox" uid="uid://v7tj22nooiw5" path="res://Scenes/styling/button_porer_dhap.tres" id="1_3wub5"]
+[ext_resource type="StyleBox" uid="uid://bdj455ysxbrme" path="res://Scenes/styling/porer_dhap.tres" id="2_vl23t"]
+[ext_resource type="Texture2D" uid="uid://cc6u2lf4lqoy5" path="res://assets/images/welcome_page/button.webp" id="3_rqhc5"]
 
-[node name="Man_purno" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_6b1fg")
+[sub_resource type="Theme" id="Theme_e4l0l"]
 
-[node name="Backround" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = -1.0
-offset_right = 1152.0
-offset_bottom = 648.0
-texture = ExtResource("1_xgbsr")
-expand_mode = 1
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qtek2"]
+texture = ExtResource("3_rqhc5")
+
+[node name="Button" type="Button"]
+texture_filter = 2
+offset_left = 311.0
+offset_top = 139.0
+offset_right = 485.0
+offset_bottom = 209.0
+pivot_offset = Vector2(821, 285)
+theme = SubResource("Theme_e4l0l")
+theme_override_styles/hover = ExtResource("1_3wub5")
+theme_override_styles/pressed = ExtResource("2_vl23t")
+theme_override_styles/normal = SubResource("StyleBoxTexture_qtek2")
+button_mask = 0
+text = " "

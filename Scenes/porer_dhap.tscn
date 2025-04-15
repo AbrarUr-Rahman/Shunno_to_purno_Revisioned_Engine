@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://g74nwhc3va1v"]
+[gd_scene load_steps=5 format=3 uid="uid://bbda3sv7pryt0"]
 
 [ext_resource type="Texture2D" uid="uid://d03vdpu2i4o2b" path="res://assets/textures/btn.png" id="1_s4vlh"]
 [ext_resource type="FontFile" uid="uid://hl5jas8diunp" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="1_v5art"]
