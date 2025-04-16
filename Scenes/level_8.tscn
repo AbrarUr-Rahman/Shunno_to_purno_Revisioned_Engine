@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://doe4xgwx4osdb"]
+[gd_scene load_steps=13 format=3 uid="uid://doe4xgwx4osdb"]
 
 [ext_resource type="Script" path="res://Scripts/level_8.gd" id="1_kc7ow"]
 [ext_resource type="Texture2D" uid="uid://bxdgsk7d26xl0" path="res://assets/images/gender_select/bg.webp" id="2_pc8b6"]
@@ -10,6 +10,19 @@
 [ext_resource type="Texture2D" uid="uid://ch6a7pmi4gebj" path="res://assets/images/selection_page-2/card 5.webp" id="8_gjokh"]
 [ext_resource type="Texture2D" uid="uid://cnpgsi4n8t7ob" path="res://assets/images/selection_page-2/card 6.webp" id="9_m566i"]
 [ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="10_kre26"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejvpt"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.243137, 0.717647, 0.960784, 0.6)
+shadow_size = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q1ptr"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.242394, 0.718134, 0.961878, 0.6)
+shadow_size = 25
+anti_aliasing = false
 
 [node name="level_8" type="Control"]
 layout_mode = 3
@@ -54,28 +67,100 @@ theme_override_constants/v_separation = 15
 columns = 3
 
 [node name="TextureButton" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("4_k0rc6")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton"]
+z_index = -1
+layout_mode = 0
+offset_right = 537.0
+offset_bottom = 286.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_ejvpt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q1ptr")
+
 [node name="TextureButton2" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("5_1e0n1")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton2"]
+z_index = -1
+layout_mode = 0
+offset_right = 537.0
+offset_bottom = 286.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_ejvpt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q1ptr")
+
 [node name="TextureButton3" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("6_q4w3u")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton3"]
+z_index = -1
+layout_mode = 0
+offset_right = 537.0
+offset_bottom = 286.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_ejvpt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q1ptr")
+
 [node name="TextureButton4" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("7_4va3r")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton4"]
+z_index = -1
+layout_mode = 0
+offset_right = 537.0
+offset_bottom = 286.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_ejvpt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q1ptr")
+
 [node name="TextureButton5" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("8_gjokh")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton5"]
+z_index = -1
+layout_mode = 0
+offset_right = 537.0
+offset_bottom = 286.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_ejvpt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q1ptr")
+
 [node name="TextureButton6" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("9_m566i")
+
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton6"]
+z_index = -1
+layout_mode = 0
+offset_right = 537.0
+offset_bottom = 286.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_ejvpt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q1ptr")
 
 [node name="Button" parent="." instance=ExtResource("10_kre26")]
 layout_mode = 0
