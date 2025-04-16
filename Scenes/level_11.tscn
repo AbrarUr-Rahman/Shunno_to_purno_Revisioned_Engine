@@ -44,10 +44,10 @@ autowrap_mode = 2
 
 [node name="text" type="Label" parent="Backround/text2"]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 26.0
-offset_right = 501.0
-offset_bottom = 182.0
+offset_left = -7.0
+offset_top = 65.0
+offset_right = 493.0
+offset_bottom = 204.0
 theme_override_fonts/font = ExtResource("3_8wpll")
 theme_override_font_sizes/font_size = 35
 text = "
@@ -84,22 +84,27 @@ theme_override_constants/v_separation = 15
 columns = 3
 
 [node name="TextureButton" type="TextureButton" parent="GridContainer"]
+texture_filter = 2
 layout_mode = 2
 texture_normal = ExtResource("6_0b3xv")
 
 [node name="TextureButton2" type="TextureButton" parent="GridContainer"]
+texture_filter = 2
 layout_mode = 2
 texture_normal = ExtResource("7_on1th")
 
 [node name="TextureButton3" type="TextureButton" parent="GridContainer"]
+texture_filter = 2
 layout_mode = 2
 texture_normal = ExtResource("8_riljk")
 
 [node name="TextureButton4" type="TextureButton" parent="GridContainer"]
+texture_filter = 2
 layout_mode = 2
 texture_normal = ExtResource("9_73axy")
 
 [node name="TextureButton5" type="TextureButton" parent="GridContainer"]
+texture_filter = 6
 layout_mode = 2
 texture_normal = ExtResource("10_4xoch")
 
