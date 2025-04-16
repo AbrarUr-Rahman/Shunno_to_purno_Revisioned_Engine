@@ -68,6 +68,7 @@ extends Control
 var total_points = 12
 var card_points = [2, 6, 4, 3, 2, 1, 2]
 var selected_cards = [false, false, false, false, false, false, false]
+@onready var popup = $Popup
 # This function is called when a card is clicked
 func _on_card_clicked(card_index: int) -> void:
 	var card_cost = card_points[card_index]
@@ -95,6 +96,9 @@ func _on_card_clicked(card_index: int) -> void:
 
 		else:
 			print("Not enough points to click this card!")
+			#popup.set_label_text("আপনি ১২ পয়েন্ট ব্যয় করে ফেলেছেন। পরের ধাপে 
+			#যেতে নিচের ডানের বাটন প্রেস করুন।") 
+			popup.show()
 
 	update_points_display()
 	update_button_state()
@@ -133,6 +137,10 @@ func update_button_state():
 
 # Setup signal connections
 func _ready():
+	popup.hide()
+	popup.style_label(30, Vector2(160,70),Vector2(400,100))
+	popup.set_label_text("আপনি ১২ পয়েন্ট ব্যয় করে ফেলেছেন। পরের ধাপে 
+	যেতে নিচের ডানের বাটন প্রেস করুন।")
 	for i in range(card_points.size()):
 		var card = $GridContainer.get_child(i)
 		card.get_child(0).visible = false

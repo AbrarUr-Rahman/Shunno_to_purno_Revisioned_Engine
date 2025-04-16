@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cw0euy5fr317w"]
+[gd_scene load_steps=11 format=3 uid="uid://cw0euy5fr317w"]
 
 [ext_resource type="Script" path="res://Scripts/level_13.gd" id="1_ek7cb"]
 [ext_resource type="Texture2D" uid="uid://bxdgsk7d26xl0" path="res://assets/images/gender_select/bg.webp" id="2_31tuo"]
@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://hl5jas8diunp" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="5_f2mno"]
 [ext_resource type="Texture2D" uid="uid://dtal1ranxs2vy" path="res://assets/images/selection_page-4/card 3.webp" id="6_flp0l"]
 [ext_resource type="Texture2D" uid="uid://co8knjel2sv3b" path="res://assets/images/selection_page-4/card 4.webp" id="7_gx0wq"]
+[ext_resource type="PackedScene" uid="uid://daantbtj6ur4m" path="res://Scenes/popup.tscn" id="10_d6bx4"]
 [ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="11_6cdb2"]
 
 [node name="level_13" type="Control"]
@@ -96,5 +97,11 @@ offset_left = 1535.0
 offset_top = 714.0
 offset_right = 1785.0
 offset_bottom = 814.0
+
+[node name="Popup" parent="." instance=ExtResource("10_d6bx4")]
+offset_left = 209.0
+offset_top = 115.0
+offset_right = 209.0
+offset_bottom = 115.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

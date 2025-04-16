@@ -14,5 +14,10 @@ res://Scenes/male_player.tscn
 res://Scenes/man_fail.tscn
 res://Scenes/woman_fail.tscn
 res://Scenes/woman_purno.tscn
+res://Scripts/level_7.gd
+res://Scripts/popup.gd
+res://Scenes/popup.tscn
+res://Scripts/level_8.gd
+res://Scripts/level_9.gd
 res://Scripts/level_12.gd
 res://Scripts/level_13.gd

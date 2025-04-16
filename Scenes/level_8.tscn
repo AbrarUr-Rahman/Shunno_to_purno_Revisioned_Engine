@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://doe4xgwx4osdb"]
+[gd_scene load_steps=12 format=3 uid="uid://doe4xgwx4osdb"]
 
 [ext_resource type="Script" path="res://Scripts/level_8.gd" id="1_kc7ow"]
 [ext_resource type="Texture2D" uid="uid://bxdgsk7d26xl0" path="res://assets/images/gender_select/bg.webp" id="2_pc8b6"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ch6a7pmi4gebj" path="res://assets/images/selection_page-2/card 5.webp" id="8_gjokh"]
 [ext_resource type="Texture2D" uid="uid://cnpgsi4n8t7ob" path="res://assets/images/selection_page-2/card 6.webp" id="9_m566i"]
 [ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="10_kre26"]
+[ext_resource type="PackedScene" uid="uid://daantbtj6ur4m" path="res://Scenes/popup.tscn" id="11_7huvj"]
 
 [node name="level_8" type="Control"]
 layout_mode = 3
@@ -83,5 +84,12 @@ offset_left = 1503.0
 offset_top = 712.0
 offset_right = 1753.0
 offset_bottom = 812.0
+
+[node name="Popup" parent="." instance=ExtResource("11_7huvj")]
+offset_left = 252.0
+offset_top = 158.0
+offset_right = 252.0
+offset_bottom = 158.0
+scale = Vector2(0.945082, 0.885954)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

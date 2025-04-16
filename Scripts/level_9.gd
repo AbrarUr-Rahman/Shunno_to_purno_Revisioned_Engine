@@ -16,12 +16,17 @@ var selected_count = 0
 # Reference nodes
 @onready var grid_container = $GridContainer
 @onready var next_button = $Button
+@onready var popup = $Popup
 
 func _ready():
 	selected_cards.clear()
 	selected_card_indices.clear()
 	locked_cards.clear()
 	selected_count = 0
+	popup.hide()
+	popup.style_label(40, Vector2(175,100),Vector2(400,100))
+	
+	
 
 	# Initialize selection and connect signals
 	for i in range(card_points.size()):
@@ -52,6 +57,8 @@ func _ready():
 func _on_card_clicked(card_index: int) -> void:
 	if locked_cards.has(card_index):
 		print("Card", card_index, "is locked and cannot be deselected.")
+		popup.set_label_text("কার্ডটি ইতিমধ্যে সিলেক্ট করা হয়েছে।")
+		popup.show()
 		return
 
 	var card = grid_container.get_child(card_index)
@@ -76,6 +83,13 @@ func _on_card_clicked(card_index: int) -> void:
 			print("Added points for the card:", card_points[card_index])
 		else:
 			print("You have reached the selection limit!")
+			if max_limit == 5:
+				popup.set_label_text("৫ টির বেশি কার্ড সিলেক্ট করা যাবে না।")
+			else:
+				popup.style_label(40, Vector2(155,100),Vector2(400,100))
+				popup.set_label_text("পুনরায় ১ টির বেশি কার্ড সিলেক্ট করা যাবে না।")	
+			
+			popup.show()
 
 	print("Selected count:", selected_count)
 	print("Selected card indices:", selected_card_indices)

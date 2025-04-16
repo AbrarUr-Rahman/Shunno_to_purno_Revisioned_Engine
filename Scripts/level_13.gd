@@ -129,6 +129,7 @@ var selected_count = 0  # Count of selected cards
 @onready var grid_container = $GridContainer
 @onready var points_label = $Backround/TextureRect/points
 @onready var next_page_button = $Button
+@onready var popup = $Popup
 
 func _ready():
 	# Retrieve total points from GameState
@@ -145,6 +146,9 @@ func _ready():
 
 	# Connect the next page button's signal
 	next_page_button.connect("pressed", Callable(self, "_on_next_page_pressed"))
+	
+	popup.hide()
+	popup.style_label(40, Vector2(180,100),Vector2(400,100))
 
 # Handle card clicks
 func _on_card_clicked(index: int) -> void:
@@ -165,6 +169,11 @@ func _on_card_clicked(index: int) -> void:
 			# Check if it's the first time they don't have enough points
 			if GameState.has_tried_purno == false:
 				# Allow the player another chance to gather points (e.g., send them to level 9)
+				popup.set_label_text('পেছনের "অপশন সিলেকশন রাউন্ড" এ 
+				ফেরত গিয়ে "আগে বেছে নেওয়া হয়নি" 
+				এরকম আরও একটি অপশন বেছে নিন।')
+				popup.style_label(25, Vector2(180,100),Vector2(400,100))
+				popup.show()
 				get_tree().change_scene_to_file("res://Scenes/level_9.tscn")
 				GameState.has_tried_purno = true  # Mark that the player has tried purno before
 			else:
@@ -178,6 +187,8 @@ func _on_card_clicked(index: int) -> void:
 		# Prevent selecting more than two cards
 		if selected_count >= 2:
 			print("You can only select up to two cards!")
+			popup.set_label_text("২ টির বেশি কার্ড সিলেক্ট করা যাবে না।")
+			popup.show()
 			return
 
 		# Select the card

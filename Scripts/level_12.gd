@@ -110,6 +110,7 @@ var selected_card_indices_level12 : Array = []
 @onready var grid_container = $GridContainer
 @onready var points_label = $Backround/TextureRect/points
 @onready var next_page_button = $Button
+@onready var popup = $Popup
 
 func _ready():
 
@@ -132,6 +133,9 @@ func _ready():
 
 	# Disable the next page button initially
 	next_page_button.disabled = true
+	
+	popup.hide()
+	popup.style_label(30, Vector2(190,70),Vector2(400,100))
 
 # Handle card clicks
 func _on_card_clicked(index: int) -> void:
@@ -152,6 +156,9 @@ func _on_card_clicked(index: int) -> void:
 			print("Selected card", index, ". Points spent:", card_costs[index])
 		else:
 			print("Not enough points to select this card!")
+			popup.set_label_text("আপনার ৩ টি চাহিদা বা সেবা উপভোগ 
+			করার জন্যে যথেষ্ট পয়েন্ট নেই। ")
+			
 
 		# Retrieve total points from GameState
 	points_label.text =  EnglishToBanglaNumberConverter.convert_number_to_bangla(GameState.total_points)+' পয়েন্ট পেয়েছেন '
@@ -201,4 +208,6 @@ func _on_next_page_pressed() -> void:
 		get_tree().change_scene_to_file("res://Scenes/coin_toss.tscn")
 	else:
 		print("You must select all cards to proceed!")
+		popup.set_label_text("৩ টি কার্ড ই সিলেক্ট করুন।")
+		popup.show()
 		next_page_button.disabled = false

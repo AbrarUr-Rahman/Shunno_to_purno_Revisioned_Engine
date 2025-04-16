@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bp0ls1kxsccnj"]
+[gd_scene load_steps=18 format=3 uid="uid://bp0ls1kxsccnj"]
 
 [ext_resource type="Script" path="res://Scripts/level_7.gd" id="1_a6j1v"]
 [ext_resource type="Texture2D" uid="uid://12gpc15svm3l" path="res://assets/images/selection_page-1/bg.webp" id="2_vnshj"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cs60l304dmcjr" path="res://assets/images/selection_page-1/card 6.webp" id="9_pbijc"]
 [ext_resource type="Texture2D" uid="uid://dco0ibv8647nb" path="res://assets/images/selection_page-1/card 7.webp" id="10_ucumn"]
 [ext_resource type="Texture2D" uid="uid://dleyfjevbf6io" path="res://assets/images/selection_page-1/ref-2.webp" id="13_isahw"]
+[ext_resource type="PackedScene" uid="uid://daantbtj6ur4m" path="res://Scenes/popup.tscn" id="14_womhq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onoq6"]
 bg_color = Color(1, 1, 1, 1)
@@ -217,5 +218,13 @@ offset_bottom = 788.0
 [node name="Ref-2" type="Sprite2D" parent="."]
 position = Vector2(1581, 489)
 texture = ExtResource("13_isahw")
+
+[node name="Popup" parent="." instance=ExtResource("14_womhq")]
+z_index = 2
+offset_left = 316.0
+offset_top = 184.0
+offset_right = 316.0
+offset_bottom = 184.0
+scale = Vector2(0.872814, 0.755258)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

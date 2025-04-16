@@ -64,6 +64,7 @@ extends Control
 # Track the selected cards
 var selected_cards = [false, false, false, false, false, false]  # One for each card
 var selected_count = 0  # Keep track of how many cards are selected
+@onready var popup = $Popup
 
 # This function is called when a card is clicked
 func _on_card_clicked(card_index: int) -> void:
@@ -81,6 +82,7 @@ func _on_card_clicked(card_index: int) -> void:
 		# If selecting a new card, check if the maximum limit is reached
 		if selected_count >= 3:
 			print("You can only select up to 3 cards!")
+			popup.show()
 			return  # Prevent selecting more than 3 cards
 
 		# Select the card
@@ -122,6 +124,9 @@ func _on_button_pressed():
 
 # Connect the signals for each card button
 func _ready():
+	popup.hide()
+	popup.style_label(40, Vector2(190,100),Vector2(400,100))
+	popup.set_label_text("যেকোনো ৩ টি কার্ড সিলেক্ট করুন।")
 	# Connect each card button's "pressed" signal
 	for i in range(selected_cards.size()):
 		var card = $GridContainer.get_child(i)  # Get the correct child by index
