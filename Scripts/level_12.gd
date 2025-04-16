@@ -100,7 +100,7 @@
 extends Control
 
 # Points required for each card
-var card_costs = [7, 5, 3]  # Example costs for the cards
+var card_costs = [7, 5, 4]  # Example costs for the cards
 
 # Track whether each card is selected
 var selected_cards = [false, false, false]  # Matches the number of cards

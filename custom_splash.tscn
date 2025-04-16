@@ -23,8 +23,8 @@ metadata/_edit_lock_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1151.0
-offset_bottom = 652.0
+offset_right = 1921.0
+offset_bottom = 914.0
 
 [node name="TextureRect" type="TextureRect" parent="ColorRect"]
 texture_filter = 2
@@ -35,10 +35,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -252.5
-offset_top = -232.0
-offset_right = 283.5
-offset_bottom = 218.0
+offset_left = -352.5
+offset_top = -323.0
+offset_right = 379.5
+offset_bottom = 201.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_2l7uq")
@@ -52,10 +52,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 42.0
-offset_top = 214.0
-offset_right = 84.0
-offset_bottom = 897.0
+offset_left = 50.0
+offset_top = 127.0
+offset_right = 92.0
+offset_bottom = 810.0
 grow_horizontal = 2
 grow_vertical = 0
 rotation = -1.5706

@@ -86,7 +86,7 @@ func _on_card_clicked(card_index: int) -> void:
 			if max_limit == 5:
 				popup.set_label_text("৫ টির বেশি কার্ড সিলেক্ট করা যাবে না।")
 			else:
-				popup.style_label(40, Vector2(155,100),Vector2(400,100))
+				popup.style_label(40, Vector2(135,100),Vector2(400,100))
 				popup.set_label_text("পুনরায় ১ টির বেশি কার্ড সিলেক্ট করা যাবে না।")	
 			
 			popup.show()

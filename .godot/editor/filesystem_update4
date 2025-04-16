@@ -21,3 +21,6 @@ res://Scripts/level_8.gd
 res://Scripts/level_9.gd
 res://Scripts/level_12.gd
 res://Scripts/level_13.gd
+res://Scripts/level_11.gd
+res://Scenes/accident_2_cyclone.tscn
+res://Scenes/accident_1_car_crash.tscn

@@ -130,6 +130,8 @@ var selected_count = 0  # Count of selected cards
 @onready var points_label = $Backround/TextureRect/points
 @onready var next_page_button = $Button
 @onready var popup = $Popup
+var pointsBeforeThisScene = GameState.total_points
+
 
 func _ready():
 	# Retrieve total points from GameState
@@ -149,6 +151,7 @@ func _ready():
 	
 	popup.hide()
 	popup.style_label(40, Vector2(180,100),Vector2(400,100))
+	
 
 # Handle card clicks
 func _on_card_clicked(index: int) -> void:
@@ -169,19 +172,33 @@ func _on_card_clicked(index: int) -> void:
 			# Check if it's the first time they don't have enough points
 			if GameState.has_tried_purno == false:
 				# Allow the player another chance to gather points (e.g., send them to level 9)
-				popup.set_label_text('পেছনের "অপশন সিলেকশন রাউন্ড" এ 
-				ফেরত গিয়ে "আগে বেছে নেওয়া হয়নি" 
-				এরকম আরও একটি অপশন বেছে নিন।')
-				popup.style_label(25, Vector2(180,100),Vector2(400,100))
-				popup.show()
-				get_tree().change_scene_to_file("res://Scenes/level_9.tscn")
-				GameState.has_tried_purno = true  # Mark that the player has tried purno before
-			else:
-				# If they already tried purno, go to fail scene
-				if GameState.selected_gender == "male":
-					get_tree().change_scene_to_file("res://Scenes/man_fail.tscn")
-				elif GameState.selected_gender == "female":
-					get_tree().change_scene_to_file("res://Scenes/woman_fail.tscn")
+				if pointsBeforeThisScene < 6:
+					popup.set_label_text('পেছনের "অপশন সিলেকশন রাউন্ড" এ ফেরত গিয়ে 
+					"আগে বেছে নেওয়া হয়নি" এরকম আরও একটি অপশন বেছে নিন।')
+					popup.style_label(25, Vector2(130,90),Vector2(400,100))
+					popup.show()
+					popup.confirmed.connect(_on_popup_confirmed)
+					GameState.has_tried_purno = true
+					GameState.total_points = pointsBeforeThisScene
+					
+				else:
+					popup.set_label_text('আপনার কাছে পর্যাপ্ত পরিমাণ পয়েন্ট নাই। 
+					অন্য কার্ড সিলেক্ট করুন')
+					popup.style_label(25, Vector2(170,90),Vector2(400,100))
+					popup.show()
+				 # Mark that the player has tried purno before
+			elif GameState.has_tried_purno==true:
+				# If they already tried purno, go to fail scene		
+				if pointsBeforeThisScene < 6:		
+					if GameState.selected_gender == "male":
+						get_tree().change_scene_to_file("res://Scenes/man_fail.tscn")
+					elif GameState.selected_gender == "female":
+						get_tree().change_scene_to_file("res://Scenes/woman_fail.tscn")
+				else:
+					popup.set_label_text('আপনার কাছে পর্যাপ্ত পরিমাণ পয়েন্ট নাই। 
+					অন্য কার্ড সিলেক্ট করুন')
+					popup.style_label(25, Vector2(170,90),Vector2(400,100))
+					popup.show()		
 			return  # Exit the function if points are not enough
 
 		# Prevent selecting more than two cards
@@ -199,7 +216,7 @@ func _on_card_clicked(index: int) -> void:
 		print("Selected card", index, ". Points spent:", card_costs[index])
 
 
-	#points_label.text =  utils.convert_number_to_bangla(GameState.total_points)+' পয়েন্ট পেয়েছেন'
+	points_label.text =  EnglishToBanglaNumberConverter.convert_number_to_bangla(GameState.total_points)+' পয়েন্ট বাকি'
 	update_next_page_button_state()
 
 # Update the next page button state
@@ -212,6 +229,9 @@ func update_next_page_button_state():
 	else:
 		print("Disabling Next Button!")
 		next_page_button.disabled = true
+		
+func _on_popup_confirmed():
+	get_tree().change_scene_to_file("res://Scenes/level_9.tscn")
 
 # Handle next page button press
 func _on_next_page_pressed() -> void:
