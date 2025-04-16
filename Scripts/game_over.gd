@@ -12,4 +12,4 @@ func _on_button_pressed() -> void:
 	GameState.has_tried_purno=false
 	GameState.selected_card_indices_level12 = []
 	# Change to menu scene
-	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/level_3.tscn")

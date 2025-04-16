@@ -188,7 +188,7 @@ func _on_card_clicked(index: int) -> void:
 		print("Selected card", index, ". Points spent:", card_costs[index])
 
 
-	#points_label.text =  utils.convert_number_to_bangla(GameState.total_points)+' পয়েন্ট পেয়েছেন'
+	points_label.text =  EnglishToBanglaNumberConverter.convert_number_to_bangla(GameState.total_points)+' পয়েন্ট বাকি'
 	update_next_page_button_state()
 
 # Update the next page button state

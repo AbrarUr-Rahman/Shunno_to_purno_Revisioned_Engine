@@ -3,7 +3,7 @@ extends Control
 
 @onready var progress_bar = $ProgressBar
 
-var next_scene_path = "res://Scenes/menu.tscn"  # Replace with your main scene path
+var next_scene_path = "res://Scenes/level_3.tscn"  # Replace with your main scene path
 
 func _ready():
 	await get_tree().create_timer(2.0).timeout

@@ -14,5 +14,11 @@ res://Scenes/male_player.tscn
 res://Scenes/man_fail.tscn
 res://Scenes/woman_fail.tscn
 res://Scenes/woman_purno.tscn
-res://Scripts/level_12.gd
+res://Scripts/level_11.gd
 res://Scripts/level_13.gd
+res://Scenes/menu.tscn
+res://custom_splash.gd
+res://Scenes/custom_splash.tscn
+res://Scripts/game_over.gd
+res://custom_splash.tscn
+res://Scenes/game_over.tscn
