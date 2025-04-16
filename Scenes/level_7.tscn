@@ -81,6 +81,7 @@ texture_normal = ExtResource("4_ju57x")
 
 [node name="Shadow" type="Button" parent="GridContainer/TextureButton"]
 z_index = -1
+layout_mode = 0
 offset_right = 404.0
 offset_bottom = 290.0
 focus_mode = 0
@@ -96,6 +97,7 @@ texture_normal = ExtResource("5_p14ja")
 
 [node name="Shadow2" type="Button" parent="GridContainer/TextureButton2"]
 z_index = -1
+layout_mode = 0
 offset_right = 404.0
 offset_bottom = 290.0
 focus_mode = 0
@@ -111,6 +113,7 @@ texture_normal = ExtResource("6_vpaow")
 
 [node name="Shadow3" type="Button" parent="GridContainer/TextureButton3"]
 z_index = -1
+layout_mode = 0
 offset_right = 404.0
 offset_bottom = 290.0
 focus_mode = 0
@@ -126,6 +129,7 @@ texture_normal = ExtResource("7_voa5v")
 
 [node name="Shadow4" type="Button" parent="GridContainer/TextureButton4"]
 z_index = -1
+layout_mode = 0
 offset_right = 404.0
 offset_bottom = 290.0
 focus_mode = 0
@@ -141,6 +145,7 @@ texture_normal = ExtResource("8_btkbd")
 
 [node name="Shadow5" type="Button" parent="GridContainer/TextureButton5"]
 z_index = -1
+layout_mode = 0
 offset_right = 404.0
 offset_bottom = 290.0
 focus_mode = 0
@@ -156,6 +161,7 @@ texture_normal = ExtResource("9_pbijc")
 
 [node name="Shadow6" type="Button" parent="GridContainer/TextureButton6"]
 z_index = -1
+layout_mode = 0
 offset_right = 404.0
 offset_bottom = 290.0
 focus_mode = 0
@@ -171,6 +177,7 @@ texture_normal = ExtResource("10_ucumn")
 
 [node name="Shadow7" type="Button" parent="GridContainer/TextureButton7"]
 z_index = -1
+layout_mode = 0
 offset_right = 404.0
 offset_bottom = 290.0
 focus_mode = 0

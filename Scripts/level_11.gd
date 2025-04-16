@@ -5,7 +5,6 @@ extends Control
 
 # Reference to the label for displaying total points
 @onready var points_label = $Labels/points
-
 func _ready():
 	
 	# Retrieve selected card data from the singleton
@@ -18,7 +17,8 @@ func _ready():
 		total_points += point
 
 	# Update the points label
-	points_label.text = str(total_points)
+	#points_label.text =  convert_number_to_bangla(total_points)+' পয়েন্ট পেয়েছেন'
+	points_label.text =  EnglishToBanglaNumberConverter.convert_number_to_bangla(total_points)+' পয়েন্ট পেয়েছেন'
 
 	# Display the selected cards
 	for index in selected_indices:

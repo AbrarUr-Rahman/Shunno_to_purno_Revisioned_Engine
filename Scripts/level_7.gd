@@ -112,8 +112,20 @@ func pop_up_card(card: Control, pop_up: bool) -> void:
 # Update the points display
 func update_points_display():
 	var label = $GridContainer/TextureRect/Label
-	label.text = str(total_points)
-
+	label.text = convert_number_to_bangla(total_points)+' পয়েন্ট বাকি'
+func convert_number_to_bangla(number: int) -> String:
+	var bangla_digits = {
+		"0": "০", "1": "১", "2": "২", "3": "৩", "4": "৪",
+		"5": "৫", "6": "৬", "7": "৭", "8": "৮", "9": "৯"
+	}
+	var english_str = str(number)
+	var bangla_str = ""
+	for char in english_str:
+		if bangla_digits.has(char):
+			bangla_str += bangla_digits[char]
+		else:
+			bangla_str += char
+	return bangla_str
 # Enable/Disable button based on remaining points
 func update_button_state():
 	var next_button = $Button
