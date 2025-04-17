@@ -5,4 +5,4 @@ extends Control
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/male_level_6.tscn")
+	get_tree().change_scene_to_file("res://Scenes/road_level_male_7.tscn")

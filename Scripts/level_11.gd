@@ -93,6 +93,6 @@ func _ready():
 			
 func _on_button_pressed() -> void:
 		if GameState.selected_gender == "male":
-			get_tree().change_scene_to_file("res://Scenes/road_level_male_9.tscn")  # Male scene path
+			get_tree().change_scene_to_file("res://Scenes/road_level_male_10.tscn")  # Male scene path
 		elif GameState.selected_gender == "female":
 			get_tree().change_scene_to_file("res://Scenes/road_level_female_4.tscn")  # Female scene path

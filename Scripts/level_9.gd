@@ -32,7 +32,8 @@ func _ready():
 	for i in range(card_points.size()):
 		selected_cards.append(false)
 		var card = grid_container.get_child(i)
-		card.modulate = Color(1, 1, 1, 1)
+		card.get_child(0).visible = false
+		#card.modulate = Color(1, 1, 1, 1)
 		card.scale = Vector2(1, 1)
 
 		if card.is_connected("pressed", Callable(self, "_on_card_clicked")):
@@ -48,8 +49,10 @@ func _ready():
 		selected_count += 1
 
 		var card = grid_container.get_child(i)
-		card.modulate = Color(0.5, 0.5, 0.5)
-		card.scale = Vector2(1.05, 1.05)
+		var shadow = card.get_child(0)
+		shadow.visible = true
+		#card.modulate = Color(0.5, 0.5, 0.5)
+		card.scale = Vector2(1.02, 1.02)
 
 	update_next_page_button_state()
 	next_button.connect("pressed", Callable(self, "_on_next_page_pressed"))
@@ -62,12 +65,14 @@ func _on_card_clicked(card_index: int) -> void:
 		return
 
 	var card = grid_container.get_child(card_index)
+	var shadow = card.get_child(0)
 
 	if selected_cards[card_index]:
 		selected_cards[card_index] = false
 		selected_count -= 1
 		selected_card_indices.erase(card_index)
-		card.modulate = Color(1, 1, 1, 1)
+		shadow.visible = false
+		#card.modulate = Color(1, 1, 1, 1)
 		card.scale = Vector2(1, 1)
 		GameState.total_points -= card_points[card_index]
 		print("Removed points for the card:", card_points[card_index])
@@ -77,8 +82,9 @@ func _on_card_clicked(card_index: int) -> void:
 			selected_cards[card_index] = true
 			selected_count += 1
 			selected_card_indices.append(card_index)
-			card.modulate = Color(0.5, 0.5, 0.5)
-			card.scale = Vector2(1.05, 1.05)
+			#card.modulate = Color(0.5, 0.5, 0.5)
+			shadow.visible = true
+			card.scale = Vector2(1.02, 1.02)
 			GameState.total_points += card_points[card_index]
 			print("Added points for the card:", card_points[card_index])
 		else:
@@ -130,17 +136,19 @@ func _on_return_to_level_9():
 
 	for i in range(card_points.size()):	
 		var card = grid_container.get_child(i)
+		var shadow = card.get_child(0)
 
 		if card.is_connected("pressed", Callable(self, "_on_card_clicked")):
 			card.disconnect("pressed", Callable(self, "_on_card_clicked"))
 		card.connect("pressed", Callable(self, "_on_card_clicked").bind(i))
 
 		if selected_cards[i]:
-			card.modulate = Color(0.5, 0.5, 0.5)
-			card.scale = Vector2(1.05, 1.05)
+			#card.modulate = Color(0.5, 0.5, 0.5)
+			shadow.visible = true
+			card.scale = Vector2(1.02, 1.02)
 			locked_cards.append(i)  # Lock previously selected
 		else:
-			card.modulate = Color(1, 1, 1, 1)
+			#card.modulate = Color(1, 1, 1, 1)
 			card.scale = Vector2(1, 1)
 
 	selected_count = GameState.selected_card_indices.size()

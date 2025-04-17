@@ -69,12 +69,14 @@ var selected_count = 0  # Keep track of how many cards are selected
 # This function is called when a card is clicked
 func _on_card_clicked(card_index: int) -> void:
 	var card = $GridContainer.get_child(card_index)  # Get the clicked card
+	var shadow = card.get_child(0)
 
 	# If the card is already selected, deselect it
 	if selected_cards[card_index]:
 		selected_cards[card_index] = false
 		selected_count -= 1
-		card.modulate = Color(1, 1, 1, 1)  # Reset card appearance
+		#card.modulate = Color(1, 1, 1, 1)  # Reset card appearance
+		shadow.visible = false
 		# Reset scale if deselected
 		pop_up_card(card, false)
 		print("Deselected card:", card_index)
@@ -88,7 +90,8 @@ func _on_card_clicked(card_index: int) -> void:
 		# Select the card
 		selected_cards[card_index] = true
 		selected_count += 1
-		card.modulate = Color(0.5, 0.5, 0.5)  # Highlight the card visually
+		#card.modulate = Color(0.5, 0.5, 0.5)  # Highlight the card visually
+		shadow.visible = true
 		pop_up_card(card, true)
 		print("Selected card:", card_index)
 
@@ -116,7 +119,7 @@ func _on_button_pressed():
 
 	# Logic to transition to the next scene based on gender
 	if GameState.selected_gender == "male":
-		get_tree().change_scene_to_file("res://Scenes/road_level_male_8.tscn")  # Male scene path
+		get_tree().change_scene_to_file("res://Scenes/road_level_male_9.tscn")  # Male scene path
 	elif GameState.selected_gender == "female":
 		get_tree().change_scene_to_file("res://Scenes/road_level_female_3.tscn")  # Female scene path
 	else:
@@ -131,6 +134,7 @@ func _ready():
 	for i in range(selected_cards.size()):
 		var card = $GridContainer.get_child(i)  # Get the correct child by index
 		card.connect("pressed", Callable(self, "_on_card_clicked").bind(i))  # Use Callable to bind the card index
+		card.get_child(0).visible = false
 
 	# Initially disable the "Next Page" button
 	update_next_page_button_state()

@@ -143,6 +143,7 @@ func _ready():
 	# Connect the pressed signals for each card
 	for i in range(card_costs.size()):
 		var card = grid_container.get_child(i)  # Get existing card
+		card.get_child(0).visible = false
 		# Connect the card's "pressed" signal
 		card.connect("pressed", Callable(self, "_on_card_clicked").bind(i))
 
@@ -156,18 +157,28 @@ func _ready():
 # Handle card clicks
 func _on_card_clicked(index: int) -> void:
 	var card = grid_container.get_child(index)  # Get the clicked card
+	var shadow = card.get_child(0)
 
 	# If the card is already selected, deselect it
 	if selected_cards[index]:
 		selected_cards[index] = false
 		selected_count -= 1
 		GameState.total_points += card_costs[index]  # Refund points
-		card.modulate = Color(1, 1, 1, 1)  # Reset the card's appearance
+		#card.modulate = Color(1, 1, 1, 1)  # Reset the card's appearance
+		shadow.visible = false
+		_pop_up_card(card,false)
 		print("Deselected card", index, ". Points refunded:", card_costs[index])
 	else:
 		# Check if the player has enough points to select the card
 		if GameState.total_points < card_costs[index]:
 			print("Not enough points to select this card!")
+			# Check if it's the first time they don't have enough points
+			#_pop_up_card(card, true)
+			#shadow.visible = true
+			#await get_tree().create_timer(0).timeout
+			#_pop_up_card(card, false)
+			#shadow.visible = true
+			#await get_tree().create_timer(0).timeout
 
 			# Check if it's the first time they don't have enough points
 			if GameState.has_tried_purno == false:
@@ -212,7 +223,9 @@ func _on_card_clicked(index: int) -> void:
 		selected_cards[index] = true
 		selected_count += 1
 		GameState.total_points -= card_costs[index]  # Deduct points
-		card.modulate = Color(0.5, 0.5, 0.5)  # Highlight the card visually
+		shadow.visible = true
+		#card.modulate = Color(0.5, 0.5, 0.5)  # Highlight the card visually
+		_pop_up_card(card, true)  # ⬅️ Animate selection
 		print("Selected card", index, ". Points spent:", card_costs[index])
 
 
@@ -265,3 +278,11 @@ func _on_next_page_pressed() -> void:
 				get_tree().change_scene_to_file("res://Scenes/woman_fail.tscn")  # Failure scene for female
 			else:
 				print("No gender selected, unable to proceed!")
+
+#  pop-up animation for the selected card using create_tween()
+func _pop_up_card(card: Control, is_selected: bool) -> void:
+	var tween = create_tween()
+	if is_selected:
+		tween.tween_property(card, "scale", Vector2(1.02, 1.02), 0.1)
+	else:
+		tween.tween_property(card, "scale", Vector2(1, 1), 0.1)

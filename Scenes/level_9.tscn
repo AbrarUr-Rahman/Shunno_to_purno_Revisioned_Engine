@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cphpcxed30e3r"]
+[gd_scene load_steps=20 format=3 uid="uid://cphpcxed30e3r"]
 
 [ext_resource type="Script" path="res://Scripts/level_9.gd" id="1_74gp0"]
 [ext_resource type="Texture2D" uid="uid://12gpc15svm3l" path="res://assets/images/selection_page-1/bg.webp" id="2_k64sm"]
@@ -17,6 +17,19 @@
 [ext_resource type="Texture2D" uid="uid://duyjumgtb3bsf" path="res://assets/images/selection_page-3/card 11 point.webp" id="15_xocba"]
 [ext_resource type="Texture2D" uid="uid://b2ycc2lsw03ne" path="res://assets/images/selection_page-3/card 12 point.webp" id="16_hsev4"]
 [ext_resource type="PackedScene" uid="uid://daantbtj6ur4m" path="res://Scenes/popup.tscn" id="17_q64l5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_piqti"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.243137, 0.717647, 0.960784, 0.6)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6ovb"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.242394, 0.718134, 0.961878, 0.6)
+shadow_size = 20
+anti_aliasing = false
 
 [node name="level_9" type="Control"]
 layout_mode = 3
@@ -67,54 +80,200 @@ theme_override_constants/v_separation = 15
 columns = 6
 
 [node name="TextureButton" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("5_dnb5m")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton"]
+z_index = -1
+layout_mode = 0
+offset_right = 262.0
+offset_bottom = 262.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_piqti")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r6ovb")
+
 [node name="TextureButton2" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("6_msm83")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton2"]
+z_index = -1
+layout_mode = 0
+offset_right = 262.0
+offset_bottom = 262.0
+focus_mode = 0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_piqti")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r6ovb")
+
 [node name="TextureButton3" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("7_b0jy5")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton3"]
+z_index = -1
+layout_mode = 0
+offset_right = 262.0
+offset_bottom = 262.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_piqti")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r6ovb")
+
 [node name="TextureButton4" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("8_005rt")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton4"]
+z_index = -1
+layout_mode = 0
+offset_right = 262.0
+offset_bottom = 262.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_piqti")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r6ovb")
+
 [node name="TextureButton5" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("9_cpctx")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton5"]
+z_index = -1
+layout_mode = 0
+offset_right = 262.0
+offset_bottom = 262.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_piqti")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r6ovb")
+
 [node name="TextureButton6" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("10_6t20t")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton6"]
+z_index = -1
+layout_mode = 0
+offset_right = 262.0
+offset_bottom = 262.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_piqti")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r6ovb")
+
 [node name="TextureButton7" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("11_ryt4g")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton7"]
+z_index = -1
+layout_mode = 0
+offset_right = 262.0
+offset_bottom = 262.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_piqti")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r6ovb")
+
 [node name="TextureButton8" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("12_xebr0")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton8"]
+z_index = -1
+layout_mode = 0
+offset_right = 262.0
+offset_bottom = 262.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_piqti")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r6ovb")
+
 [node name="TextureButton9" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("13_o7ula")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton9"]
+z_index = -1
+layout_mode = 0
+offset_right = 262.0
+offset_bottom = 262.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_piqti")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r6ovb")
+
 [node name="TextureButton10" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("14_u5an3")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton10"]
+z_index = -1
+layout_mode = 0
+offset_right = 262.0
+offset_bottom = 262.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_piqti")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r6ovb")
+
 [node name="TextureButton11" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("15_xocba")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton11"]
+z_index = -1
+layout_mode = 0
+offset_right = 262.0
+offset_bottom = 262.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_piqti")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r6ovb")
+
 [node name="TextureButton12" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("16_hsev4")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton12"]
+z_index = -1
+layout_mode = 0
+offset_right = 262.0
+offset_bottom = 262.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_piqti")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r6ovb")
+
 [node name="Popup" parent="." instance=ExtResource("17_q64l5")]
+z_index = 2
 offset_left = 210.0
 offset_top = 112.0
 offset_right = 210.0

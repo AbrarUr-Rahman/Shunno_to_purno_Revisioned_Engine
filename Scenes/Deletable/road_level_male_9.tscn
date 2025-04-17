@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmgrfnwthxit"]
+
+[ext_resource type="Texture2D" uid="uid://wi72bdbba13k" path="res://assets/webp/roadmap1-male@2x.webp" id="1_heuux"]
+[ext_resource type="Script" path="res://Scripts/road_level_male_9.gd" id="1_j7jhn"]
+[ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="2_rwyh1"]
+[ext_resource type="PackedScene" uid="uid://nvu1bsas5jye" path="res://Scenes/male_player.tscn" id="3_d4e18"]
+
+[sub_resource type="Animation" id="Animation_pxlf8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1008, 193)]
+}
+
+[sub_resource type="Animation" id="Animation_nvl43"]
+resource_name = "move_male"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1008, 193), Vector2(650, 193)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mc081"]
+_data = {
+"RESET": SubResource("Animation_pxlf8"),
+"move_male": SubResource("Animation_nvl43")
+}
+
+[node name="Road_level_male_9" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 660.0
+script = ExtResource("1_j7jhn")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 1152.0
+offset_bottom = 657.0
+texture = ExtResource("1_heuux")
+expand_mode = 1
+
+[node name="Button" parent="Background" instance=ExtResource("2_rwyh1")]
+layout_mode = 0
+offset_left = 831.0
+offset_top = 529.0
+offset_right = 1080.0
+offset_bottom = 599.0
+theme_override_font_sizes/font_size = 36
+
+[node name="MalePlayer" parent="." instance=ExtResource("3_d4e18")]
+position = Vector2(1008, 193)
+scale = Vector2(-0.5, 0.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MalePlayer"]
+libraries = {
+"": SubResource("AnimationLibrary_mc081")
+}
+autoplay = "move_male"
+
+[connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]

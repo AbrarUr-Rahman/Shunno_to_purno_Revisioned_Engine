@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bftpicgmr8x8w"]
+[gd_scene load_steps=13 format=3 uid="uid://bftpicgmr8x8w"]
 
 [ext_resource type="Script" path="res://Scripts/level_12.gd" id="1_iky15"]
 [ext_resource type="Texture2D" uid="uid://bxdgsk7d26xl0" path="res://assets/images/gender_select/bg.webp" id="2_dgvvn"]
@@ -11,6 +11,19 @@
 [ext_resource type="PackedScene" uid="uid://daantbtj6ur4m" path="res://Scenes/popup.tscn" id="9_kq13p"]
 
 [sub_resource type="Theme" id="Theme_j1vjy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xmoir"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.243137, 0.717647, 0.960784, 0.6)
+shadow_size = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jp4ed"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.242394, 0.718134, 0.961878, 0.6)
+shadow_size = 25
+anti_aliasing = false
 
 [node name="level_12" type="Control"]
 layout_mode = 3
@@ -81,16 +94,52 @@ theme_override_constants/v_separation = 25
 columns = 3
 
 [node name="TextureButton" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("5_cqe24")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton"]
+z_index = -1
+layout_mode = 0
+offset_right = 417.0
+offset_bottom = 417.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_xmoir")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jp4ed")
+
 [node name="TextureButton2" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("6_a78fx")
 
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton2"]
+z_index = -1
+layout_mode = 0
+offset_right = 417.0
+offset_bottom = 417.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_xmoir")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jp4ed")
+
 [node name="TextureButton3" type="TextureButton" parent="GridContainer"]
+z_index = 2
 layout_mode = 2
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("7_xshfi")
+
+[node name="Shadow" type="Button" parent="GridContainer/TextureButton3"]
+z_index = -1
+layout_mode = 0
+offset_right = 417.0
+offset_bottom = 417.0
+focus_mode = 0
+mouse_filter = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_xmoir")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jp4ed")
 
 [node name="Button" parent="." instance=ExtResource("8_3r5oo")]
 layout_mode = 0

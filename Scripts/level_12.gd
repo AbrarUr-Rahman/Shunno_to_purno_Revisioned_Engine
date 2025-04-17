@@ -125,6 +125,7 @@ func _ready():
 	# Connect the pressed signals for each card
 	for i in range(card_costs.size()):
 		var card = grid_container.get_child(i)  # Get existing card
+		card.get_child(0).visible = false
 		card.connect("pressed", Callable(self, "_on_card_clicked").bind(i))
 	print("Level 12 Ready! Total points:", GameState.total_points)
 
@@ -143,6 +144,7 @@ func _on_card_clicked(index: int) -> void:
 
 	print("CARD CLICKED PROGRAMMATICALLY? Index:", index)
 	var card = grid_container.get_child(index)  # Get the clicked card
+	var shadow = card.get_child(0)
 
 	if selected_cards[index]:  # Prevent unselecting cards
 			print("Card", index, "is already selected.")
@@ -152,7 +154,9 @@ func _on_card_clicked(index: int) -> void:
 			selected_cards[index] = true
 			selected_card_indices_level12.append(index)
 			GameState.total_points -= card_costs[index]  # Deduct points
-			card.modulate = Color(0.5, 0.5, 0.5)  # Highlight the card visually
+			#card.modulate = Color(0.5, 0.5, 0.5)  # Highlight the card visually
+			shadow.visible = true
+			_pop_up_card(card, true)  # Animate the card
 			print("Selected card", index, ". Points spent:", card_costs[index])
 		else:
 			print("Not enough points to select this card!")
@@ -186,6 +190,14 @@ func all_cards_selected() -> bool:
 		if not selected:
 			return false
 	return true
+	
+# Animate the card when selected
+func _pop_up_card(card: Control, pop_up: bool) -> void:
+	var tween = create_tween()
+	if pop_up:
+		tween.tween_property(card, "scale", Vector2(1.02, 1.02), 0.1)
+	else:
+		tween.tween_property(card, "scale", Vector2(1, 1), 0.1)
 
 # Update the next page button state
 func update_next_page_button_state():

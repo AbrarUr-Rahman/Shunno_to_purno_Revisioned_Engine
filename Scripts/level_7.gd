@@ -152,7 +152,7 @@ func _ready():
 func _on_button_pressed() -> void:
 	if total_points == 0:
 		if GameState.selected_gender == "male":
-			get_tree().change_scene_to_file("res://Scenes/road_level_male_7.tscn")
+			get_tree().change_scene_to_file("res://Scenes/road_level_male_8.tscn")
 		elif GameState.selected_gender == "female":
 			get_tree().change_scene_to_file("res://Scenes/road_level_female_2.tscn")
 	else:
