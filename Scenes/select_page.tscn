@@ -85,7 +85,7 @@ offset_top = 731.0
 offset_right = 502.0
 offset_bottom = 773.0
 theme_override_fonts/font = ExtResource("5_opxb7")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 35
 text = "যেকোনো একটি নির্বাচন করুন।"
 
 [node name="Nari" type="Label" parent="Labels"]
@@ -112,13 +112,12 @@ text = "পুরুষ"
 
 [node name="Button" parent="." instance=ExtResource("4_vmoh7")]
 layout_mode = 0
-offset_left = 1476.0
+offset_left = 1467.0
 offset_top = 714.0
-offset_right = 1709.0
-offset_bottom = 784.0
+offset_right = 1717.0
+offset_bottom = 814.0
 
 [node name="Popup" parent="." instance=ExtResource("8_7ky2c")]
-visible = false
 z_index = 2
 offset_left = 422.0
 offset_top = 152.0

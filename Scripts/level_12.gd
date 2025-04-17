@@ -160,8 +160,10 @@ func _on_card_clicked(index: int) -> void:
 			print("Selected card", index, ". Points spent:", card_costs[index])
 		else:
 			print("Not enough points to select this card!")
+			popup.style_label(30, Vector2(170,70),Vector2(400,100))
 			popup.set_label_text("আপনার ৩ টি চাহিদা বা সেবা উপভোগ 
 			করার জন্যে যথেষ্ট পয়েন্ট নেই। ")
+			popup.show()
 			
 
 		# Retrieve total points from GameState
@@ -220,6 +222,7 @@ func _on_next_page_pressed() -> void:
 		get_tree().change_scene_to_file("res://Scenes/coin_toss.tscn")
 	else:
 		print("You must select all cards to proceed!")
+		popup.style_label(40, Vector2(180,80),Vector2(400,100))
 		popup.set_label_text("৩ টি কার্ড ই সিলেক্ট করুন।")
 		popup.show()
 		next_page_button.disabled = false

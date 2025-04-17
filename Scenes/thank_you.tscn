@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwumn5hcjj5ix"]
-
-[ext_resource type="Texture2D" uid="uid://buesyygt3pq3o" path="res://assets/webp/accident-1.webp" id="1_yr6e1"]
+[gd_scene format=3 uid="uid://bwumn5hcjj5ix"]
 
 [node name="thank_you" type="Control"]
 layout_mode = 3
@@ -15,5 +13,4 @@ layout_mode = 0
 offset_left = -1.0
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("1_yr6e1")
 stretch_mode = 2

@@ -60,6 +60,7 @@ func _ready():
 func _on_card_clicked(card_index: int) -> void:
 	if locked_cards.has(card_index):
 		print("Card", card_index, "is locked and cannot be deselected.")
+		popup.style_label(40, Vector2(120,100),Vector2(400,100))
 		popup.set_label_text("কার্ডটি ইতিমধ্যে সিলেক্ট করা হয়েছে।")
 		popup.show()
 		return
@@ -90,9 +91,10 @@ func _on_card_clicked(card_index: int) -> void:
 		else:
 			print("You have reached the selection limit!")
 			if max_limit == 5:
+				popup.style_label(35, Vector2(130,100),Vector2(400,100))
 				popup.set_label_text("৫ টির বেশি কার্ড সিলেক্ট করা যাবে না।")
 			else:
-				popup.style_label(40, Vector2(135,100),Vector2(400,100))
+				popup.style_label(30, Vector2(125,100),Vector2(400,100))
 				popup.set_label_text("পুনরায় ১ টির বেশি কার্ড সিলেক্ট করা যাবে না।")	
 			
 			popup.show()

@@ -274,6 +274,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_r6ovb")
 
 [node name="Popup" parent="." instance=ExtResource("17_q64l5")]
 z_index = 2
+texture_filter = 6
 offset_left = 210.0
 offset_top = 112.0
 offset_right = 210.0

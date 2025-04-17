@@ -221,6 +221,7 @@ texture = ExtResource("13_isahw")
 
 [node name="Popup" parent="." instance=ExtResource("14_womhq")]
 z_index = 2
+texture_filter = 6
 offset_left = 316.0
 offset_top = 184.0
 offset_right = 316.0

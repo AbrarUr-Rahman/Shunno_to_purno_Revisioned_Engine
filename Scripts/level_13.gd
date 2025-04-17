@@ -186,7 +186,7 @@ func _on_card_clicked(index: int) -> void:
 				if pointsBeforeThisScene < 6:
 					popup.set_label_text('পেছনের "অপশন সিলেকশন রাউন্ড" এ ফেরত গিয়ে 
 					"আগে বেছে নেওয়া হয়নি" এরকম আরও একটি অপশন বেছে নিন।')
-					popup.style_label(25, Vector2(130,90),Vector2(400,100))
+					popup.style_label(20, Vector2(140,90),Vector2(400,100))
 					popup.show()
 					popup.confirmed.connect(_on_popup_confirmed)
 					GameState.has_tried_purno = true
@@ -194,7 +194,7 @@ func _on_card_clicked(index: int) -> void:
 					
 				else:
 					popup.set_label_text('আপনার কাছে পর্যাপ্ত পরিমাণ পয়েন্ট নাই। 
-					অন্য কার্ড সিলেক্ট করুন')
+						   অন্য কার্ড সিলেক্ট করুন')
 					popup.style_label(25, Vector2(170,90),Vector2(400,100))
 					popup.show()
 				 # Mark that the player has tried purno before
@@ -216,6 +216,7 @@ func _on_card_clicked(index: int) -> void:
 		if selected_count >= 2:
 			print("You can only select up to two cards!")
 			popup.set_label_text("২ টির বেশি কার্ড সিলেক্ট করা যাবে না।")
+			popup.style_label(35, Vector2(130,100),Vector2(400,100))
 			popup.show()
 			return
 

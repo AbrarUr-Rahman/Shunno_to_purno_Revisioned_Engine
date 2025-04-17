@@ -138,7 +138,7 @@ func update_button_state():
 # Setup signal connections
 func _ready():
 	popup.hide()
-	popup.style_label(30, Vector2(160,70),Vector2(400,100))
+	popup.style_label(25, Vector2(135,80),Vector2(400,100))
 	popup.set_label_text("আপনি ১২ পয়েন্ট ব্যয় করে ফেলেছেন। পরের ধাপে 
 	যেতে নিচের ডানের বাটন প্রেস করুন।")
 	for i in range(card_points.size()):

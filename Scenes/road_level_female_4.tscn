@@ -24,6 +24,5 @@ offset_left = 1582.0
 offset_top = 736.0
 offset_right = 1832.0
 offset_bottom = 836.0
-theme_override_font_sizes/font_size = 36
 
 [connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]

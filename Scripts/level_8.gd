@@ -128,7 +128,7 @@ func _on_button_pressed():
 # Connect the signals for each card button
 func _ready():
 	popup.hide()
-	popup.style_label(40, Vector2(190,100),Vector2(400,100))
+	popup.style_label(40, Vector2(130,100),Vector2(400,100))
 	popup.set_label_text("যেকোনো ৩ টি কার্ড সিলেক্ট করুন।")
 	# Connect each card button's "pressed" signal
 	for i in range(selected_cards.size()):

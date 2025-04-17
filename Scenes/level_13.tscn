@@ -161,6 +161,7 @@ offset_bottom = 814.0
 
 [node name="Popup" parent="." instance=ExtResource("10_d6bx4")]
 z_index = 2
+texture_filter = 6
 offset_left = 209.0
 offset_top = 115.0
 offset_right = 209.0

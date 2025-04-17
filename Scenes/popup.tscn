@@ -31,10 +31,11 @@ texture = ExtResource("2_shmu8")
 [node name="Label" type="Label" parent="Modal"]
 texture_filter = 6
 layout_mode = 0
-offset_left = 195.561
-offset_top = 89.0
-offset_right = 737.561
-offset_bottom = 159.0
+offset_left = 148.562
+offset_top = 92.9765
+offset_right = 690.562
+offset_bottom = 162.977
+scale = Vector2(1.29502, 1.05148)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_rs2nc")
 theme_override_font_sizes/font_size = 50
@@ -42,10 +43,11 @@ text = "নির্বাচন করে এগিয়ে যান। "
 
 [node name="Button" parent="Modal" instance=ExtResource("3_s1xfj")]
 layout_mode = 0
-offset_left = 331.0
-offset_top = 181.0
-offset_right = 581.0
-offset_bottom = 281.0
+offset_left = 314.413
+offset_top = 187.461
+offset_right = 614.413
+offset_bottom = 287.461
+theme_override_font_sizes/font_size = 35
 text = "ঠিক আছে"
 
 [connection signal="confirmed" from="." to="." method="_on_confirmed"]
