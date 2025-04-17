@@ -81,7 +81,7 @@ func _ready():
 	# Apply textures to the existing TextureButtons
 	for i in range(min(selected_indices.size(), grid_container.get_child_count())):
 		var card_index = selected_indices[i]
-		var texture_path = "res://assets/images/selection_page-3//card %d point.png" % (card_index+1)
+		var texture_path = "res://assets/images/selection_page-3//card %d point.webp" % (card_index+1)
 		var texture = load(texture_path)
 
 		if texture:
