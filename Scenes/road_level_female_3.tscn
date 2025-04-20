@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://p8xbib0y0xkt"]
 
 [ext_resource type="Script" path="res://Scripts/road_level_female_3.gd" id="1_ed3eh"]
-[ext_resource type="Texture2D" uid="uid://boyc0nunl2rmw" path="res://assets/images/map/female-3.png" id="2_fd6dh"]
 [ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="2_q21n5"]
+[ext_resource type="Texture2D" uid="uid://db56u4qvxvnsq" path="res://assets/images/map/female-3.webp" id="2_t4wn7"]
 
 [node name="Road_level_female_3" type="Control"]
 layout_mode = 3
@@ -15,7 +15,7 @@ script = ExtResource("1_ed3eh")
 layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 658.0
-texture = ExtResource("2_fd6dh")
+texture = ExtResource("2_t4wn7")
 stretch_mode = 2
 
 [node name="Button" parent="Background" instance=ExtResource("2_q21n5")]
