@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=3 uid="uid://dv6wom85jsk0c"]
+[gd_scene load_steps=6 format=3 uid="uid://dv6wom85jsk0c"]
 
-[ext_resource type="Texture2D" path="res://assets/webp/roadmap1-male@2x.webp" id="2_0s1qq"]
 [ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="4_rwre0"]
 [ext_resource type="PackedScene" uid="uid://gbqsaclwerml" path="res://Scenes/backup/female_player.tscn" id="5_fq38f"]
 
@@ -54,7 +53,6 @@ layout_mode = 0
 offset_top = -3.0
 offset_right = 1151.0
 offset_bottom = 647.0
-texture = ExtResource("2_0s1qq")
 expand_mode = 1
 
 [node name="Button2" parent="." instance=ExtResource("4_rwre0")]

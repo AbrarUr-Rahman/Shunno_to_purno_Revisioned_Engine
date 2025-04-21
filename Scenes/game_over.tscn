@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://bqmmhamsp1vkt"]
 
 [ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_hujhs"]
-[ext_resource type="Texture2D" uid="uid://deobjw4ssibr" path="res://assets/images/proverty_day_message/bg.webp" id="2_ocyox"]
-[ext_resource type="Texture2D" uid="uid://bih3vg8bk82oa" path="res://assets/images/proverty_day_message/text.webp" id="3_7i7s6"]
+[ext_resource type="Texture2D" uid="uid://dxn8mo2tpcyrh" path="res://assets/images/proverty_day_message/bg.webp" id="2_4frax"]
+[ext_resource type="Texture2D" uid="uid://68uj3nagkxip" path="res://assets/images/proverty_day_message/text.webp" id="3_ielkr"]
 [ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="3_v2lpe"]
 [ext_resource type="FontFile" uid="uid://dflfvvlubatt6" path="res://assets/fonts/LiAlinurKurigramUnicode.woff" id="4_w0xym"]
 
@@ -21,7 +21,7 @@ offset_left = 1.0
 offset_top = -3.0
 offset_right = 1149.0
 offset_bottom = 643.0
-texture = ExtResource("2_ocyox")
+texture = ExtResource("2_4frax")
 stretch_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect"]
@@ -30,7 +30,7 @@ offset_left = 1323.0
 offset_top = 82.0
 offset_right = 1795.0
 offset_bottom = 679.0
-texture = ExtResource("3_7i7s6")
+texture = ExtResource("3_ielkr")
 
 [node name="Button" parent="." instance=ExtResource("3_v2lpe")]
 layout_mode = 0

@@ -21,7 +21,6 @@ res://Scenes/custom_splash.tscn
 res://Scenes/female_level_4.tscn
 res://Scenes/female_level_6.tscn
 res://Scenes/game.tscn
-res://Scenes/game_over.tscn
 res://Scenes/road_level_male_7.tscn
 res://Scenes/road_level_male_8.tscn
 res://Scenes/road_level_male_9.tscn
@@ -33,3 +32,5 @@ res://Scenes/road_level_female_5.tscn
 res://Scenes/road_level_male_10.tscn
 res://Scenes/road_level_male_11.tscn
 res://Scenes/thank_you.tscn
+res://Scenes/female_level_5.tscn
+res://Scenes/game_over.tscn
