@@ -1,21 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://dmlh82j23jyac"]
-
-[ext_resource type="Texture2D" path="res://assets/Sprites/woman.png" id="1_1p1k8"]
+[gd_scene load_steps=7 format=3 uid="uid://bstuq2g85l2e4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_473us"]
-atlas = ExtResource("1_1p1k8")
 region = Rect2(0, 0, 63, 204)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3gew7"]
-atlas = ExtResource("1_1p1k8")
 region = Rect2(126, 0, 63, 204)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_10yxu"]
-atlas = ExtResource("1_1p1k8")
 region = Rect2(445, 0, 89, 204)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b0b1h"]
-atlas = ExtResource("1_1p1k8")
 region = Rect2(532, 0, 76, 204)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4kyd2"]

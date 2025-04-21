@@ -1,9 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://7mbnyen54gnq"]
+[gd_scene load_steps=6 format=3 uid="uid://2co8slwwvpgy"]
 
-[ext_resource type="Texture2D" uid="uid://wi72bdbba13k" path="res://assets/webp/roadmap1-male@2x.webp" id="1_3w13k"]
 [ext_resource type="Script" path="res://Scripts/road_level_7.gd" id="1_gggkl"]
 [ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="2_gk4l6"]
-[ext_resource type="PackedScene" uid="uid://nvu1bsas5jye" path="res://Scenes/male_player.tscn" id="3_ibosg"]
 
 [sub_resource type="Animation" id="Animation_jkek1"]
 length = 0.001
@@ -52,7 +50,6 @@ script = ExtResource("1_gggkl")
 layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 658.0
-texture = ExtResource("1_3w13k")
 expand_mode = 1
 
 [node name="Button" parent="Background" instance=ExtResource("2_gk4l6")]
@@ -63,9 +60,19 @@ offset_right = 1080.0
 offset_bottom = 599.0
 theme_override_font_sizes/font_size = 36
 
-[node name="MalePlayer" parent="." instance=ExtResource("3_ibosg")]
+[node name="MalePlayer" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 position = Vector2(50, 304)
 scale = Vector2(0.7, 0.7)
+script = null
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MalePlayer"]
 libraries = {

@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://basd81qjt2n4e"]
+[gd_scene load_steps=7 format=3 uid="uid://bkv88ipn30f7p"]
 
 [ext_resource type="Script" path="res://Scripts/male_level_6.gd" id="1_monc4"]
-[ext_resource type="Texture2D" path="res://assets/webp/roadmap1-male@2x.webp" id="2_rf4bf"]
-[ext_resource type="PackedScene" uid="uid://nvu1bsas5jye" path="res://Scenes/male_player.tscn" id="3_6cp0f"]
+[ext_resource type="PackedScene" uid="uid://b2dsky0rodjdf" path="res://Scenes/male_player.tscn" id="3_6cp0f"]
 [ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="4_hwq30"]
 
 [sub_resource type="Animation" id="Animation_e0c51"]
@@ -54,7 +53,6 @@ script = ExtResource("1_monc4")
 layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 658.0
-texture = ExtResource("2_rf4bf")
 expand_mode = 1
 
 [node name="MalePlayer" parent="." instance=ExtResource("3_6cp0f")]

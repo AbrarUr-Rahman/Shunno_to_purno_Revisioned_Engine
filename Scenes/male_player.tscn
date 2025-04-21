@@ -1,21 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://nvu1bsas5jye"]
-
-[ext_resource type="Texture2D" path="res://assets/Sprites/man.png" id="1_myukc"]
+[gd_scene load_steps=7 format=3 uid="uid://b2dsky0rodjdf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dfh7w"]
-atlas = ExtResource("1_myukc")
 region = Rect2(0, 419, 160, 419)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nyfa6"]
-atlas = ExtResource("1_myukc")
 region = Rect2(800, 419, 160, 419)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tpcdu"]
-atlas = ExtResource("1_myukc")
 region = Rect2(960, 419, 160, 419)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bgrdp"]
-atlas = ExtResource("1_myukc")
 region = Rect2(1120, 419, 160, 419)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y6k7i"]
