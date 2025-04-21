@@ -1,15 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://55vkhh68uia8"]
+[gd_scene load_steps=6 format=3 uid="uid://1sjtqilutbo4"]
 
 [ext_resource type="Script" path="res://Scripts/level_10.gd" id="1_evgcj"]
 [ext_resource type="FontFile" uid="uid://dflfvvlubatt6" path="res://assets/fonts/LiAlinurKurigramUnicode.woff" id="3_mdqg5"]
-[ext_resource type="Texture2D" path="res://assets/webp/screen-4-border.svg" id="4_rt4if"]
-[ext_resource type="Texture2D" path="res://assets/webp/image1.webp" id="5_e1rm3"]
 [ext_resource type="FontFile" uid="uid://hl5jas8diunp" path="res://assets/fonts/LiSirajeeSanjarUnicode.woff" id="6_8w5k1"]
-[ext_resource type="Texture2D" path="res://assets/webp/image2.webp" id="7_doshb"]
-[ext_resource type="Texture2D" path="res://assets/webp/image3.webp" id="8_tiyox"]
-[ext_resource type="Texture2D" path="res://assets/webp/image4.webp" id="9_sx0c5"]
-[ext_resource type="Texture2D" path="res://assets/webp/image5.webp" id="10_jiv7h"]
-[ext_resource type="Texture2D" path="res://assets/webp/coin-12.webp" id="11_ppwbt"]
 [ext_resource type="PackedScene" uid="uid://g74nwhc3va1v" path="res://Scenes/porer_dhap.tscn" id="12_cwnp2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihca2"]
@@ -70,7 +63,6 @@ columns = 3
 
 [node name="TextureButton" type="TextureButton" parent="Backround/GridContainer"]
 layout_mode = 2
-texture_normal = ExtResource("4_rt4if")
 
 [node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton"]
 layout_mode = 0
@@ -78,7 +70,6 @@ offset_left = 5.0
 offset_top = 10.0
 offset_right = 271.0
 offset_bottom = 200.0
-texture = ExtResource("5_e1rm3")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="Backround/GridContainer/TextureButton"]
@@ -115,7 +106,6 @@ autowrap_mode = 2
 
 [node name="TextureButton2" type="TextureButton" parent="Backround/GridContainer"]
 layout_mode = 2
-texture_normal = ExtResource("4_rt4if")
 
 [node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton2"]
 layout_mode = 0
@@ -123,7 +113,6 @@ offset_left = 5.0
 offset_top = 10.0
 offset_right = 271.0
 offset_bottom = 200.0
-texture = ExtResource("7_doshb")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="Backround/GridContainer/TextureButton2"]
@@ -160,7 +149,6 @@ autowrap_mode = 2
 
 [node name="TextureButton3" type="TextureButton" parent="Backround/GridContainer"]
 layout_mode = 2
-texture_normal = ExtResource("4_rt4if")
 
 [node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton3"]
 layout_mode = 0
@@ -168,7 +156,6 @@ offset_left = 5.0
 offset_top = 10.0
 offset_right = 271.0
 offset_bottom = 200.0
-texture = ExtResource("8_tiyox")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="Backround/GridContainer/TextureButton3"]
@@ -205,7 +192,6 @@ autowrap_mode = 2
 
 [node name="TextureButton4" type="TextureButton" parent="Backround/GridContainer"]
 layout_mode = 2
-texture_normal = ExtResource("4_rt4if")
 
 [node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton4"]
 layout_mode = 0
@@ -213,7 +199,6 @@ offset_left = 5.0
 offset_top = 10.0
 offset_right = 271.0
 offset_bottom = 200.0
-texture = ExtResource("9_sx0c5")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="Backround/GridContainer/TextureButton4"]
@@ -250,7 +235,6 @@ autowrap_mode = 2
 
 [node name="TextureButton5" type="TextureButton" parent="Backround/GridContainer"]
 layout_mode = 2
-texture_normal = ExtResource("4_rt4if")
 
 [node name="TextureRect" type="TextureRect" parent="Backround/GridContainer/TextureButton5"]
 layout_mode = 0
@@ -258,7 +242,6 @@ offset_left = 5.0
 offset_top = 10.0
 offset_right = 271.0
 offset_bottom = 200.0
-texture = ExtResource("10_jiv7h")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="Backround/GridContainer/TextureButton5"]
@@ -301,7 +284,6 @@ offset_right = 1231.0
 offset_bottom = 476.0
 scale = Vector2(0.8, 0.8)
 size_flags_horizontal = 8
-texture = ExtResource("11_ppwbt")
 expand_mode = 2
 stretch_mode = 4
 
